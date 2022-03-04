@@ -3,11 +3,6 @@
 ## Installation
 npm i
 
-## Prime Theme View
-first, rename config file to "vite.config.js" 
-npm run prime-serve
-
-
 ## Storybook
 npm run storybook
 
@@ -21,3 +16,9 @@ src/assets/themes/
 ## global scss location
 src/assets/library/
 
+## compile Theme
+sass src/assets/themes/theme-name/_theme.scss theme-name.css
+
+## Prime Theme View
+first, rename config file to "vite.config.js" 
+npm run prime-serve
