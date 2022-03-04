@@ -17,11 +17,11 @@ src/assets/themes/
 src/assets/library/
 
 ## compile Theme
-sass src/assets/themes/white-paper/_theme.scss 
-src/assets/themes/white-paper/white-paper.css
+sass src/assets/themes/white-label/_theme.scss 
+src/assets/themes/white-label/white-label.css
 
 ## minify Theme
-sass "src/assets/themes/white-paper/white-paper.css:src/assets/themes/white-paper/white-paper.min.css" --style compresse
+sass "src/assets/themes/white-label/white-label.css:src/assets/themes/white-label/white-label.min.css" --style compresse
 
 ## Prime Theme View
 first, rename config file to "vite.config.js" 

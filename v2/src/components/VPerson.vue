@@ -581,7 +581,7 @@ export default {
     opacity: 0;
   }
   .person-inner {
-    color: $textColor;
+    color: var(--text-color);
     .person-image-link {
       padding: 0;
       position: relative;
@@ -632,26 +632,26 @@ export default {
       }
     }
     .person-details {
-      color: $textColor;
+      color: var(--text-color);
       .person-name-link-holder {
         margin-bottom: spacing(1);
         .person-name-link {
           @include font-config($h2-config);
-          color: $textColor;
+          color: var(--text-color);
           overflow-wrap: anywhere;
           word-break: break-word;
           text-decoration: none;
           display: inline-block;
           span {
-            transition: color $transitionDuration;
-            -webkit-transition: color $transitionDuration;
+            transition: color var(--transition-duration);
+            -webkit-transition: color var(--transition-duration);
           }
           &.disabled {
             pointer-events: none;
           }
           &:hover {
             span {
-              color: $linkButtonHoverColor;
+              color: var(--link-button-hover-color);
               text-decoration: underline;
             }
           }
@@ -703,7 +703,7 @@ export default {
       .read-more {
         word-break: keep-all;
         cursor: pointer;
-        color: $textColor;
+        color: var(--text-color);
         font-size: 0.75rem;
         letter-spacing: 0.6px;
         text-transform: uppercase;
@@ -713,7 +713,7 @@ export default {
           display: inline-block;
         }
         &:hover {
-          color: $primaryColor;
+          color: var(--primary-color);
         }
       }
     }

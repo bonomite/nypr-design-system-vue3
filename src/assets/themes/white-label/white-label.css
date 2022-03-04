@@ -27414,17 +27414,84 @@
 }
 
 :root {
+  --primary-color: #5e81ac;
+  --primary-color-rgb: 94,129,172;
+  --primary-color-alt: #7694b8;
+  --primary-color-alt-rgb: 118,148,184;
+  --primary-light-color: #8ea7c5;
+  --primary-light-color-rgb: 142,167,197;
+  --primary-dark-color: #51749e;
+  --primary-dark-color-rgb: 81,116,158;
+  --primary-darker-color: #48678c;
+  --primary-darker-color-rgb: 72,103,140;
+  --primary-text-color: #ffffff;
+  --primary-color-text: #ffffff;
+  --link-button-color: #5e81ac;
+  --link-button-hover-color: #48678c;
+  --link-button-text-hover-decoration: underline;
+  --text-color: #4c566a;
+  --text-color-secondary: #7694b8;
+  --font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-family-header: Libre Baskerville, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-size: 1rem;
+  --font-weight: normal;
+  --text-secondary-color: #7694b8;
+  --border-radius: 4px;
+  --transition-duration: 0.2s;
+  --transition-ease: ease-in-out;
+  --form-element-transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  --action-icon-transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  --list-item-transition: none;
+  --prime-icon-font: primeicons;
+  --prime-icon-font-size: 1rem;
+  --divider: 1px solid #e5e9f0;
+  --inline-spacing: 0.5rem;
+  --disabled-opacity: 0.6;
+  --mask-bg: rgba(112, 120, 136, 0.5);
+  --loading-icon-font-size: 2rem;
+  --error-color: #bf616a;
+  --info-color: #639bb2;
+  --info-light-color: #88c0d0;
+  --success-color: #7fa366;
+  --success-light-color: #a3be8c;
+  --warning-color: #d08770;
+  --warning-light-color: #e2ac94;
+  --help-color: #9a6796;
+  --help-light-color: #b48ead;
+  --danger-color: #bf616a;
+  --danger-light-color: #d88889;
+  --yellow-color: #ebcb8b;
+  --shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  --maskbg: rgba(112, 120, 136, 0.5);
+  --transition-duration: 0.2s;
+  --black: #000000;
+  --black50: #707888;
+  --black100: #4c566a;
+  --black200: #434c5e;
+  --black300: #3b4252;
+  --black400: #2e3440;
+  --black500: #15171d;
+  --white: #ffffff;
+  --white100: #eceff4;
+  --white200: #e5e9f0;
+  --white300: #d8dee9;
+  --gray-50: #edeef0;
+  --gray-100: #dbdde1;
+  --gray-200: #b7bbc3;
+  --gray-300: #949aa6;
+  --gray-400: #707888;
+  --gray-500: #4c566a;
+  --gray-600: #3d4555;
+  --gray-700: #2e3440;
+  --gray-800: #1e222a;
+  --gray-900: #0f1115;
   --surface-a: #ffffff;
   --surface-b: #eceff4;
   --surface-c: #d8dee9;
   --surface-d: #e5e9f0;
   --surface-e: #ffffff;
   --surface-f: #ffffff;
-  --text-color: #4c566a;
-  --text-color-secondary: #7694b8;
-  --primary-color: #5e81ac;
-  --primary-color-text: #ffffff;
-  --font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   --surface-0: #ffffff;
   --surface-50: #edeef0;
   --surface-100: #dbdde1;
@@ -27457,15 +27524,10 @@
   --surface-border: #e5e9f0;
   --surface-hover: #d8dee9;
   --focus-ring: 0 0 0 0.2rem #8ea7c5;
-  --maskbg: rgba(112, 120, 136, 0.5);
-  --tagPadding: 0.25rem 0.4rem;
+  --tab-padding: 0.25rem 0.4rem;
   --badge-font-weight: 700;
   --badge-font-size: 0.633rem;
   --badge-letter-spacing: 0.03rem;
-  --link-button-color: #5e81ac;
-  --transition-duration: 0.2s;
-  --link-button-hover-color: #48678c;
-  --link-button-text-hover-decoration: underline;
 }
 
 /* latin-ext */
@@ -33101,206 +33163,5 @@ p.footer {
 }
 
 /* Customizations to the designer theme should be defined here */
-.p-inputtext:enabled:hover {
-  background-color: #eceff4;
-}
-.p-inputtext:enabled:focus {
-  background-color: #ffffff;
-}
 
-.p-chips .p-chips-multiple-container:not(.p-disabled):hover {
-  background-color: #eceff4;
-}
-.p-chips .p-chips-multiple-container:not(.p-disabled).p-focus {
-  background-color: #ffffff;
-}
-
-.p-autocomplete .p-autocomplete-panel .p-autocomplete-item:not(.p-disabled):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-.p-autocomplete.p-autocomplete-multiple .p-autocomplete-multiple-container:not(.p-disabled):hover {
-  background-color: #eceff4;
-}
-
-.p-dropdown:not(.p-disabled):hover {
-  background-color: #eceff4;
-}
-
-.p-dropdown-panel .p-dropdown-items .p-dropdown-item:not(.p-highlight):not(.p-disabled):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-
-.p-listbox:not(.p-disabled) .p-listbox-item:not(.p-disabled):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-
-.p-multiselect-panel .p-multiselect-items .p-multiselect-item:not(.p-highlight):not(.p-disabled):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-
-.p-multiselect:not(.p-disabled):hover {
-  background-color: #eceff4;
-}
-
-.p-button {
-  font-weight: 500;
-}
-.p-button.p-button-icon-only .p-button-label {
-  display: none;
-}
-
-.p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
-  background-color: #d8dee9;
-}
-.p-radiobutton .p-radiobutton-box:not(.p-disabled).p-focus {
-  border-color: transparent;
-}
-
-.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
-  background-color: #d8dee9;
-}
-.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
-  border-color: transparent;
-}
-
-.p-accordion .p-accordion-header:not(.p-highlight):not(.p-disabled):hover:not(.p-disabled) .p-accordion-header-link:focus {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-.p-accordion .p-accordion-header:not(.p-highlight):not(.p-disabled):hover .p-accordion-header-link {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-.p-accordion .p-accordion-header:not(.p-disabled).p-highlight:hover .p-accordion-header-link {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-
-.p-datepicker table td > span.p-highlight {
-  color: #ffffff;
-  background: #5e81ac;
-}
-.p-datepicker table td > span.p-highlight:hover {
-  background-color: #7694b8;
-  border: 2px solid #5e81ac;
-}
-.p-datepicker table td.p-datepicker-today > span.p-highlight {
-  color: #ffffff;
-  background: #5e81ac;
-}
-
-.p-fieldset.p-fieldset-toggleable .p-fieldset-legend:hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-
-.p-menubar .p-menuitem-link:not(.p-disabled):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-
-.p-tieredmenu .p-menuitem-link:not(.p-disabled):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-
-.p-menu .p-menuitem-link:not(.p-disabled):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-
-.p-contextmenu .p-menuitem-link:not(.p-disabled):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-
-.p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight):hover,
-.p-paginator .p-paginator-prev:not(.p-disabled):not(.p-highlight):hover,
-.p-paginator .p-paginator-next:not(.p-disabled):not(.p-highlight):hover,
-.p-paginator .p-paginator-last:not(.p-disabled):not(.p-highlight):hover {
-  border: 1px solid #5e81ac;
-}
-.p-paginator .p-paginator-pages .p-paginator-page:not(.p-highlight):hover {
-  border: 1px solid #5e81ac;
-}
-
-.p-datatable .p-sortable-column:not(.p-highlight):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-.p-datatable .p-sortable-column.p-highlight {
-  background-color: #d8dee9;
-}
-.p-datatable .p-sortable-column.p-highlight:hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-.p-datatable.p-datatable-hoverable-rows .p-datatable-tbody > tr:not(.p-highlight):hover {
-  outline: 1px solid #7694b8;
-}
-
-.p-overlaypanel .p-overlaypanel-close:enabled:hover {
-  background: #7694b8;
-  color: #ffffff;
-  border: 2px solid #51749e;
-}
-
-.p-picklist .p-picklist-list .p-picklist-item:not(.p-highlight):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-
-.p-tree.p-tree-horizontal .p-treenode .p-treenode-content.p-treenode-selectable:not(.p-highlight):hover {
-  background: #ffffff;
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-
-.p-treetable .p-sortable-column:not(.p-highlight):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-.p-treetable .p-sortable-column.p-highlight {
-  background-color: #d8dee9;
-}
-.p-treetable .p-sortable-column.p-highlight:hover {
-  background-color: #ffffff;
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-.p-treetable .p-sortable-column:focus {
-  box-shadow: inset 0 0 0 0.2rem #8ea7c5;
-  outline: 0 none;
-}
-.p-treetable.p-treetable-hoverable-rows .p-treetable-tbody > tr:not(.p-highlight):hover {
-  outline: 1px solid #7694b8;
-}
-
-.p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-.p-megamenu .p-menuitem-link:not(.p-disabled):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-
-.p-panelmenu .p-panelmenu-header:not(.p-highlight):not(.p-disabled) > a:hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-.p-panelmenu .p-panelmenu-header.p-highlight:not(.p-disabled) > a:hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-.p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link:not(.p-disabled):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-
-.p-slidemenu .p-menuitem-link:not(.p-disabled):hover {
-  box-shadow: inset 0 0 0 0.1rem #7694b8;
-}
-
-.p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
-  background: #5e81ac;
-  color: #ffffff;
-}
-
-.p-galleria .p-galleria-indicators .p-galleria-indicator.p-highlight button {
-  background: #5e81ac;
-  color: #ffffff;
-}
-
-.p-datatable .p-datatable-tbody > tr.p-datatable-dragpoint-top > td {
-  box-shadow: inset 0 2px 0 0 #5e81ac;
-}
-.p-datatable .p-datatable-tbody > tr.p-datatable-dragpoint-bottom > td {
-  box-shadow: inset 0 -2px 0 0 #5e81ac;
-}
-
-/*# sourceMappingURL=white-paper.css.map */
+/*# sourceMappingURL=white-label.css.map */

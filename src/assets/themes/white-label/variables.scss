@@ -81,6 +81,8 @@ $dangerColor: #bf616a !default;
 $dangerLightColor: #d88889 !default;
 $yellowColor: #ebcb8b !default;
 
+$shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12) !default;
+
 $black: #000000 !default;
 $black50: #707888 !default;
 $black100: #4c566a !default;
@@ -922,23 +924,28 @@ $imagePreviewActionIconBorderRadius: 50% !default;
     --primary-color: #{$primaryColor};
     --primary-color-rgb: #{hex2rgb($primaryColor)};
     --primary-color-alt: #{$primaryColorAlt};
+    --primary-color-alt-rgb: #{hex2rgb($primaryColorAlt)};
     --primary-light-color: #{$primaryLightColor};
+    --primary-light-color-rgb: #{hex2rgb($primaryLightColor)};
     --primary-dark-color: #{$primaryDarkColor};
-    --primary-dark-color-rgb: #{$primaryDarkColor};
+    --primary-dark-color-rgb: #{hex2rgb($primaryDarkColor)};
     --primary-darker-color: #{$primaryDarkerColor};
+    --primary-darker-color-rgb: #{hex2rgb($primaryDarkerColor)};
     --primary-text-color: #{$primaryTextColor};
     --primary-color-text: #{$primaryTextColor};
-
-    --text-color: #{$black100};
+    
+    --link-button-color: #{$linkButtonColor};
+    --link-button-hover-color: #{$linkButtonHoverColor};
+    --link-button-text-hover-decoration: #{$linkButtonTextHoverDecoration};
+    
+    --text-color: #{$textColor};
     --text-color-secondary: #{$primaryColorAlt};
     --font-family: #{$fontFamily};
-
-    //global
+    
     --font-family: #{$fontFamily};
     --font-family-header: #{$fontFamilyHeader};
     --font-size: #{$fontSize};
     --font-weight: #{$fontWeight};
-    --text-color: #{$textColor};
     --text-secondary-color: #{$textSecondaryColor};
     --border-radius: #{$borderRadius};
     --transition-duration: #{$transitionDuration};
@@ -953,6 +960,7 @@ $imagePreviewActionIconBorderRadius: 50% !default;
     --disabled-opacity: #{$disabledOpacity};
     --mask-bg: #{$maskBg};
     --loading-icon-font-size: #{$loadingIconFontSize};
+    
     --error-color: #{$errorColor};
     --info-color: #{$infoColor};
     --info-light-color: #{$infoLightColor};
@@ -965,6 +973,11 @@ $imagePreviewActionIconBorderRadius: 50% !default;
     --danger-color: #{$dangerColor};
     --danger-light-color: #{$dangerLightColor};
     --yellow-color: #{$yellowColor};
+
+    --shadow: #{$shadow};
+    --maskbg: #{$maskBg};
+
+    --transition-duration: #{$transitionDuration};
 
     --black: #{$black};
     --black50: #{$black50};
@@ -1019,23 +1032,22 @@ $imagePreviewActionIconBorderRadius: 50% !default;
     --gray-800: #{$gray-800};
     --gray-900: #{$gray-900};
     --black: #{$black};
+
     --content-padding: #{$panelContentPadding};
     --inline-spacing: #{$inlineSpacing};
     --border-radius: #{$borderRadius};
+
     --surface-ground: #eceff4;
     --surface-section: #ffffff;
     --surface-card: #ffffff;
     --surface-overlay: #ffffff;
     --surface-border: #e5e9f0;
     --surface-hover: #d8dee9;
+
     --focus-ring: #{$focusShadow};
-    --maskbg: #{$maskBg};
     --tab-padding: #{$tagPadding};
     --badge-font-weight: #{$badgeFontWeight};
     --badge-font-size: #{$badgeFontSize};
     --badge-letter-spacing: #{$badgeLetterSpacing};
-    --link-button-color: #{$linkButtonColor};
-    --transition-duration: #{$transitionDuration};
-    --link-button-hover-color: #{$linkButtonHoverColor};
-    --link-button-text-hover-decoration: #{$linkButtonTextHoverDecoration};
+    
 }

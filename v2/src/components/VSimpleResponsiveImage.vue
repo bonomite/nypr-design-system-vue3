@@ -317,7 +317,7 @@ const closeEnlarge = () => {
     }
   }
   .enlarge-button {
-    background-color: $primaryColor + CC;
+    background-color: rgba(var(--primary-color-rgb), 0.8);
     border-color: transparent;
     // pointer-events: none;
     position: absolute;

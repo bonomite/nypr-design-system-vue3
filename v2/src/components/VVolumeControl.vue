@@ -79,7 +79,7 @@ let previousVolume = ref(props.volume)
     margin-right: 4px;
   }
   .volume-control-icon {
-    color: $textColor;
+    color: var(--text-color);
     flex: 1 0;
     appearance: none;
     border: none;
@@ -91,10 +91,10 @@ let previousVolume = ref(props.volume)
     max-width: 36px;
   }
   .volume-control-slider {
-    transition: width $transitionDuration, opacity $transitionDuration,
-      margin-right $transitionDuration;
-    -webkit-transition: width $transitionDuration, opacity $transitionDuration,
-      margin-right $transitionDuration;
+    transition: width var(--transition-duration), opacity var(--transition-duration),
+      margin-right var(--transition-duration);
+    -webkit-transition: width var(--transition-duration), opacity var(--transition-duration),
+      margin-right var(--transition-duration);
     margin-right: 0;
     width: 0px;
     opacity: 0;

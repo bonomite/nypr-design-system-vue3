@@ -47,9 +47,9 @@ console.log('authors - ',props.authors)
   a,
   a:visited,
   a:active {
-    color: RGB(var(--color-text));
+    color: var(--color-text);
     &:hover {
-      color: RGB(var(--color-link-hover));
+      color: var(--color-link-hover);
     }
   }
 }

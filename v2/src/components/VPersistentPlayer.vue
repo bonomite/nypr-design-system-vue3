@@ -241,8 +241,8 @@ const togglePlay = () => {
   z-index: $z-index-10;
   width: 100%;
   padding: 8px 16px 8px 8px;
-  color: $textColor;
-  background-color: $gray-100;
+  color: var(--text-color);
+  background-color: var(--gray-100);
   .player-controls {
     display: flex;
     align-items: center;
@@ -258,7 +258,7 @@ const togglePlay = () => {
   a,
   a:visited,
   a:active {
-    color: $textColor;
+    color: var(--text-color);
     text-decoration: none;
 
     &:hover {

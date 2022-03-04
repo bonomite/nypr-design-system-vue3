@@ -111,7 +111,7 @@ const getMobileImageScale = computed(() => {
 </script>
 
 <template>
-  <div class="card" :class="{ [`flex-column ${bp}:flex-row`]: responsive }">
+  <div class="v-card" :class="{ [`flex-column ${bp}:flex-row`]: responsive }">
     <template v-if="image">
       <div
         class="card-image-link card-image-wrapper"
@@ -170,14 +170,14 @@ const getMobileImageScale = computed(() => {
 
 
 <style lang="scss">
-.card {
+.v-card {
   display: flex;
   align-items: flex-start;
-  background: $cardBackground;
-  color: $textColor;
-  box-shadow: $cardShadow;
-  -webkit-box-shadow: $cardShadow;
-  border-radius: $borderRadius;
+  background: var(--white);
+  color: var(--text-color);
+  box-shadow: var(--shadow);
+  -webkit-box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
   overflow: hidden;
   width: 100%;
   max-width: 100%;
@@ -214,18 +214,9 @@ const getMobileImageScale = computed(() => {
           margin-top: spacing(0.5);
           text-decoration: none;
           &:before {
-            color: $linkButtonColor;
+            color: var(--link-button-color);
           }
         }
-        // .o-gallery-icon {
-        //   width: 1.5rem;
-        //   height: auto;
-        //   margin-left: spacing(2);
-        //   margin-bottom: 2px;
-        //   path {
-        //     fill: $linkButtonColor;
-        //   }
-        // }
       }
     }
   }

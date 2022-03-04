@@ -170,8 +170,8 @@ $track-info-image-size: 84px;
       .track-info-livestream-indicator {
         display: flex;
         align-items: center;
-        background: $textColor;
-        color: $primaryTextColor;
+        background: var(--text-color);
+        color: var(--primary-color-text);
         border-radius: 44px;
         padding: 4px;
         margin-right: 8px;
@@ -189,13 +189,13 @@ $track-info-image-size: 84px;
         }
       }
       .track-info-livestream-station {
-        font-family: $fontFamily;
+        font-family: var(--font-family);
         font-size: 12px;
         font-weight: 700;
       }
     }
     .track-info-title {
-      font-family: $fontFamily;
+      font-family: var(--font-family);
       font-size: 12px;
       width: 100%;
       text-overflow: ellipsis;
@@ -233,7 +233,7 @@ $track-info-image-size: 84px;
     }
     .track-info-progress {
       position: absolute;
-      background-color: $primaryColor;
+      background-color: var(--primary-color);
       cursor: pointer;
       min-width: 200px;
       top: -5px;
@@ -248,7 +248,7 @@ $track-info-image-size: 84px;
         position: relative;
       }
       .player-track-seeker {
-        background-color: $primaryDarkColor;
+        background-color: var(--primary-dark-color);
         bottom: 0;
         left: 0;
         position: absolute;
@@ -256,7 +256,7 @@ $track-info-image-size: 84px;
         z-index: 20;
       }
       .player-track-buffered {
-        background-color: $gray-400;
+        background-color: var(--gray-400);
         bottom: 0;
         left: 0;
         position: absolute;
@@ -278,7 +278,7 @@ $track-info-image-size: 84px;
           content: '';
           height: 22px;
           width: 22px;
-          background-color: $gray-600;
+          background-color: var(--gray-600);
           border-radius: 50%;
           opacity: 1;
           display: block;

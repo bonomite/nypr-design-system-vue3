@@ -227,9 +227,9 @@ const share = () => {
 .share-button svg > *,
 .follow-link svg > *,
 .follow-link {
-  color: $textColor;
-  fill: $textColor;
-  transition: $transitionEase $transitionDuration;
+  color: var(--text-color);
+  fill: var(--text-color);
+  transition: var(--transition-ease) var(--transition-duration);
 }
 
 .follow-link,
@@ -237,9 +237,9 @@ const share = () => {
   &:hover {
     cursor: pointer;
     svg > * {
-      fill: $primaryColor !important;
+      fill: var(--primary-color) !important;
     }
-    color: $primaryColor !important;
+    color: var(--primary-color) !important;
   }
 }
 .follow-link.phone svg {
@@ -248,7 +248,7 @@ const share = () => {
 .follow-link.site {
   width: auto;
   &:hover {
-    color: $primaryColor;
+    color: var(--primary-color);
     text-decoration: underline;
   }
 }

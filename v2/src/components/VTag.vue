@@ -42,14 +42,14 @@ const props = defineProps({
       pointer-events: none;
     }
     .p-button {
-      padding: var(--tagPadding);
+      padding: var(--tab-padding);
       border: none;
       text-decoration: none;
       vertical-align: middle;
       .p-button-label {
-        font-weight: var(--badgeFontWeight);
-        font-size: var(--badgeFontSize);
-        letter-spacing: var(--badgeLetterSpacing);
+        font-weight: var(--badge-font-weight);
+        font-size: var(--badge-font-size);
+        letter-spacing: var(--badge-letter-spacing);
       }
     }
     &:hover {

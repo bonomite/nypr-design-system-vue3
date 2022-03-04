@@ -227,7 +227,7 @@ const getCurrentDimensions = computed(() => {
     text-decoration: none !important;
     span {
       text-decoration: none !important;
-      color: $white !important;
+      color: var(--white) !important;
     }
   }
   &.disabled {
@@ -247,10 +247,10 @@ const getCurrentDimensions = computed(() => {
   overflow-y: auto;
   display: block;
   max-height: 100%;
-  background: rgba($primaryDarkerColor, 0.7);
+  background: rgba(var(--primary-dark-color-rgb), 0.7);
   pointer-events: none;
   p {
-    color: $white;
+    color: var(--white);
   }
 }
 
@@ -261,7 +261,7 @@ const getCurrentDimensions = computed(() => {
 
 .image-with-caption .image-with-caption-credit {
   margin-left: spacing(2);
-  @media all and (min-width: $medium) {
+  @media all and (min-width: $md) {
     margin-left: 0;
   }
 
@@ -271,10 +271,10 @@ const getCurrentDimensions = computed(() => {
 .image-with-caption {
   .image-with-caption-credit-link {
     display: inline-block;
-    color: $gray-200;
+    color: var(--gray-200);
 
     p {
-      color: $gray-200;
+      color: var(--gray-200);
     }
   }
 }
@@ -317,12 +317,12 @@ const getCurrentDimensions = computed(() => {
   .image-with-caption-icons
   .image-with-caption-icons-close
   .pi {
-  color: $white;
+  color: var(--white);
 }
 
 .image-with-caption .info-icon,
 .image-with-caption .o-close-icon {
-  transition: $transitionDuration;
+  transition: var(--transition-duration);
   width: 28px;
   height: 28px;
 
@@ -337,11 +337,11 @@ const getCurrentDimensions = computed(() => {
 
 .image-with-caption .o-close-icon path,
 .image-with-caption .info-icon-i {
-  fill: $white;
+  fill: var(--white);
 }
 
 .image-with-caption .info-icon-bg {
-  fill: rgba($black, 0.7);
+  fill: rgba(var(--black), 0.7);
 }
 
 // .image-with-caption .gothamist-caption {
