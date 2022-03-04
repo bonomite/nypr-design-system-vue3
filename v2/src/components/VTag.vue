@@ -24,7 +24,9 @@ const props = defineProps({
       <Button
         :class="props.name"
         :label="props.name"
-        :style="props.radius !== null ? `border-radius: ${props.radius}px;` : ''"
+        :style="
+          props.radius !== null ? `border-radius: ${props.radius}px;` : ''
+        "
         @click="props.slug ? emit('tagClick', props.slug) : null"
       ></Button>
     </v-flexible-link>
@@ -40,20 +42,20 @@ const props = defineProps({
       pointer-events: none;
     }
     .p-button {
-      padding: $tagPadding;
+      padding: var(--tagPadding);
       border: none;
       text-decoration: none;
       vertical-align: middle;
       .p-button-label {
-        font-weight: $badgeFontWeight;
-        font-size: $badgeFontSize;
-        letter-spacing: $badgeLetterSpacing;
+        font-weight: var(--badgeFontWeight);
+        font-size: var(--badgeFontSize);
+        letter-spacing: var(--badgeLetterSpacing);
       }
     }
     &:hover {
       .p-button-label {
         text-decoration: none !important;
-        color: $primaryTextColor !important;
+        color: var(--primary-color-text) !important;
       }
     }
   }

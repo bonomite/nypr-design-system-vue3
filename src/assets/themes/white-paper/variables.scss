@@ -960,4 +960,8 @@ $imagePreviewActionIconBorderRadius: 50% !default;
     --surface-hover: #d8dee9;
     --focus-ring: #{$focusShadow};
     --maskbg: #{$maskBg};
+    --tagPadding: #{$tagPadding};
+    --badgeFontWeight: #{$badgeFontWeight};
+    --badgeFontSize: #{$badgeFontSize};
+    --badgeLetterSpacing: #{$badgeLetterSpacing};
 }
