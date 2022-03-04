@@ -12,7 +12,8 @@ const props = defineProps({
   },
 })
 const isExternal = computed(() => {
-  if (typeof props.to === 'string' && /^http(s)+:/.test(props.to)) {
+  var reg = new RegExp('^(?:[a-z]+:)?//', 'i');
+  if (typeof props.to === 'string' && reg.test(props.to)) {
     return true
   }
   return false
