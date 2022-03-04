@@ -8,11 +8,11 @@ const props = defineProps({
   },
   target: {
     type: String,
-    default: "_blank",
+    default: '_blank',
   },
 })
 const isExternal = computed(() => {
-  var reg = new RegExp('^(?:[a-z]+:)?//', 'i');
+  var reg = new RegExp('^(?:[a-z]+:)?//', 'i')
   if (typeof props.to === 'string' && reg.test(props.to)) {
     return true
   }
@@ -34,23 +34,28 @@ const isExternal = computed(() => {
   >
     <slot name="default"></slot>
   </a>
-  <nuxt-link v-else class="flexible-link internal" :to="to" v-bind="{ ...$attrs }">
+  <nuxt-link
+    v-else
+    class="flexible-link internal"
+    :to="to"
+    v-bind="{ ...$attrs }"
+  >
     <slot name="default"></slot>
   </nuxt-link>
 </template>
 <style lang="scss">
 .flexible-link {
-  color: $linkButtonColor;
-  transition: all $transitionDuration;
+  color: var(--linkButtonColor);
+  transition: all var(--transitionDuration);
   * {
-    transition: all $transitionDuration;
+    transition: all var(--transitionDuration);
   }
   &:hover {
-    color: $linkButtonHoverColor !important;
-    text-decoration: $linkButtonTextHoverDecoration;
+    color: var(--linkButtonHoverColor) !important;
+    text-decoration: var(--linkButtonTextHoverDecoration);
     * {
-      color: $linkButtonHoverColor !important;
-      text-decoration: $linkButtonTextHoverDecoration;
+      color: var(--linkButtonHoverColor) !important;
+      text-decoration: var(--linkButtonTextHoverDecoration);
     }
   }
   &:focus {
@@ -58,4 +63,3 @@ const isExternal = computed(() => {
   }
 }
 </style>
-

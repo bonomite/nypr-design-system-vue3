@@ -27462,6 +27462,10 @@
   --badgeFontWeight: 700;
   --badgeFontSize: 0.633rem;
   --badgeLetterSpacing: 0.03rem;
+  --linkButtonColor: #5e81ac;
+  --transitionDuration: 0.2s;
+  --linkButtonHoverColor: #48678c;
+  --linkButtonTextHoverDecoration: underline;
 }
 
 /* latin-ext */
