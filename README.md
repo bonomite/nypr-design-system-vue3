@@ -19,6 +19,9 @@ src/assets/library/
 ## compile Theme
 sass src/assets/themes/theme-name/_theme.scss theme-name.css
 
+## minify Theme
+sass "theme-name.css:theme-name.min.css" --style compressed
+
 ## Prime Theme View
 first, rename config file to "vite.config.js" 
 npm run prime-serve
