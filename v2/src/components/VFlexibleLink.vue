@@ -21,7 +21,7 @@ const isExternal = computed(() => {
 </script>
 
 <template>
-  <div v-if="!to" class="flexible-link null" v-bind="{ ...$props, ...$attrs }">
+  <div v-if="!to" class="flexible-link null" v-bind="{ ...$attrs }">
     <slot name="default"></slot>
   </div>
   <a
@@ -34,7 +34,7 @@ const isExternal = computed(() => {
   >
     <slot name="default"></slot>
   </a>
-  <nuxt-link v-else class="flexible-link internal" v-bind="{ ...$props, ...$attrs }">
+  <nuxt-link v-else class="flexible-link internal" :to="to" v-bind="{ ...$attrs }">
     <slot name="default"></slot>
   </nuxt-link>
 </template>
