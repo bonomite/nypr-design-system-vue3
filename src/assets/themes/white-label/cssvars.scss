@@ -1,4 +1,4 @@
-:root {
+:root, [data-theme="default"] {
 
     --primary-color: #{$primaryColor};
     --primary-color-rgb: #{hex2rgb($primaryColor)};
@@ -129,4 +129,8 @@
     --badge-font-size: #{$badgeFontSize};
     --badge-letter-spacing: #{$badgeLetterSpacing};
     
+}
+[data-theme="dark"] {
+    --primary-color: #ff0000;
+    --link-button-color: #ff0000;
 }

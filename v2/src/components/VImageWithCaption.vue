@@ -185,10 +185,10 @@ const getCurrentDimensions = computed(() => {
       </div>
     </div>
     <figcaption v-if="credit || (caption && gothamistVariation)" class="mt-1">
-      <gothamist-arrow v-if="caption && gothamistVariation" />
+<!--       <gothamist-arrow v-if="caption && gothamistVariation" />
       <div class="image-with-caption-credit">
         <p v-if="caption && gothamistVariation" class="gothamist-caption">{{ caption }}</p>
-      </div>
+      </div> -->
       <h4 v-if="title" class="image-with-caption-title">{{ title }}</h4>
       <p v-if="description" class="footer image-with-caption-description">{{ description }}</p>
       <v-flexible-link
@@ -310,6 +310,10 @@ const getCurrentDimensions = computed(() => {
   bottom: spacing(2);
   right: spacing(2);
   z-index: 999;
+  .p-button{
+    background-color: rgba(var(--primary-color-rgb), 0.8);
+    border-color: transparent;
+  }
 }
 
 // keep X white on rollover

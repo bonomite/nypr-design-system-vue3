@@ -173,7 +173,7 @@ const getMobileImageScale = computed(() => {
 .v-card {
   display: flex;
   align-items: flex-start;
-  background: var(--white);
+  background: var(--surface-a);
   color: var(--text-color);
   box-shadow: var(--shadow);
   -webkit-box-shadow: var(--shadow);
