@@ -64,6 +64,7 @@
     "nuxt3": "^3.0.0-27424151.dbab979",
     "postcss": "^8.4.5",
     "prettier": "2.5.1",
+    "storybook-dark-mode": "^1.0.9",
     "vue-loader": "^16.8.3"
   },
   "resolutions": {
