@@ -1,0 +1,132 @@
+:root {
+
+    --primary-color: #{$primaryColor};
+    --primary-color-rgb: #{hex2rgb($primaryColor)};
+    --primary-color-alt: #{$primaryColorAlt};
+    --primary-color-alt-rgb: #{hex2rgb($primaryColorAlt)};
+    --primary-light-color: #{$primaryLightColor};
+    --primary-light-color-rgb: #{hex2rgb($primaryLightColor)};
+    --primary-dark-color: #{$primaryDarkColor};
+    --primary-dark-color-rgb: #{hex2rgb($primaryDarkColor)};
+    --primary-darker-color: #{$primaryDarkerColor};
+    --primary-darker-color-rgb: #{hex2rgb($primaryDarkerColor)};
+    --primary-text-color: #{$primaryTextColor};
+    --primary-color-text: #{$primaryTextColor};
+    
+    --link-button-color: #{$linkButtonColor};
+    --link-button-hover-color: #{$linkButtonHoverColor};
+    --link-button-text-hover-decoration: #{$linkButtonTextHoverDecoration};
+    
+    --text-color: #{$textColor};
+    --text-color-secondary: #{$primaryColorAlt};
+    --font-family: #{$fontFamily};
+    
+    --font-family: #{$fontFamily};
+    --font-family-header: #{$fontFamilyHeader};
+    --font-size: #{$fontSize};
+    --font-weight: #{$fontWeight};
+    --text-secondary-color: #{$textSecondaryColor};
+    --border-radius: #{$borderRadius};
+    --transition-duration: #{$transitionDuration};
+    --transition-ease: #{$transitionEase};
+    --form-element-transition: #{$formElementTransition};
+    --action-icon-transition: #{$actionIconTransition};
+    --list-item-transition: #{$listItemTransition};
+    --prime-icon-font: #{$primeIconFont};
+    --prime-icon-font-size: #{$primeIconFontSize};
+    --divider: #{$divider};
+    --inline-spacing: #{$inlineSpacing};
+    --disabled-opacity: #{$disabledOpacity};
+    --mask-bg: #{$maskBg};
+    --loading-icon-font-size: #{$loadingIconFontSize};
+    
+    --error-color: #{$errorColor};
+    --info-color: #{$infoColor};
+    --info-light-color: #{$infoLightColor};
+    --success-color: #{$successColor};
+    --success-light-color: #{$successLightColor};
+    --warning-color: #{$warningColor};
+    --warning-light-color: #{$warningLightColor};
+    --help-color: #{$helpColor};
+    --help-light-color: #{$helpLightColor};
+    --danger-color: #{$dangerColor};
+    --danger-light-color: #{$dangerLightColor};
+    --yellow-color: #{$yellowColor};
+
+    --shadow: #{$shadow};
+    --maskbg: #{$maskBg};
+
+    --transition-duration: #{$transitionDuration};
+
+    --black: #{$black};
+    --black50: #{$black50};
+    --black100: #{$black100};
+    --black200: #{$black200};
+    --black300: #{$black300};
+    --black400: #{$black400};
+    --black500: #{$black500};
+
+    --white: #{$white};
+    --white100: #{$white100};
+    --white200: #{$white200};
+    --white300: #{$white300};
+
+    --gray-50: #{$gray-50};
+    --gray-100: #{$gray-100};
+    --gray-200: #{$gray-200};
+    --gray-300: #{$gray-300};
+    --gray-400: #{$gray-400};
+    --gray-500: #{$gray-500};
+    --gray-600: #{$gray-600};
+    --gray-700: #{$gray-700};
+    --gray-800: #{$gray-800};
+    --gray-900: #{$gray-900};
+
+    --surface-a: #{$white};
+    --surface-b: #{$white100};
+    --surface-c: #{$white300};
+    --surface-d: #{$white200};
+    --surface-e: #{$white};
+    --surface-f: #{$white};
+
+    --surface-0: #{$white};
+    --surface-50: #{$gray-50};
+    --surface-100: #{$gray-100};
+    --surface-200: #{$gray-200};
+    --surface-300: #{$gray-300};
+    --surface-400: #{$gray-400};
+    --surface-500: #{$gray-500};
+    --surface-600: #{$gray-600};
+    --surface-700: #{$gray-700};
+    --surface-800: #{$gray-800};
+    --surface-900: #{$gray-900};
+    --gray-50: #{$gray-50};
+    --gray-100: #{$gray-100};
+    --gray-200: #{$gray-200};
+    --gray-300: #{$gray-300};
+    --gray-400: #{$gray-400};
+    --gray-500: #{$gray-500};
+    --gray-600: #{$gray-600};
+    --gray-700: #{$gray-700};
+    --gray-800: #{$gray-800};
+    --gray-900: #{$gray-900};
+    --black: #{$black};
+
+    --content-padding: #{$panelContentPadding};
+    --inline-spacing: #{$inlineSpacing};
+    --border-radius: #{$borderRadius};
+
+    --surface-ground: #eceff4;
+    --surface-section: #ffffff;
+    --surface-card: #ffffff;
+    --surface-overlay: #ffffff;
+    --surface-border: #e5e9f0;
+    --surface-hover: #d8dee9;
+
+    --focus-ring: #{$focusShadow};
+    --tab-padding: #{$tagPadding};
+    --badge-font-weight: #{$badgeFontWeight};
+    --badge-font-size: #{$badgeFontSize};
+    --badge-letter-spacing: #{$badgeLetterSpacing};
+    
+}
