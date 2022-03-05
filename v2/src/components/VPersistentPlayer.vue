@@ -196,15 +196,11 @@ const togglePlay = () => {
         </Button>
         <Button
           :title="isPlaying ? 'Pause' : 'Play'"
-          class="play-button"
-          :class="[
-            { ['pi pi-play']: !isPlaying && !isLoading },
-            { ['pi pi-pause']: isPlaying },
-
-            { 'p-button-icon-only': !shouldShowCta },
-          ]"
+          class="play-button p-button-icon-only"          
           @click="togglePlay"
         >
+          <i v-if="!isPlaying && !isLoading" class="pi pi-play"></i>
+          <i v-if="isPlaying" class="pi pi-pause"></i>
           <i v-if="isLoading" class="pi pi-spin pi-spinner"></i>
         </Button>
         <Button
