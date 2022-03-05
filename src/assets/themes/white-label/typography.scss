@@ -55,7 +55,7 @@ $h4-config: (
             "font-size": 1.278rem,
             "line-height": 1.889rem,
             "font-weight": $bold-weight,
-            "color": $textColor,
+            "color": var(--text-color),
         ),
     ),
 );
