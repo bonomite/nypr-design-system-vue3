@@ -1,5 +1,5 @@
-:root, [data-theme="default"] {
-
+:root,
+[data-theme="default"] {
     --primary-color: #{$primaryColor};
     --primary-color-rgb: #{hex2rgb($primaryColor)};
     --primary-color-alt: #{$primaryColorAlt};
@@ -10,22 +10,46 @@
     --primary-dark-color-rgb: #{hex2rgb($primaryDarkColor)};
     --primary-darker-color: #{$primaryDarkerColor};
     --primary-darker-color-rgb: #{hex2rgb($primaryDarkerColor)};
-    --primary-text-color: #{$primaryTextColor};
-    --primary-color-text: #{$primaryTextColor};
-    
+
     --link-button-color: #{$linkButtonColor};
     --link-button-hover-color: #{$linkButtonHoverColor};
     --link-button-text-hover-decoration: #{$linkButtonTextHoverDecoration};
-    
+
+    --error-color: #{$errorColor};
+    --info-color: #{$infoColor};
+    --info-light-color: #{$infoLightColor};
+    --success-color: #{$successColor};
+    --success-light-color: #{$successLightColor};
+    --warning-color: #{$warningColor};
+    --warning-light-color: #{$warningLightColor};
+    --help-color: #{$helpColor};
+    --help-light-color: #{$helpLightColor};
+    --danger-color: #{$dangerColor};
+    --danger-light-color: #{$dangerLightColor};
+    --yellow-color: #{$yellowColor};
+
     --text-color: #{$textColor};
     --text-color-secondary: #{$primaryColorAlt};
     --font-family: #{$fontFamily};
-    
+    --root-font-size: #{$rootFontSize};
+    --font-size: #{$fontSize};
+    --primary-text-color: #{$primaryTextColor};
+    --primary-color-text: #{$primaryTextColor};
+    --font-weight: #{$fontWeight};
+    --font-weight-100: #{$fontWeight-100};
+    --font-weight-200: #{$fontWeight-200};
+    --font-weight-300: #{$fontWeight-300};
+    --font-weight-400: #{$fontWeight-400};
+    --font-weight-500: #{$fontWeight-500};
+    --font-weight-600: #{$fontWeight-600};
+    --font-weight-700: #{$fontWeight-700};
+    --font-weight-800: #{$fontWeight-800};
+    --font-weight-900: #{$fontWeight-900};
     --font-family: #{$fontFamily};
     --font-family-header: #{$fontFamilyHeader};
     --font-size: #{$fontSize};
-    --font-weight: #{$fontWeight};
     --text-secondary-color: #{$textSecondaryColor};
+
     --border-radius: #{$borderRadius};
     --transition-duration: #{$transitionDuration};
     --transition-ease: #{$transitionEase};
@@ -39,19 +63,6 @@
     --disabled-opacity: #{$disabledOpacity};
     --mask-bg: #{$maskBg};
     --loading-icon-font-size: #{$loadingIconFontSize};
-    
-    --error-color: #{$errorColor};
-    --info-color: #{$infoColor};
-    --info-light-color: #{$infoLightColor};
-    --success-color: #{$successColor};
-    --success-light-color: #{$successLightColor};
-    --warning-color: #{$warningColor};
-    --warning-light-color: #{$warningLightColor};
-    --help-color: #{$helpColor};
-    --help-light-color: #{$helpLightColor};
-    --danger-color: #{$dangerColor};
-    --danger-light-color: #{$dangerLightColor};
-    --yellow-color: #{$yellowColor};
 
     --shadow: #{$shadow};
     --maskbg: #{$maskBg};
@@ -116,22 +127,53 @@
     --inline-spacing: #{$inlineSpacing};
     --border-radius: #{$borderRadius};
 
-    --surface-ground: #eceff4;
-    --surface-section: #ffffff;
-    --surface-card: #ffffff;
-    --surface-overlay: #ffffff;
-    --surface-border: #e5e9f0;
-    --surface-hover: #d8dee9;
+    --surface-ground: #{$surfaceGround};
+    --surface-section: #{$surfaceSection};
+    --surface-card: #{$surfaceCard};
+    --surface-overlay: #{$surfaceOverlay};
+    --surface-border: #{$surfaceBorder};
+    --surface-hover: #{$surfaceHover};
 
     --focus-ring: #{$focusShadow};
     --tab-padding: #{$tagPadding};
     --badge-font-weight: #{$badgeFontWeight};
     --badge-font-size: #{$badgeFontSize};
     --badge-letter-spacing: #{$badgeLetterSpacing};
-    
 }
 [data-theme="dark"] {
-    --primary-color: #ff0000;
-    --link-button-color: #ff0000;
-    --text-color: var(--white)
+    /* --primary-color: #{$dangerColor};
+    --primary-color-rgb: #{hex2rgb($dangerColor)}; */
+    --link-button-color: var(--primary-light-color);
+    --text-color: var(--white100);
+    --text-color-secondary: var(--white300);
+
+    --surface-ground: #{$gray-700};
+    --surface-section: #{$gray-900};
+    --surface-card: #{$gray-900};
+    --surface-overlay: #{$gray-900};
+    --surface-border: #{$gray-800};
+    --surface-hover: #{$gray-700};
+
+    --surface-0: #{$black};
+    --surface-50: #{$gray-950};
+    --surface-100: #{$gray-900};
+    --surface-200: #{$gray-800};
+    --surface-300: #{$gray-700};
+    --surface-400: #{$gray-600};
+    --surface-500: #{$gray-500};
+    --surface-600: #{$gray-400};
+    --surface-700: #{$gray-300};
+    --surface-800: #{$gray-200};
+    --surface-900: #{$gray-100};
+
+    --gray-50: #{$gray-950};
+    --gray-100: #{$gray-900};
+    --gray-200: #{$gray-800};
+    --gray-300: #{$gray-700};
+    --gray-400: #{$gray-600};
+    --gray-500: #{$gray-500};
+    --gray-600: #{$gray-400};
+    --gray-700: #{$gray-300};
+    --gray-800: #{$gray-200};
+    --gray-900: #{$gray-100};
 }

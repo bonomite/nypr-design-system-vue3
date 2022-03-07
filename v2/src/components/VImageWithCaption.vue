@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onBeforeMount, onMounted } from 'vue'
-import GothamistArrow from '../../../assets-shared/icons/gothamist/GothamistArrow'
+//import GothamistArrow from '../../../assets-shared/icons/gothamist/GothamistArrow'
 import VSimpleResponsiveImage from './VSimpleResponsiveImage'
 import VFlexibleLink from './VFlexibleLink'
 import Button from 'primevue/button'
@@ -197,10 +197,10 @@ const getCurrentDimensions = computed(() => {
         rel="noopener"
         class="image-with-caption-credit-link"
       >
-        <p class="footer">{{ credit }}</p>
+        <span class="footer">{{ credit }}</span>
       </v-flexible-link>
       <span v-else class="image-with-caption-credit-link">
-        <p class="footer">{{ credit }}</p>
+        <span class="footer">{{ credit }}</span>
       </span>
     </figcaption>
   </figure>
@@ -266,17 +266,6 @@ const getCurrentDimensions = computed(() => {
   }
 
   text-align: right;
-}
-
-.image-with-caption {
-  .image-with-caption-credit-link {
-    display: inline-block;
-    color: var(--gray-200);
-
-    p {
-      color: var(--gray-200);
-    }
-  }
 }
 
 // .image-with-caption.gothamist .image-with-caption-credit {
