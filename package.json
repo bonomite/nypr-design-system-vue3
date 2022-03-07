@@ -1,10 +1,14 @@
 {
   "private": true,
+  "config":{
+    "theme": "white-label"
+  },
   "scripts": {
     "build": "nuxi build",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "build-storybook": "build-storybook",
     "dev": "nuxi dev",
+    "build-theme": "node src/assets/themes/build-theme.js",
     "format": "prettier .  --write",
     "prime-build": "vite build",
     "prime-lint": "vite lint",

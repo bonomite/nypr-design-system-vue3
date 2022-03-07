@@ -79,27 +79,6 @@ $dangerColor: #bf616a !default;
 $dangerLightColor: #d88889 !default;
 $yellowColor: #ebcb8b !default;
 
-$rootFontSize: 18px;
-$fontSize: 1rem !default;
-$fontFamily: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$fontFamilyHeader: "Libre Baskerville", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$textColor: $black100 !default;
-$textSecondaryColor: $primaryColorAlt !default;
-$fontWeight: normal !default;
-$fontWeight-100: 100 !default;
-$fontWeight-200: 200 !default;
-$fontWeight-300: 300 !default;
-$fontWeight-400: 400 !default;
-$fontWeight-500: 500 !default;
-$fontWeight-600: 600 !default;
-$fontWeight-700: 700 !default;
-$fontWeight-800: 800 !default;
-$fontWeight-900: 900 !default;
-
-$shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12) !default;
-
 $black: #000000 !default;
 $black50: #707888 !default;
 $black100: #4c566a !default;
@@ -133,6 +112,28 @@ $surfaceCard: #ffffff !default;
 $surfaceOverlay: #ffffff !default;
 $surfaceBorder: #e5e9f0 !default;
 $surfaceHover: #d8dee9 !default;
+
+$rootFontSize: 18px;
+$fontSize: 1rem !default;
+$fontFamily: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$fontFamilyHeader: "Libre Baskerville", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$textColor: $black100 !default;
+$textSecondaryColor: $primaryColorAlt !default;
+$fontWeight: normal !default;
+$fontWeight-100: 100 !default;
+$fontWeight-200: 200 !default;
+$fontWeight-300: 300 !default;
+$fontWeight-400: 400 !default;
+$fontWeight-500: 500 !default;
+$fontWeight-600: 600 !default;
+$fontWeight-700: 700 !default;
+$fontWeight-800: 800 !default;
+$fontWeight-900: 900 !default;
+
+$shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12) !default;
+
 
 $borderRadius: 4px !default;
 $transitionDuration: 0.2s !default;

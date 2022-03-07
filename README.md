@@ -16,12 +16,8 @@ src/assets/themes/
 ## global scss location
 src/assets/library/
 
-## compile Theme
-sass src/assets/themes/white-label/_theme.scss 
-src/assets/themes/white-label/white-label.css
-
-## minify Theme
-sass "src/assets/themes/white-label/white-label.css:src/assets/themes/white-label/white-label.min.css" --style compresse
+## build Theme (replace "white-label" with your theme name)
+npm run build-theme white-label 
 
 ## Prime Theme View
 first, rename config file to "vite.config.js" 
