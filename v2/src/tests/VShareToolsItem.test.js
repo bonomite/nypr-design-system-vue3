@@ -76,15 +76,18 @@ describe('VShareToolsItem', () => {
 
   test('service prop works: facebook', () => {
     const service = 'facebook'
-    const wrapper = shallowMount(VShareToolsItem, {
+    const wrapper = mount(VShareToolsItem, {
       propsData: {
         username,
         service
       }
     })
     // check if the corresponding component was successfully created
-    expect(wrapper.findComponent(FacebookIcon).exists()).toBe(true)
-    expect(wrapper.attributes().href).toBe('https://www.facebook.com/WNYC')
+    setTimeout(() => {
+      // expect(wrapper.html()).toContain('Loading Component')
+      expect(wrapper.findComponent(FacebookIcon).exists()).toBe(true)
+      expect(wrapper.attributes().href).toBe('https://www.facebook.com/WNYC')
+    }, 35)
   })
 
   test('service prop works: instagram', () => {
@@ -96,8 +99,10 @@ describe('VShareToolsItem', () => {
       }
     })
     // check if the corresponding component was successfully created
-    expect(wrapper.findComponent(InstagramIcon).exists()).toBe(true)
-    expect(wrapper.attributes().href).toBe('https://www.instagram.com/WNYC')
+    setTimeout(() => {
+      expect(wrapper.findComponent(InstagramIcon).exists()).toBe(true)
+      expect(wrapper.attributes().href).toBe('https://www.instagram.com/WNYC')
+    }, 35)
   })
 
   test('service prop works: spotify', () => {
@@ -109,8 +114,11 @@ describe('VShareToolsItem', () => {
       }
     })
     // check if the corresponding component was successfully created
-    expect(wrapper.findComponent(SpotifyIcon).exists()).toBe(true)
-    expect(wrapper.attributes().href).toBe('https://open.spotify.com/playlist/WNYC')
+    setTimeout(() => {
+      expect(wrapper.findComponent(SpotifyIcon).exists()).toBe(true)
+      expect(wrapper.attributes().href).toBe('https://open.spotify.com/playlist/WNYC')
+
+    }, 35)
   })
 
   test('service prop works: twitter', () => {
@@ -122,8 +130,11 @@ describe('VShareToolsItem', () => {
       }
     })
     // check if the corresponding component was successfully created
-    expect(wrapper.findComponent(TwitterIcon).exists()).toBe(true)
-    expect(wrapper.attributes().href).toBe('https://twitter.com/WNYC')
+    setTimeout(() => {
+      expect(wrapper.findComponent(TwitterIcon).exists()).toBe(true)
+      expect(wrapper.attributes().href).toBe('https://twitter.com/WNYC')
+
+    }, 35)
   })
 
   test('service prop works: youtube', () => {
@@ -135,11 +146,14 @@ describe('VShareToolsItem', () => {
       }
     })
     // check if the corresponding component was successfully created
-    expect(wrapper.findComponent(YoutubeIcon).exists()).toBe(true)
-    expect(wrapper.attributes().href).toBe('https://www.youtube.com/channel/WNYC')
+    setTimeout(() => {
+
+      expect(wrapper.findComponent(YoutubeIcon).exists()).toBe(true)
+      expect(wrapper.attributes().href).toBe('https://www.youtube.com/channel/WNYC')
+    }, 35)
   })
 
-  test('service prop works: email', () => {
+  it('service prop works: email', () => {
     const service = 'email'
     const wrapper = shallowMount(VShareToolsItem, {
       propsData: {
@@ -148,8 +162,11 @@ describe('VShareToolsItem', () => {
       }
     })
     // check if the corresponding component was successfully created
-    expect(wrapper.findComponent(EmailIcon).exists()).toBe(true)
-    expect(wrapper.attributes().href).toBe('mailto:test@test.com')
+    setTimeout(() => {
+
+      expect(wrapper.findComponent(EmailIcon).exists()).toBe(true)
+      expect(wrapper.attributes().href).toBe('mailto:test@test.com')
+    }, 35)
   })
 
   test('link prop works with no service prop', () => {
@@ -163,7 +180,7 @@ describe('VShareToolsItem', () => {
     expect(wrapper.vm.socialLink).toBe('')
   })
 
-  test('sharing works: facebook', async () => {
+  test('sharing works: facebook', () => {
     const wrapper = shallowMount(VShareToolsItem, {
       propsData: {
         action: 'share',
@@ -172,11 +189,14 @@ describe('VShareToolsItem', () => {
       }
     })
     global.open = jest.fn()
-    await wrapper.findComponent(FacebookIcon).trigger('click')
-    expect(global.open).toBeCalledWith('https://www.facebook.com/sharer.php?u=http%3A%2F%2Fexample.com', windowName, windowString)
+    setTimeout(() => {
+
+      wrapper.findComponent(FacebookIcon).trigger('click')
+      expect(global.open).toBeCalledWith('https://www.facebook.com/sharer.php?u=http%3A%2F%2Fexample.com', windowName, windowString)
+    }, 35)
   })
 
-  test('sharing works: twitter', async () => {
+  test('sharing works: twitter', () => {
     const wrapper = shallowMount(VShareToolsItem, {
       propsData: {
         action: 'share',
@@ -186,11 +206,14 @@ describe('VShareToolsItem', () => {
       }
     })
     global.open = jest.fn()
-    await wrapper.findComponent(TwitterIcon).trigger('click')
-    expect(global.open).toBeCalledWith('https://twitter.com/intent/tweet?url=http%3A%2F%2Fexample.com&text=Title&via=NYPR', windowName, windowString)
+    setTimeout(() => {
+
+      wrapper.findComponent(TwitterIcon).trigger('click')
+      expect(global.open).toBeCalledWith('https://twitter.com/intent/tweet?url=http%3A%2F%2Fexample.com&text=Title&via=NYPR', windowName, windowString)
+    }, 35)
   })
 
-  test('sharing works: reddit', async () => {
+  test('sharing works: reddit', () => {
     const wrapper = shallowMount(VShareToolsItem, {
       propsData: {
         action: 'share',
@@ -200,11 +223,14 @@ describe('VShareToolsItem', () => {
       }
     })
     global.open = jest.fn()
-    await wrapper.findComponent(RedditIcon).trigger('click')
-    expect(global.open).toBeCalledWith('https://www.reddit.com/submit?url=http%3A%2F%2Fexample.com&title=Title', windowName, windowString)
+    setTimeout(() => {
+
+      wrapper.findComponent(RedditIcon).trigger('click')
+      expect(global.open).toBeCalledWith('https://www.reddit.com/submit?url=http%3A%2F%2Fexample.com&title=Title', windowName, windowString)
+    }, 35)
   })
 
-  test('sharing works: email', async () => {
+  test('sharing works: email', () => {
     const wrapper = shallowMount(VShareToolsItem, {
       propsData: {
         action: 'share',
@@ -214,11 +240,14 @@ describe('VShareToolsItem', () => {
       }
     })
     global.open = jest.fn()
-    await wrapper.findComponent(EmailIcon).trigger('click')
-    expect(global.open).toBeCalledWith('mailto:?body=Title%20-%20http%3A%2F%2Fexample.com', windowName, windowString)
+    setTimeout(() => {
+
+      wrapper.findComponent(EmailIcon).trigger('click')
+      expect(global.open).toBeCalledWith('mailto:?body=Title%20-%20http%3A%2F%2Fexample.com', windowName, windowString)
+    }, 35)
   })
 
-  test('utm params works', async () => {
+  test('utm params works', () => {
     const wrapper = shallowMount(VShareToolsItem, {
       propsData: {
         action: 'share',
@@ -228,11 +257,14 @@ describe('VShareToolsItem', () => {
       }
     })
     global.open = jest.fn()
-    await wrapper.findComponent(FacebookIcon).trigger('click')
-    expect(global.open).toBeCalledWith('https://www.facebook.com/sharer.php?u=http%3A%2F%2Fexample.com%3Futm_medium%3Dsocial%26utm_source%3Dfacebook%26utm_campaign%3Dshared_facebook', windowName, windowString)
+    setTimeout(() => {
+
+      wrapper.findComponent(FacebookIcon).trigger('click')
+      expect(global.open).toBeCalledWith('https://www.facebook.com/sharer.php?u=http%3A%2F%2Fexample.com%3Futm_medium%3Dsocial%26utm_source%3Dfacebook%26utm_campaign%3Dshared_facebook', windowName, windowString)
+    }, 35)
   })
 
-  test('it passes basic accessibility tests', async () => {
+  test('it passes basic accessibility tests', () => {
     const service = 'facebook'
     const wrapper = mount(VShareToolsItem, {
       propsData: {
@@ -241,7 +273,10 @@ describe('VShareToolsItem', () => {
         label
       }
     })
-    const results = await axe(wrapper.element)
-    expect(results).toHaveNoViolations()
+    setTimeout(() => {
+
+      const results = axe(wrapper.element)
+      expect(results).toHaveNoViolations()
+    }, 35)
   })
 })

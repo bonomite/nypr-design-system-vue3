@@ -80,8 +80,7 @@
           <a
             v-if="fullName"
             class="person-name-link"
-            role="heading"
-            aria-level="3"
+            role="link"
             :class="!nameLink || onAuthorPage ? 'disabled' : ''"
             :href="nameLink ? nameLink : null"
           >
@@ -694,10 +693,6 @@ export default {
             -webkit-line-clamp: unset;
           }
         }
-      }
-
-      .social {
-        margin-top: spacing(4);
       }
 
       .read-more {

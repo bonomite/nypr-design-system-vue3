@@ -2,15 +2,15 @@
 const props = defineProps({
   label: {
     type: String,
-    default: null
+    default: null,
   },
   responsive: {
     type: Boolean,
-    default: false
+    default: false,
   },
   vertical: {
     type: Boolean,
-    default: false
+    default: false,
   },
   bp: {
     type: String,
@@ -20,14 +20,18 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="v-share-tools group" :class="[{ 'vertical': props.vertical }]">
+  <div
+    class="v-share-tools group"
+    :class="[{ vertical: props.vertical }]"
+    v-bind="{ ...$attrs }"
+  >
     <p
       v-if="props.label"
       class="label"
-      :class="[
-        { [`w-full ${bp}:w-auto`]: responsive },
-      ]"
-    >{{ props.label }}</p>
+      :class="[{ [`w-full ${bp}:w-auto`]: responsive }]"
+    >
+      {{ props.label }}
+    </p>
     <slot />
   </div>
 </template>
