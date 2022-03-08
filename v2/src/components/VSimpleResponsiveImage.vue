@@ -210,8 +210,9 @@ const closeEnlarge = () => {
         loading="lazy"
       />
     </div>
-    <!-- <Image
-      class="image"
+    <client-only v-if="allowPreview">
+    <Image
+      class="image prime-image"
       :class="isVertical ? 'is-vertical' : ''"
       image-class="prime-img-class"
       image-style="width: 100%; height: auto;"
@@ -227,21 +228,14 @@ const closeEnlarge = () => {
       @hide="closeEnlarge"
       @click="emit('click', $event.target.value)"
       @keypress="emit('keypress', $event.target.value)"
-    > -->
-    <img
-      class="image"
-      :class="isVertical ? 'is-vertical' : ''"
-      :srcset="srcset"
-      :src="computedSrc"
-      :width="computedWidth"
-      :height="height"
-      :style="[isVertical ? `width:${computedWidth}px;` : '']"
-      :alt="alt"
-      loading="lazy"
-      @click="emit('click', $event.target.value)"
-      @keypress="emit('keypress', $event.target.value)"
-    />
-
+    >
+      <template v-if="allowPreview" #indicator>
+        <Button
+          icon="pi pi-arrows-v"
+          class="p-button-sm enlarge-button"
+        ></Button>
+      </template>
+    </Image>
     <div v-if="loadingEnlargedImage">
       <Teleport to=".p-component-overlay">
         <ProgressSpinner
@@ -259,6 +253,21 @@ const closeEnlarge = () => {
         />
       </Teleport>
     </div>
+    </client-only>
+    <img
+      v-else
+      class="image native-image prime-img-class"
+      :class="isVertical ? 'is-vertical' : ''"
+      :srcset="srcset"
+      :src="computedSrc"
+      :width="computedWidth"
+      :height="height"
+      :style="[isVertical ? `width:${computedWidth}px;` : '']"
+      :alt="alt"
+      loading="lazy"
+      @click="emit('click', $event.target.value)"
+      @keypress="emit('keypress', $event.target.value)"
+    />
   </div>
 </template>
 
