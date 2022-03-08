@@ -235,7 +235,7 @@ const closeEnlarge = () => {
         ></Button>
       </template>
     </Image>
-    <span v-if="loadingEnlargedImage">
+    <div v-if="loadingEnlargedImage">
       <Teleport to=".p-component-overlay">
         <ProgressSpinner
           v-if="loadingEnlargedImage"
@@ -251,7 +251,7 @@ const closeEnlarge = () => {
           stroke-width="6"
         />
       </Teleport>
-    </span>
+    </div>
   </div>
 </template>
 

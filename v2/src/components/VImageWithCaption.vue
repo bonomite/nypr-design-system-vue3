@@ -219,8 +219,8 @@ const getCurrentDimensions = computed(() => {
       >
         <span class="footer">{{ credit }}</span>
       </v-flexible-link>
-      <span v-else class="image-with-caption-credit-link">
-        <span class="footer">{{ credit }}</span>
+      <span v-else class="image-with-caption-credit-link footer">
+        {{ credit }}
       </span>
     </figcaption>
   </figure>
