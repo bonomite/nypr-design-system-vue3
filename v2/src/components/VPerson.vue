@@ -22,7 +22,7 @@
           ref="imgRef"
           class="visual-holder"
           :class="[
-            { [`w-${imgScale} m-auto ${bp}:w-12`]: orientation === 'responsive' },
+            { [`w-${imgScale} m-auto ${bp}:w-12 responsive` ]: orientation === 'responsive' },
             { [`w-${imgScale} m-auto w-12`]: orientation === 'vertical' },
           ]"
         >

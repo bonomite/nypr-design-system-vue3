@@ -21,27 +21,29 @@ const isExternal = computed(() => {
 </script>
 
 <template>
-  <div v-if="!to" class="flexible-link null" v-bind="{ ...$attrs }">
-    <slot name="default"></slot>
+  <div>
+    <div v-if="!to" class="flexible-link null" v-bind="{ ...$attrs }">
+      <slot name="default"></slot>
+    </div>
+    <a
+      v-else-if="isExternal"
+      v-bind="{ ...$props, ...$attrs }"
+      :href="to"
+      :target="target"
+      :rel="`noopener ${props.target === '_blank' ? 'noreferrer' : ''}`"
+      class="flexible-link external"
+    >
+      <slot name="default"></slot>
+    </a>
+    <nuxt-link
+      v-else
+      class="flexible-link internal"
+      :to="to"
+      v-bind="{ ...$attrs }"
+    >
+      <slot name="default"></slot>
+    </nuxt-link>
   </div>
-  <a
-    v-else-if="isExternal"
-    v-bind="{ ...$props, ...$attrs }"
-    :href="to"
-    :target="target"
-    :rel="`noopener ${props.target === '_blank' ? 'noreferrer' : ''}`"
-    class="flexible-link external"
-  >
-    <slot name="default"></slot>
-  </a>
-  <nuxt-link
-    v-else
-    class="flexible-link internal"
-    :to="to"
-    v-bind="{ ...$attrs }"
-  >
-    <slot name="default"></slot>
-  </nuxt-link>
 </template>
 <style lang="scss">
 .flexible-link {

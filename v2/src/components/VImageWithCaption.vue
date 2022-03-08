@@ -124,19 +124,28 @@ const toggleCaption = () => {
 }
 
 onBeforeMount(() => {
-  if (!props.width) { responsive.value = true }
+  if (!props.width) {
+    responsive.value = true
+  }
 })
 onMounted(() => {
   // if it gets a width of refThisImg, it will use it, otherwise, it will use the browsers width as the default, unless if it specifically overwritten by the defaultWidth prop which is controlled by the breakpoints
-  thisWidth.value = refThisImg.value.offsetWidth != 0 ? refThisImg.value.offsetWidth : props.defaultWidth ? props.defaultWidth : window.innerWidth
+  thisWidth.value =
+    refThisImg.value.offsetWidth != 0
+      ? refThisImg.value.offsetWidth
+      : props.defaultWidth
+      ? props.defaultWidth
+      : window.innerWidth
 })
 
 const getCurrentDimensions = computed(() => {
   const hRatio = Number(props.ratio[0])
   const vRatio = Number(props.ratio[1])
-  return { width: thisWidth.value, height: Math.round(thisWidth.value * vRatio / hRatio) }
+  return {
+    width: thisWidth.value,
+    height: Math.round((thisWidth.value * vRatio) / hRatio),
+  }
 })
-
 </script>
 
 <template>
@@ -149,10 +158,12 @@ const getCurrentDimensions = computed(() => {
           :to="imageUrl && !allowPreview ? imageUrl : null"
           target="_blank"
           aria-hidden="true"
-          @click="imageUrl && !allowPreview ? emit('componentEvent', imageUrl) : null"
+          @click="
+            imageUrl && !allowPreview ? emit('componentEvent', imageUrl) : null
+          "
         >
           <v-simple-responsive-image
-            v-if="image && thisWidth || width"
+            v-if="(image && thisWidth) || width"
             :src="image"
             :alt="altText"
             :width="width ? width : getCurrentDimensions.width"
@@ -166,7 +177,10 @@ const getCurrentDimensions = computed(() => {
           />
         </v-flexible-link>
         <transition name="fade">
-          <div v-if="caption && captionVisible" class="image-with-caption-caption">
+          <div
+            v-if="caption && captionVisible"
+            class="image-with-caption-caption"
+          >
             <p>{{ caption }}</p>
           </div>
         </transition>
@@ -181,16 +195,22 @@ const getCurrentDimensions = computed(() => {
           icon="pi pi-times p-button-icon"
           class="p-button-sm p-button-secondary p-button-text image-with-caption-icons-close"
         ></Button>
-        <Button v-else icon="pi pi-info" class="p-button-sm image-with-caption-icons-info"></Button>
+        <Button
+          v-else
+          icon="pi pi-info"
+          class="p-button-sm image-with-caption-icons-info"
+        ></Button>
       </div>
     </div>
     <figcaption v-if="credit || (caption && gothamistVariation)" class="mt-1">
-<!--       <gothamist-arrow v-if="caption && gothamistVariation" />
+      <!--       <gothamist-arrow v-if="caption && gothamistVariation" />
       <div class="image-with-caption-credit">
         <p v-if="caption && gothamistVariation" class="gothamist-caption">{{ caption }}</p>
       </div> -->
       <h4 v-if="title" class="image-with-caption-title">{{ title }}</h4>
-      <p v-if="description" class="footer image-with-caption-description">{{ description }}</p>
+      <p v-if="description" class="footer image-with-caption-description">
+        {{ description }}
+      </p>
       <v-flexible-link
         v-if="creditUrl"
         :to="creditUrl"
@@ -299,7 +319,7 @@ const getCurrentDimensions = computed(() => {
   bottom: spacing(2);
   right: spacing(2);
   z-index: 999;
-  .p-button{
+  .p-button {
     background-color: rgba(var(--primary-color-rgb), 0.8);
     border-color: transparent;
   }

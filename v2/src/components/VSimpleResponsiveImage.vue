@@ -113,18 +113,18 @@ const computedSrc = computed(() => {
 
   return template
     ? template
-      .replace(props.widthToken, computedWidth.value)
-      .replace(props.heightToken, props.height)
-      .replace(props.qualityToken, props.quality)
+        .replace(props.widthToken, computedWidth.value)
+        .replace(props.heightToken, props.height)
+        .replace(props.qualityToken, props.quality)
     : undefined
 })
 const computedSrcBg = computed(() => {
   const template = props.src
   return template
     ? template
-      .replace(props.widthToken, props.width)
-      .replace(props.heightToken, props.height)
-      .replace(props.qualityToken, 15)
+        .replace(props.widthToken, props.width)
+        .replace(props.heightToken, props.height)
+        .replace(props.qualityToken, 15)
     : undefined
 })
 
@@ -158,8 +158,9 @@ const srcset = computed(() => {
           .replace(props.widthToken, width)
           .replace(props.heightToken, height)
           .replace(props.qualityToken, calcQuality(props.quality, size))
-        srcset += `${url} ${size}x${size < props.sizes.length && !lastImage ? ',' : ''
-          } `
+        srcset += `${url} ${size}x${
+          size < props.sizes.length && !lastImage ? ',' : ''
+        } `
       }
     }
     return srcset
@@ -181,7 +182,10 @@ const enlarge = () => {
   loadingEnlargedImage.value = true
   const img = document.getElementsByClassName('p-image-preview')
   if (rawImage) {
-    img[0].setAttribute('src', props.imageEnlarged ? props.imageEnlarged : props.src)
+    img[0].setAttribute(
+      'src',
+      props.imageEnlarged ? props.imageEnlarged : props.src
+    )
   } else {
     const sizeList = srcset.value.split(',')
     const lastSize = sizeList[sizeList.length - 1]
@@ -195,32 +199,16 @@ const closeEnlarge = () => {
 }
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <template>
   <div class="simple-responsive-image-holder">
     <div v-if="isVertical" class="bg">
-      <img :src="computedSrcBg" :width="width" :height="height" :alt="alt" loading="lazy" />
+      <img
+        :src="computedSrcBg"
+        :width="width"
+        :height="height"
+        :alt="alt"
+        loading="lazy"
+      />
     </div>
     <Image
       class="image"
@@ -231,9 +219,7 @@ const closeEnlarge = () => {
       :src="computedSrc"
       :width="computedWidth"
       :height="height"
-      :style="[
-        isVertical ? `width:${computedWidth}px;` : ''
-      ]"
+      :style="[isVertical ? `width:${computedWidth}px;` : '']"
       :alt="alt"
       :preview="allowPreview"
       loading="lazy"
@@ -243,7 +229,10 @@ const closeEnlarge = () => {
       @keypress="emit('keypress', $event.target.value)"
     >
       <template v-if="allowPreview" #indicator>
-        <Button icon="pi pi-arrows-v" class="p-button-sm enlarge-button"></Button>
+        <Button
+          icon="pi pi-arrows-v"
+          class="p-button-sm enlarge-button"
+        ></Button>
       </template>
     </Image>
     <span v-if="loadingEnlargedImage">
@@ -265,31 +254,6 @@ const closeEnlarge = () => {
     </span>
   </div>
 </template>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <style lang="scss">
 .simple-responsive-image-holder {
@@ -336,7 +300,7 @@ const closeEnlarge = () => {
     left: 0;
     overflow: hidden;
     &:after {
-      content: "";
+      content: '';
       background-color: RGB(var(--surface-900));
       width: 100%;
       height: 100%;
