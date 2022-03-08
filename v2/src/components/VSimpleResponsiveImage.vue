@@ -211,48 +211,48 @@ const closeEnlarge = () => {
       />
     </div>
     <client-only v-if="allowPreview">
-    <Image
-      class="image prime-image"
-      :class="isVertical ? 'is-vertical' : ''"
-      image-class="prime-img-class"
-      image-style="width: 100%; height: auto;"
-      :srcset="srcset"
-      :src="computedSrc"
-      :width="computedWidth"
-      :height="height"
-      :style="[isVertical ? `width:${computedWidth}px;` : '']"
-      :alt="alt"
-      :preview="allowPreview"
-      loading="lazy"
-      @show="enlarge"
-      @hide="closeEnlarge"
-      @click="emit('click', $event.target.value)"
-      @keypress="emit('keypress', $event.target.value)"
-    >
-      <template v-if="allowPreview" #indicator>
-        <Button
-          icon="pi pi-arrows-v"
-          class="p-button-sm enlarge-button"
-        ></Button>
-      </template>
-    </Image>
-    <div v-if="loadingEnlargedImage">
-      <Teleport to=".p-component-overlay">
-        <ProgressSpinner
-          v-if="loadingEnlargedImage"
-          style="
-            z-index: -1;
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-          "
-          stroke-width="6"
-        />
-      </Teleport>
-    </div>
+      <Image
+        class="image prime-image"
+        :class="isVertical ? 'is-vertical' : ''"
+        image-class="prime-img-class"
+        image-style="width: 100%; height: auto;"
+        :srcset="srcset"
+        :src="computedSrc"
+        :width="computedWidth"
+        :height="height"
+        :style="[isVertical ? `width:${computedWidth}px;` : '']"
+        :alt="alt"
+        :preview="allowPreview"
+        loading="lazy"
+        @show="enlarge"
+        @hide="closeEnlarge"
+        @click="emit('click', $event.target.value)"
+        @keypress="emit('keypress', $event.target.value)"
+      >
+        <template v-if="allowPreview" #indicator>
+          <Button
+            icon="pi pi-arrows-v"
+            class="p-button-sm enlarge-button"
+          ></Button>
+        </template>
+      </Image>
+      <div v-if="loadingEnlargedImage">
+        <Teleport to=".p-component-overlay">
+          <ProgressSpinner
+            v-if="loadingEnlargedImage"
+            style="
+              z-index: -1;
+              position: fixed;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+            "
+            stroke-width="6"
+          />
+        </Teleport>
+      </div>
     </client-only>
     <img
       v-else
@@ -334,8 +334,12 @@ const closeEnlarge = () => {
   }
 }
 .p-component-overlay {
+  overflow: hidden;
   .p-image-toolbar {
     z-index: 1;
+  }
+  .p-progress-spinner {
+    overflow: hidden;
   }
 }
 </style>
