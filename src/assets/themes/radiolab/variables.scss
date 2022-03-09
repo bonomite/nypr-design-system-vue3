@@ -59,10 +59,8 @@ $colors: (
 // scale-color example
 // $newColor: scale-color($existingColor, $saturation: 30%, $lightness: -30%, $alpha: -90%) !default;
 // can use any of the following $red, $green, $blue, $saturation, $lightness, $whiteness, $blackness, $alpha
-@function hex2rgb($hexColor) {
-    @return "#{red($hexColor)},#{green($hexColor)},#{blue($hexColor)}";
-}
-$primaryColor: #5e81ac !default;
+
+$primaryColor: #ff3904 !default;
 $primaryColorAlt: scale-color($primaryColor, $lightness: 15%) !default;
 $primaryLightColor: scale-color($primaryColor, $lightness: 30%) !default;
 $primaryDarkColor: scale-color($primaryColor, $lightness: -10%) !default;
@@ -94,6 +92,7 @@ $white100: #eceff4 !default;
 $white200: #e5e9f0 !default;
 $white300: #d8dee9 !default;
 
+//gray and surfaces
 $gray-50: #edeef0 !default;
 $gray-100: #dbdde1 !default;
 $gray-200: #b7bbc3 !default;
@@ -104,16 +103,37 @@ $gray-600: #3d4555 !default;
 $gray-700: #2e3440 !default;
 $gray-800: #1e222a !default;
 $gray-900: #0f1115 !default;
+$gray-950: #08090c !default;
 
-//global
+//labels surfaces
+$surfaceGround: #eceff4 !default;
+$surfaceSection: #ffffff !default;
+$surfaceCard: #ffffff !default;
+$surfaceOverlay: #ffffff !default;
+$surfaceBorder: #e5e9f0 !default;
+$surfaceHover: #d8dee9 !default;
+
+$rootFontSize: 18px;
+$fontSize: 1rem !default;
 $fontFamily: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $fontFamilyHeader: "Libre Baskerville", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$fontSize: 1rem !default;
-$fontWeight: normal !default;
 $textColor: $black100 !default;
 $textSecondaryColor: $primaryColorAlt !default;
+$fontWeight: normal !default;
+$fontWeight-100: 100 !default;
+$fontWeight-200: 200 !default;
+$fontWeight-300: 300 !default;
+$fontWeight-400: 400 !default;
+$fontWeight-500: 500 !default;
+$fontWeight-600: 600 !default;
+$fontWeight-700: 700 !default;
+$fontWeight-800: 800 !default;
+$fontWeight-900: 900 !default;
+
+$shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12) !default;
+
 $borderRadius: 4px !default;
 $transitionDuration: 0.2s !default;
 $transitionEase: ease-in-out !default;
@@ -916,126 +936,3 @@ $imagePreviewActionIconWidth: 3rem !default;
 $imagePreviewActionIconHeight: 3rem !default;
 $imagePreviewActionIconFontSize: 1.5rem !default;
 $imagePreviewActionIconBorderRadius: 50% !default;
-
-:root {
-
-    --primary-color: #{$primaryColor};
-    --primary-color-rgb: #{hex2rgb($primaryColor)};
-    --primary-color-alt: #{$primaryColorAlt};
-    --primary-light-color: #{$primaryLightColor};
-    --primary-dark-color: #{$primaryDarkColor};
-    --primary-dark-color-rgb: #{$primaryDarkColor};
-    --primary-darker-color: #{$primaryDarkerColor};
-    --primary-text-color: #{$primaryTextColor};
-    --primary-color-text: #{$primaryTextColor};
-
-    --text-color: #{$black100};
-    --text-color-secondary: #{$primaryColorAlt};
-    --font-family: #{$fontFamily};
-
-    //global
-    --font-family: #{$fontFamily};
-    --font-family-header: #{$fontFamilyHeader};
-    --font-size: #{$fontSize};
-    --font-weight: #{$fontWeight};
-    --text-color: #{$textColor};
-    --text-secondary-color: #{$textSecondaryColor};
-    --border-radius: #{$borderRadius};
-    --transition-duration: #{$transitionDuration};
-    --transition-ease: #{$transitionEase};
-    --form-element-transition: #{$formElementTransition};
-    --action-icon-transition: #{$actionIconTransition};
-    --list-item-transition: #{$listItemTransition};
-    --prime-icon-font: #{$primeIconFont};
-    --prime-icon-font-size: #{$primeIconFontSize};
-    --divider: #{$divider};
-    --inline-spacing: #{$inlineSpacing};
-    --disabled-opacity: #{$disabledOpacity};
-    --mask-bg: #{$maskBg};
-    --loading-icon-font-size: #{$loadingIconFontSize};
-    --error-color: #{$errorColor};
-    --info-color: #{$infoColor};
-    --info-light-color: #{$infoLightColor};
-    --success-color: #{$successColor};
-    --success-light-color: #{$successLightColor};
-    --warning-color: #{$warningColor};
-    --warning-light-color: #{$warningLightColor};
-    --help-color: #{$helpColor};
-    --help-light-color: #{$helpLightColor};
-    --danger-color: #{$dangerColor};
-    --danger-light-color: #{$dangerLightColor};
-    --yellow-color: #{$yellowColor};
-
-    --black: #{$black};
-    --black50: #{$black50};
-    --black100: #{$black100};
-    --black200: #{$black200};
-    --black300: #{$black300};
-    --black400: #{$black400};
-    --black500: #{$black500};
-
-    --white: #{$white};
-    --white100: #{$white100};
-    --white200: #{$white200};
-    --white300: #{$white300};
-
-    --gray-50: #{$gray-50};
-    --gray-100: #{$gray-100};
-    --gray-200: #{$gray-200};
-    --gray-300: #{$gray-300};
-    --gray-400: #{$gray-400};
-    --gray-500: #{$gray-500};
-    --gray-600: #{$gray-600};
-    --gray-700: #{$gray-700};
-    --gray-800: #{$gray-800};
-    --gray-900: #{$gray-900};
-
-    --surface-a: #{$white};
-    --surface-b: #{$white100};
-    --surface-c: #{$white300};
-    --surface-d: #{$white200};
-    --surface-e: #{$white};
-    --surface-f: #{$white};
-
-    --surface-0: #{$white};
-    --surface-50: #{$gray-50};
-    --surface-100: #{$gray-100};
-    --surface-200: #{$gray-200};
-    --surface-300: #{$gray-300};
-    --surface-400: #{$gray-400};
-    --surface-500: #{$gray-500};
-    --surface-600: #{$gray-600};
-    --surface-700: #{$gray-700};
-    --surface-800: #{$gray-800};
-    --surface-900: #{$gray-900};
-    --gray-50: #{$gray-50};
-    --gray-100: #{$gray-100};
-    --gray-200: #{$gray-200};
-    --gray-300: #{$gray-300};
-    --gray-400: #{$gray-400};
-    --gray-500: #{$gray-500};
-    --gray-600: #{$gray-600};
-    --gray-700: #{$gray-700};
-    --gray-800: #{$gray-800};
-    --gray-900: #{$gray-900};
-    --black: #{$black};
-    --content-padding: #{$panelContentPadding};
-    --inline-spacing: #{$inlineSpacing};
-    --border-radius: #{$borderRadius};
-    --surface-ground: #eceff4;
-    --surface-section: #ffffff;
-    --surface-card: #ffffff;
-    --surface-overlay: #ffffff;
-    --surface-border: #e5e9f0;
-    --surface-hover: #d8dee9;
-    --focus-ring: #{$focusShadow};
-    --maskbg: #{$maskBg};
-    --tab-padding: #{$tagPadding};
-    --badge-font-weight: #{$badgeFontWeight};
-    --badge-font-size: #{$badgeFontSize};
-    --badge-letter-spacing: #{$badgeLetterSpacing};
-    --link-button-color: #{$linkButtonColor};
-    --transition-duration: #{$transitionDuration};
-    --link-button-hover-color: #{$linkButtonHoverColor};
-    --link-button-text-hover-decoration: #{$linkButtonTextHoverDecoration};
-}

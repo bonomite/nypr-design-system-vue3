@@ -34,7 +34,7 @@ $h2-config: (
 $h3-config: (
     "default": (
         "values": (
-            "font-family": var(--font-family)Header,
+            "font-family": var(--font-family) Header,
             "font-size": 1.111rem,
             "line-height": 1.667rem,
             "font-weight": var(--fontWeight-400),
@@ -96,10 +96,9 @@ $p-config: (
 $footer-config: (
     "default": (
         "values": (
-            /* "font-family": var(--font-family), */
-            "font-size": 0.75rem,
+            /* "font-family": var(--font-family), */ "font-size": 0.75rem,
             "line-height": 0.75rem,
-/*             "font-weight": var(--fontWeight-400),
+            /*             "font-weight": var(--fontWeight-400),
             "color": var(--text-color), */
         ),
     ),
@@ -138,7 +137,8 @@ p {
     @include font-config($p-config);
 }
 
-p.footer, .footer {
+p.footer,
+.footer {
     @include font-config($footer-config);
 }
 

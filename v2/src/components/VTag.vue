@@ -19,7 +19,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <span class="p-tag-holder">
+  <span class="v-tag">
     <v-flexible-link :to="props.slug" :class="props.slug ? '' : 'disabled'">
       <Button
         :class="props.name"
@@ -34,7 +34,7 @@ const props = defineProps({
 </template>
 
 <style lang="scss">
-.p-tag-holder {
+.v-tag {
   .flexible-link {
     text-decoration: none !important;
     display: inline-flex;
