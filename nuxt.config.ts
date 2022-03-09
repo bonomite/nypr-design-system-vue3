@@ -33,4 +33,9 @@ export default defineNuxtConfig({
   // components: [
   //   { path: '~/v2.src.components/', extensions: ['vue'] }
   // ],
+  build: {
+    transpile: [
+      'primevue'
+    ]
+  }
 })
