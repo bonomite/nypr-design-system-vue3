@@ -17,14 +17,18 @@ export default defineNuxtConfig({
   },
   buildModules: ['nuxt-purgecss'],
   css: [
-
+    '~/src/assets/library/primeflex.min.css',
+    '~/src/assets/themes/white-label/white-label.min.css',
+    'primevue/resources/primevue.min.css',
+    'primeicons/primeicons.css'
   ],
   ssr: false,
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@import "~/src/assets/library/primeflex.min.css"; @import "~/src/assets/themes/white-label/_theme.scss"; @import "primevue/resources/primevue.min.css"; @import "primeicons/primeicons.css";`,
+          //additionalData: `@import "~/src/assets/library/primeflex.min.css"; @import "~/src/assets/themes/white-label/_theme.scss"; @import "primevue/resources/primevue.min.css"; @import "primeicons/primeicons.css";`,
+          additionalData: `@import "~/src/assets/themes/white-label/variables.scss"; @import "~/src/assets/themes/white-label/_mixins.scss";`,
         },
       },
     },
