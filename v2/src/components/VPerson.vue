@@ -3,10 +3,7 @@
     <div
       v-resize="onResize"
       class="person-inner grid grid-nogutter"
-      :class="[
-        hasDetails ? 'has-details' : '',
-        image ? '' : 'no-image',
-      ]"
+      :class="[hasDetails ? 'has-details' : '', image ? '' : 'no-image']"
     >
       <!-- Image section -->
       <div
@@ -22,7 +19,10 @@
           ref="imgRef"
           class="visual-holder"
           :class="[
-            { [`w-${imgScale} m-auto ${bp}:w-12 responsive` ]: orientation === 'responsive' },
+            {
+              [`w-${imgScale} m-auto ${bp}:w-12 responsive`]:
+                orientation === 'responsive',
+            },
             { [`w-${imgScale} m-auto w-12`]: orientation === 'vertical' },
           ]"
         >
@@ -54,7 +54,10 @@
             v-if="video"
             :label="null"
             class="p-button-icon-only pi pi-play video-play-button"
-            :class="[{ 'pi-times': showVideo }, { 'p-button-rounded circle': circle },]"
+            :class="[
+              { 'pi-times': showVideo },
+              { 'p-button-rounded circle': circle },
+            ]"
             :title="
               (showVideo ? 'Close ' : 'Play ') +
               fullName +
@@ -71,7 +74,10 @@
         ref="detailsRef"
         class="person-details flex flex-column justify-content-center"
         :class="[
-          { [`col-12 p-2 text-center ${bp}:text-left ${bp}:col-8 ${bp}:p-3`]: orientation === 'responsive' },
+          {
+            [`col-12 p-2 text-center ${bp}:text-left ${bp}:col-8 ${bp}:p-3`]:
+              orientation === 'responsive',
+          },
           { [`col-12 p-2 text-center`]: orientation === 'vertical' },
           { 'col-8 p-3': orientation === 'horizontal' },
         ]"
@@ -114,12 +120,15 @@
             ref="readMoreRef"
             class="read-more"
             @click="handleBlurb()"
-          >{{ readMore ? 'read less' : 'read more' }}</a>
+            >{{ readMore ? 'read less' : 'read more' }}</a
+          >
         </div>
         <v-share-tools
           v-if="socialArrayData.length > 0"
           class="social"
-          :class="[`text-center justify-content-center ${bp}:justify-content-start ${bp}:text-left`]"
+          :class="[
+            `text-center justify-content-center ${bp}:justify-content-start ${bp}:text-left`,
+          ]"
         >
           <v-share-tools-item
             v-for="(item, index) in socialArrayData"
@@ -160,7 +169,7 @@
           v-if="video"
           :label="null"
           class="p-button-icon-only pi pi-times closer"
-          :class="[{ 'p-button-rounded': circle },]"
+          :class="[{ 'p-button-rounded': circle }]"
           @click="handleVideoClick($event)"
         />
       </div>
@@ -217,7 +226,7 @@ export default {
       default: null,
     },
     /**
-     *  image scale in its container in vertical orientation only, 1(8.333%) through 12(100%) 
+     *  image scale in its container in vertical orientation only, 1(8.333%) through 12(100%)
      */
     imgScale: {
       type: String,
@@ -555,7 +564,7 @@ export default {
   position: relative;
   &:before {
     display: block;
-    content: "";
+    content: '';
     width: 100%;
     padding-top: calc(($height / $width) * 100%);
   }
@@ -699,7 +708,7 @@ export default {
         word-break: keep-all;
         cursor: pointer;
         color: var(--text-color);
-        font-size: 0.75rem;
+        font-size: var(--font-size-4);
         letter-spacing: 0.6px;
         text-transform: uppercase;
         margin-top: spacing(1);
@@ -730,7 +739,7 @@ export default {
         width: 24px;
         height: 24px;
         padding: 0;
-        font-size: 0.6rem;
+        font-size: var(--font-size-2);
         position: absolute;
         cursor: pointer;
         top: spacing(1);

@@ -1,5 +1,4 @@
 <script setup>
-
 import { computed, useSlots } from 'vue'
 import breakpoint from '../../../src/assets/library/breakpoints.module.scss'
 import VTag from './VTag'
@@ -106,8 +105,6 @@ const getMobileImageScale = computed(() => {
   // console.log('breakpoint[props.bp] = ', breakpoint[props.bp])
   return window.innerWidth < breakpoint[props.bp] ? props.mobileImageScale : 1
 })
-
-
 </script>
 
 <template>
@@ -146,17 +143,27 @@ const getMobileImageScale = computed(() => {
     </template>
     <div v-if="hasDetails" class="card-details">
       <div v-if="tags || sponsored" class="card-tags">
-        <v-tag v-for="(tag, index) in tags" :key="index" :name="tag.name" :slug="tag.slug" />
+        <v-tag
+          v-for="(tag, index) in tags"
+          :key="index"
+          :name="tag.name"
+          :slug="tag.slug"
+        />
         <v-tag v-if="sponsored" name="sponsored" />
       </div>
       <div v-if="title" class="card-title" role="heading" aria-level="3">
         <v-flexible-link
           class="card-title-link"
-          :class="{ 'disabled': !titleLink }"
+          :class="{ disabled: !titleLink }"
           :to="titleLink"
         >
           <h2 v-html="title"></h2>
-          <i v-if="icon" :class="`pi pi-${icon}`" role="img" :aria-label="icon + ' icon'"></i>
+          <i
+            v-if="icon"
+            :class="`pi pi-${icon}`"
+            role="img"
+            :aria-label="icon + ' icon'"
+          ></i>
           <slot name="customIcon"></slot>
         </v-flexible-link>
       </div>
@@ -167,7 +174,6 @@ const getMobileImageScale = computed(() => {
     </div>
   </div>
 </template>
-
 
 <style lang="scss">
 .v-card {
@@ -209,7 +215,7 @@ const getMobileImageScale = computed(() => {
         overflow-wrap: anywhere;
         word-break: break-word;
         .pi {
-          font-size: 1.278rem;
+          font-size: var(--font-size-8);
           margin-left: spacing(2);
           margin-top: spacing(0.5);
           text-decoration: none;

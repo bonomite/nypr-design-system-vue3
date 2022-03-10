@@ -38,5 +38,5 @@ NoLink.args = {
 export const CustomRadius = Template.bind({})
 CustomRadius.args = {
     name: 'news',
-    radius: 0,
+    radius: 12,
 }

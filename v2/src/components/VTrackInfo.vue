@@ -195,8 +195,6 @@ $track-info-image-size: 84px;
       }
     }
     .track-info-title {
-      font-family: var(--font-family);
-      font-size: 12px;
       width: 100%;
       text-overflow: ellipsis;
       overflow: hidden;

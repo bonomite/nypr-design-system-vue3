@@ -3,14 +3,14 @@ import VFlexibleLink from './VFlexibleLink'
 const props = defineProps({
   authors: {
     type: Array,
-    default: null
+    default: null,
   },
   prefix: {
     type: String,
-    default: 'by '
-  }
+    default: 'by ',
+  },
 })
-console.log('authors - ',props.authors)
+// console.log('authors - ', props.authors)
 </script>
 
 <template>
@@ -21,36 +21,30 @@ console.log('authors - ',props.authors)
       :key="index"
       class="byline-author"
     >
-      <v-flexible-link
-        v-if="author.url"
-        target="_self"
-        :to="author.url"
-      >{{ author.firstName }}&nbsp;{{ author.lastName }}</v-flexible-link>
-      <template v-else>{{ author.firstName }}&nbsp;{{ author.lastName }}</template>
+      <v-flexible-link v-if="author.url" target="_self" :to="author.url"
+        >{{ author.firstName }}&nbsp;{{ author.lastName }}</v-flexible-link
+      >
+      <template v-else
+        >{{ author.firstName }}&nbsp;{{ author.lastName }}</template
+      >
       <template v-if="author.organization && author.organizationUrl">
-        <v-flexible-link :to="author.organizationUrl">({{ author.organization }})</v-flexible-link>
+        <v-flexible-link :to="author.organizationUrl"
+          >({{ author.organization }})</v-flexible-link
+        >
       </template>
-      <template v-if="author.organization && !author.organizationUrl">({{ author.organization }})</template>
+      <template v-if="author.organization && !author.organizationUrl"
+        >({{ author.organization }})</template
+      >
       <template v-if="index < props.authors.length - 2">,&nbsp;</template>
-      <template v-if="index === props.authors.length - 2">&nbsp;and&nbsp;</template>
+      <template v-if="index === props.authors.length - 2"
+        >&nbsp;and&nbsp;</template
+      >
     </span>
   </div>
 </template>
 
-
-
 <style lang="scss">
 .byline {
-  @include typeface(body, 4);
-  line-height: 25px;
-
-  a,
-  a:visited,
-  a:active {
-    color: var(--color-text);
-    &:hover {
-      color: var(--color-link-hover);
-    }
-  }
+  color: var(--text-color);
 }
 </style>

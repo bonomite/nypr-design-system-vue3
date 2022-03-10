@@ -60,7 +60,7 @@ $colors: (
 // $newColor: scale-color($existingColor, $saturation: 30%, $lightness: -30%, $alpha: -90%) !default;
 // can use any of the following $red, $green, $blue, $saturation, $lightness, $whiteness, $blackness, $alpha
 
-$primaryColor: #ff3904 !default;
+$primaryColor: #5e81ac !default;
 $primaryColorAlt: scale-color($primaryColor, $lightness: 15%) !default;
 $primaryLightColor: scale-color($primaryColor, $lightness: 30%) !default;
 $primaryDarkColor: scale-color($primaryColor, $lightness: -10%) !default;
@@ -113,8 +113,9 @@ $surfaceOverlay: #ffffff !default;
 $surfaceBorder: #e5e9f0 !default;
 $surfaceHover: #d8dee9 !default;
 
-$rootFontSize: 18px;
 $fontSize: 1rem !default;
+$fontRatio: 1.125;
+$fontRatioLarge: 1.333;
 $fontFamily: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $fontFamilyHeader: "Libre Baskerville", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,

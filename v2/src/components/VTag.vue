@@ -48,8 +48,9 @@ const props = defineProps({
       vertical-align: middle;
       .p-button-label {
         font-weight: var(--badge-font-weight);
-        font-size: var(--badge-font-size);
+        font-size: var(--font-size-2);
         letter-spacing: var(--badge-letter-spacing);
+        text-transform: uppercase;
       }
     }
     &:hover {
