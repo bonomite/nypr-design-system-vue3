@@ -10,6 +10,10 @@ const props = defineProps({
     type: String,
     default: '_blank',
   },
+  raw: {
+    type: Boolean,
+    default: false,
+  },
 })
 const isExternal = computed(() => {
   var reg = new RegExp('^(?:[a-z]+:)?//', 'i')
@@ -31,12 +35,14 @@ const isExternal = computed(() => {
     :target="target"
     :rel="`noopener ${props.target === '_blank' ? 'noreferrer' : ''}`"
     class="flexible-link external"
+    :class="{ ['raw']: raw }"
   >
     <slot name="default"></slot>
   </a>
   <nuxt-link
     v-else
     class="flexible-link internal"
+    :class="{ ['raw']: raw }"
     :to="to"
     v-bind="{ ...$attrs }"
   >
@@ -44,7 +50,7 @@ const isExternal = computed(() => {
   </nuxt-link>
 </template>
 <style lang="scss">
-.flexible-link {
+.flexible-link:not(.raw) {
   color: var(--link-button-color);
   transition: all var(--transition-duration);
   * {
@@ -61,5 +67,8 @@ const isExternal = computed(() => {
   &:focus {
     @include focused();
   }
+}
+.flexible-link.raw {
+  text-decoration: none;
 }
 </style>
