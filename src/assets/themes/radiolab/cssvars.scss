@@ -1,202 +1,947 @@
 :root,
 [data-color-mode="default"] {
-    --primary-color: #{$primaryColor};
-    --primary-color-rgb: #{hex2rgb($primaryColor)};
-    --primary-color-alt: #{$primaryColorAlt};
-    --primary-color-alt-rgb: #{hex2rgb($primaryColorAlt)};
-    --primary-light-color: #{$primaryLightColor};
-    --primary-light-color-rgb: #{hex2rgb($primaryLightColor)};
-    --primary-dark-color: #{$primaryDarkColor};
-    --primary-dark-color-rgb: #{hex2rgb($primaryDarkColor)};
-    --primary-darker-color: #{$primaryDarkerColor};
-    --primary-darker-color-rgb: #{hex2rgb($primaryDarkerColor)};
+  --primaryColor: #{hex2rgb($primaryColor)};
+  --primaryColorAlt: #{hex2rgb($primaryColorAlt)};
+  --primaryLightColor: #{hex2rgb($primaryLightColor)};
+  --primaryDarkColor: #{hex2rgb($primaryDarkColor)};
+  --primaryDarkerColor: #{hex2rgb($primaryDarkerColor)};
+  --primaryTextColor: #{hex2rgb($primaryTextColor)};
 
-    --link-button-color: #{$linkButtonColor};
-    --link-button-hover-color: #{$linkButtonHoverColor};
-    --link-button-text-hover-decoration: #{$linkButtonTextHoverDecoration};
+  --infoColor: #{hex2rgb($infoColor)};
+  --infoLightColor: #{hex2rgb($infoLightColor)};
+  --successColor: #{hex2rgb($successColor)};
+  --successLightColor: #{hex2rgb($successLightColor)};
+  --warningColor: #{hex2rgb($warningColor)};
+  --warningLightColor: #{hex2rgb($warningLightColor)};
+  --helpColor: #{hex2rgb($helpColor)};
+  --helpLightColor: #{hex2rgb($helpLightColor)};
+  --dangerColor: #{hex2rgb($dangerColor)};
+  --dangerLightColor: #{hex2rgb($dangerLightColor)};
+  --yellowColor: #{hex2rgb($yellowColor)};
 
-    --error-color: #{$errorColor};
-    --info-color: #{$infoColor};
-    --info-light-color: #{$infoLightColor};
-    --success-color: #{$successColor};
-    --success-light-color: #{$successLightColor};
-    --warning-color: #{$warningColor};
-    --warning-light-color: #{$warningLightColor};
-    --help-color: #{$helpColor};
-    --help-light-color: #{$helpLightColor};
-    --danger-color: #{$dangerColor};
-    --danger-light-color: #{$dangerLightColor};
-    --yellow-color: #{$yellowColor};
+  --black: #{hex2rgb($black)};
+  --black50: #{hex2rgb($black50)};
+  --black100: #{hex2rgb($black100)};
+  --black200: #{hex2rgb($black200)};
+  --black300: #{hex2rgb($black300)};
+  --black400: #{hex2rgb($black400)};
+  --black500: #{hex2rgb($black500)};
 
-    --text-color: #{$textColor};
-    --text-color-secondary: #{$primaryColorAlt};
-    --font-family: #{$fontFamily};
-    --font-size: #{$fontSize};
-    --font-ratio: #{$fontRatio};
-    --font-ratio-large: #{$fontRatioLarge};
+  --white: #{hex2rgb($white)};
+  --white100: #{hex2rgb($white100)};
+  --white200: #{hex2rgb($white200)};
+  --white300: #{hex2rgb($white300)};
 
-    --font-size-1: calc(var(--font-size-2) / var(--font-ratio));
-    --font-size-2: calc(var(--font-size-3) / var(--font-ratio));
-    --font-size-3: calc(var(--font-size-4) / var(--font-ratio));
-    --font-size-4: calc(var(--font-size-5) / var(--font-ratio));
-    --font-size-5: calc(var(--font-size-6) / var(--font-ratio));
-    --font-size-6: var(--font-size);
-    --font-size-7: calc(var(--font-size-6) * var(--font-ratio));
-    --font-size-8: calc(var(--font-size-7) * var(--font-ratio));
-    --font-size-9: calc(var(--font-size-8) * var(--font-ratio));
-    --font-size-10: calc(var(--font-size-9) * var(--font-ratio));
-    --font-size-11: calc(var(--font-size-10) * var(--font-ratio));
-    --font-size-12: calc(var(--font-size-11) * var(--font-ratio));
-    --font-size-13: calc(var(--font-size-12) * var(--font-ratio));
-    --font-size-14: calc(var(--font-size-13) * var(--font-ratio));
-    --font-size-15: calc(var(--font-size-14) * var(--font-ratio));
-    --font-size-16: calc(var(--font-size-15) * var(--font-ratio));
-    --font-size-17: calc(var(--font-size-16) * var(--font-ratio));
-    --font-size-18: calc(var(--font-size-17) * var(--font-ratio));
-    --font-size-19: calc(var(--font-size-18) * var(--font-ratio));
-    --font-size-20: calc(var(--font-size-19) * var(--font-ratio));
+  //gray and surfaces
+  --gray-50: #{hex2rgb($gray-50)};
+  --gray-100: #{hex2rgb($gray-100)};
+  --gray-200: #{hex2rgb($gray-200)};
+  --gray-300: #{hex2rgb($gray-300)};
+  --gray-400: #{hex2rgb($gray-400)};
+  --gray-500: #{hex2rgb($gray-500)};
+  --gray-600: #{hex2rgb($gray-600)};
+  --gray-700: #{hex2rgb($gray-700)};
+  --gray-800: #{hex2rgb($gray-800)};
+  --gray-900: #{hex2rgb($gray-900)};
+  --gray-950: #{hex2rgb($gray-950)};
 
-    --primary-text-color: #{$primaryTextColor};
-    --primary-color-text: #{$primaryTextColor};
-    --font-weight: #{$fontWeight};
-    --font-weight-100: #{$fontWeight-100};
-    --font-weight-200: #{$fontWeight-200};
-    --font-weight-300: #{$fontWeight-300};
-    --font-weight-400: #{$fontWeight-400};
-    --font-weight-500: #{$fontWeight-500};
-    --font-weight-600: #{$fontWeight-600};
-    --font-weight-700: #{$fontWeight-700};
-    --font-weight-800: #{$fontWeight-800};
-    --font-weight-900: #{$fontWeight-900};
-    --font-family: #{$fontFamily};
-    --font-family-header: #{$fontFamilyHeader};
-    --font-size: #{$fontSize};
-    --text-secondary-color: #{$textSecondaryColor};
+  --surface-0: #{hex2rgb($white)};
+  --surface-50: #{hex2rgb($gray-50)};
+  --surface-100: #{hex2rgb($gray-100)};
+  --surface-200: #{hex2rgb($gray-200)};
+  --surface-300: #{hex2rgb($gray-300)};
+  --surface-400: #{hex2rgb($gray-400)};
+  --surface-500: #{hex2rgb($gray-500)};
+  --surface-600: #{hex2rgb($gray-600)};
+  --surface-700: #{hex2rgb($gray-700)};
+  --surface-800: #{hex2rgb($gray-800)};
+  --surface-900: #{hex2rgb($gray-900)};
 
-    --border-radius: #{$borderRadius};
-    --transition-duration: #{$transitionDuration};
-    --transition-ease: #{$transitionEase};
-    --form-element-transition: #{$formElementTransition};
-    --action-icon-transition: #{$actionIconTransition};
-    --list-item-transition: #{$listItemTransition};
-    --prime-icon-font: #{$primeIconFont};
-    --prime-icon-font-size: #{$primeIconFontSize};
-    --divider: #{$divider};
-    --inline-spacing: #{$inlineSpacing};
-    --disabled-opacity: #{$disabledOpacity};
-    --mask-bg: #{$maskBg};
-    --loading-icon-font-size: #{$loadingIconFontSize};
+  //labels surfaces
+  --surfaceGround: #{hex2rgb($surfaceGround)};
+  --surfaceSection: #{hex2rgb($surfaceSection)};
+  --surfaceCard: #{hex2rgb($surfaceCard)};
+  --surfaceOverlay: #{hex2rgb($surfaceOverlay)};
+  --surfaceBorder: #{hex2rgb($surfaceBorder)};
+  --surfaceHover: #{hex2rgb($surfaceHover)};
 
-    --shadow: #{$shadow};
-    --maskbg: #{$maskBg};
+  --fontSize: #{$fontSize};
+  --fontRatio: #{$fontRatio};
+  --fontRatioLarge: #{$fontRatioLarge};
+  --fontFamily: #{$fontFamily};
+  --fontFamilyHeader: #{$fontFamilyHeader};
+  --textColor: #{hex2rgb($textColor)};
+  --textSecondaryColor: #{hex2rgb($textSecondaryColor)};
 
-    --transition-duration: #{$transitionDuration};
+  --fontSize-1: calc(var(--fontSize-2) / var(--fontRatio));
+  --fontSize-2: calc(var(--fontSize-3) / var(--fontRatio));
+  --fontSize-3: calc(var(--fontSize-4) / var(--fontRatio));
+  --fontSize-4: calc(var(--fontSize-5) / var(--fontRatio));
+  --fontSize-5: calc(var(--fontSize-6) / var(--fontRatio));
+  --fontSize-6: var(--fontSize);
+  --fontSize-7: calc(var(--fontSize-6) * var(--fontRatio));
+  --fontSize-8: calc(var(--fontSize-7) * var(--fontRatio));
+  --fontSize-9: calc(var(--fontSize-8) * var(--fontRatio));
+  --fontSize-10: calc(var(--fontSize-9) * var(--fontRatio));
+  --fontSize-11: calc(var(--fontSize-10) * var(--fontRatio));
+  --fontSize-12: calc(var(--fontSize-11) * var(--fontRatio));
+  --fontSize-13: calc(var(--fontSize-12) * var(--fontRatio));
+  --fontSize-14: calc(var(--fontSize-13) * var(--fontRatio));
+  --fontSize-15: calc(var(--fontSize-14) * var(--fontRatio));
+  --fontSize-16: calc(var(--fontSize-15) * var(--fontRatio));
+  --fontSize-17: calc(var(--fontSize-16) * var(--fontRatio));
+  --fontSize-18: calc(var(--fontSize-17) * var(--fontRatio));
+  --fontSize-19: calc(var(--fontSize-18) * var(--fontRatio));
+  --fontSize-20: calc(var(--fontSize-19) * var(--fontRatio));
 
-    --black: #{$black};
-    --black50: #{$black50};
-    --black100: #{$black100};
-    --black200: #{$black200};
-    --black300: #{$black300};
-    --black400: #{$black400};
-    --black500: #{$black500};
+  --fontWeight: #{$fontWeight};
+  --fontWeight-100: #{$fontWeight-100};
+  --fontWeight-200: #{$fontWeight-200};
+  --fontWeight-300: #{$fontWeight-300};
+  --fontWeight-400: #{$fontWeight-400};
+  --fontWeight-500: #{$fontWeight-500};
+  --fontWeight-600: #{$fontWeight-600};
+  --fontWeight-700: #{$fontWeight-700};
+  --fontWeight-800: #{$fontWeight-800};
+  --fontWeight-900: #{$fontWeight-900};
 
-    --white: #{$white};
-    --white100: #{$white100};
-    --white200: #{$white200};
-    --white300: #{$white300};
+  --shadow: #{$shadow};
 
-    --gray-50: #{$gray-50};
-    --gray-100: #{$gray-100};
-    --gray-200: #{$gray-200};
-    --gray-300: #{$gray-300};
-    --gray-400: #{$gray-400};
-    --gray-500: #{$gray-500};
-    --gray-600: #{$gray-600};
-    --gray-700: #{$gray-700};
-    --gray-800: #{$gray-800};
-    --gray-900: #{$gray-900};
+  --borderRadius: #{$borderRadius};
+  --transitionDuration: #{$transitionDuration};
+  --transitionEase: #{$transitionEase};
+  --formElementTransition: #{$formElementTransition};
+  --actionIconTransition: #{$actionIconTransition};
+  --listItemTransition: #{$listItemTransition};
+  --primeIconFont: #{$primeIconFont};
+  --primeIconFontSize: #{$primeIconFontSize};
+  --divider: #{$divider};
+  --inlineSpacing: #{$inlineSpacing};
+  --disabledOpacity: #{$disabledOpacity};
+  --maskBg: #{$maskBg};
+  --loadingIconFontSize: #{$loadingIconFontSize};
+  --errorColor: #{hex2rgb($errorColor)};
 
-    --surface-a: #{$white};
-    --surface-b: #{$white100};
-    --surface-c: #{$white300};
-    --surface-d: #{$white200};
-    --surface-e: #{$white};
-    --surface-f: #{$white};
+  //highlight
+  --highlightBg: #{hex2rgb($highlightBg)};
+  --highlightTextColor: #{hex2rgb($highlightTextColor)};
 
-    --surface-0: #{$white};
-    --surface-50: #{$gray-50};
-    --surface-100: #{$gray-100};
-    --surface-200: #{$gray-200};
-    --surface-300: #{$gray-300};
-    --surface-400: #{$gray-400};
-    --surface-500: #{$gray-500};
-    --surface-600: #{$gray-600};
-    --surface-700: #{$gray-700};
-    --surface-800: #{$gray-800};
-    --surface-900: #{$gray-900};
-    --gray-50: #{$gray-50};
-    --gray-100: #{$gray-100};
-    --gray-200: #{$gray-200};
-    --gray-300: #{$gray-300};
-    --gray-400: #{$gray-400};
-    --gray-500: #{$gray-500};
-    --gray-600: #{$gray-600};
-    --gray-700: #{$gray-700};
-    --gray-800: #{$gray-800};
-    --gray-900: #{$gray-900};
-    --black: #{$black};
+  //scale
+  --scaleSM: #{$scaleSM};
+  --scaleLG: #{$scaleLG};
 
-    --content-padding: #{$panelContentPadding};
-    --inline-spacing: #{$inlineSpacing};
-    --border-radius: #{$borderRadius};
+  //focus
+  --focusOutlineColor: #{hex2rgb($focusOutlineColor)};
+  --focusOutline: #{$focusOutline};
+  --focusOutlineOffset: #{$focusOutlineOffset};
+  --focusShadow: #{$focusShadow};
 
-    --surface-ground: #{$surfaceGround};
-    --surface-section: #{$surfaceSection};
-    --surface-card: #{$surfaceCard};
-    --surface-overlay: #{$surfaceOverlay};
-    --surface-border: #{$surfaceBorder};
-    --surface-hover: #{$surfaceHover};
+  //action icons
+  --actionIconWidth: #{$actionIconWidth};
+  --actionIconHeight: #{$actionIconHeight};
+  --actionIconBg: #{$actionIconBg};
+  --actionIconBorder: #{$actionIconBorder};
+  --actionIconColor: #{hex2rgb($actionIconColor)};
+  --actionIconHoverBg: #{hex2rgb($actionIconHoverBg)};
+  --actionIconHoverBorderColor: #{hex2rgb($actionIconHoverBorderColor)};
+  --actionIconHoverColor: #{hex2rgb($actionIconHoverColor)};
+  --actionIconBorderRadius: #{$actionIconBorderRadius};
 
-    --focus-ring: #{$focusShadow};
-    --tab-padding: #{$tagPadding};
-    --badge-font-weight: #{$badgeFontWeight};
-    --badge-font-size: #{$badgeFontSize};
-    --badge-letter-spacing: #{$badgeLetterSpacing};
+  //input field (e.g. inputtext, spinner, inputmask)
+  --inputPadding: #{$inputPadding};
+  --inputTextFontSize: #{$inputTextFontSize};
+
+  --inputBg: #{$inputBg};
+  --inputTextColor: #{hex2rgb($inputTextColor)};
+  --inputIconColor: #{hex2rgb($inputIconColor)};
+  --inputBorder: #{$inputBorder};
+  --inputHoverBorderColor: #{hex2rgb($inputHoverBorderColor)};
+  --inputFocusBorderColor: #{hex2rgb($inputFocusBorderColor)};
+  --inputErrorBorderColor: #{hex2rgb($inputErrorBorderColor)};
+  --inputPlaceholderTextColor: #{hex2rgb($inputPlaceholderTextColor)};
+  --inputFilledBg: #{hex2rgb($inputFilledBg)};
+  --inputFilledHoverBg: #{hex2rgb($inputFilledHoverBg)};
+  --inputFilledFocusBg: #{hex2rgb($inputFilledFocusBg)};
+
+  //input groups
+  --inputGroupBg: #{hex2rgb($inputGroupBg)};
+  --inputGroupTextColor: #{hex2rgb($inputGroupTextColor)};
+  --inputGroupAddOnMinWidth: #{$inputGroupAddOnMinWidth};
+
+  //input lists (e.g. dropdown, autocomplete, multiselect, orderlist)
+  --inputListBg: #{$inputListBg};
+  --inputListTextColor: #{hex2rgb($inputListTextColor)};
+  --inputListBorder: #{$inputListBorder};
+  --inputListPadding: #{$inputListPadding};
+  --inputListItemPadding: #{$inputListItemPadding};
+  --inputListItemBg: #{$inputListItemBg};
+  --inputListItemTextColor: #{hex2rgb($inputListItemTextColor)};
+  --inputListItemHoverBg: #{$inputListItemHoverBg};
+  --inputListItemTextHoverColor: #{hex2rgb($inputListItemTextHoverColor)};
+  --inputListItemBorder: #{$inputListItemBorder};
+  --inputListItemBorderRadius: #{$inputListItemBorderRadius};
+  --inputListItemMargin: #{$inputListItemMargin};
+  --inputListItemFocusShadow: #{$inputListItemFocusShadow};
+  --inputListHeaderPadding: #{$inputListHeaderPadding};
+  --inputListHeaderMargin: #{$inputListHeaderMargin};
+  --inputListHeaderBg: #{hex2rgb($inputListHeaderBg)};
+  --inputListHeaderTextColor: #{hex2rgb($inputListHeaderTextColor)};
+  --inputListHeaderBorder: #{$inputListHeaderBorder};
+
+  //inputs with overlays (e.g. autocomplete, dropdown, multiselect)
+  --inputOverlayBg: #{hex2rgb($inputOverlayBg)};
+  --inputOverlayHeaderBg: #{hex2rgb($inputOverlayHeaderBg)};
+  --inputOverlayBorder: #{$inputOverlayBorder};
+  --inputOverlayShadow: #{$inputOverlayShadow};
+
+  //password
+  --passwordMeterBg: #{hex2rgb($passwordMeterBg)};
+  --passwordWeakBg: #{hex2rgb($passwordWeakBg)};
+  --passwordMediumBg: #{hex2rgb($passwordMediumBg)};
+  --passwordStrongBg: #{hex2rgb($passwordStrongBg)};
+
+  //button
+  --buttonPadding: #{$buttonPadding};
+  --buttonIconOnlyWidth: #{$buttonIconOnlyWidth};
+  --buttonIconOnlyPadding: #{$buttonIconOnlyPadding};
+  --buttonBg: #{hex2rgb($buttonBg)};
+  --buttonTextColor: #{hex2rgb($buttonTextColor)};
+  --buttonBorder: #{$buttonBorder};
+  --buttonHoverBg: #{hex2rgb($buttonHoverBg)};
+  --buttonTextHoverColor: #{hex2rgb($buttonTextHoverColor)};
+  --buttonHoverBorderColor: #{hex2rgb($buttonHoverBorderColor)};
+  --buttonActiveBg: #{hex2rgb($buttonActiveBg)};
+  --buttonTextActiveColor: #{hex2rgb($buttonTextActiveColor)};
+  --buttonActiveBorderColor: #{hex2rgb($buttonActiveBorderColor)};
+  --raisedButtonShadow: #{$raisedButtonShadow};
+  --roundedButtonBorderRadius: #{$roundedButtonBorderRadius};
+
+  --textButtonHoverBgOpacity: #{$textButtonHoverBgOpacity};
+  --textButtonActiveBgOpacity: #{$textButtonActiveBgOpacity};
+  --outlinedButtonBorder: #{$outlinedButtonBorder};
+  --plainButtonTextColor: #{hex2rgb($plainButtonTextColor)};
+  --plainButtonHoverBgColor: #{hex2rgb($plainButtonHoverBgColor)};
+  --plainButtonActiveBgColor: #{hex2rgb($plainButtonActiveBgColor)};
+
+  --secondaryButtonBg: #{hex2rgb($secondaryButtonBg)};
+  --secondaryButtonTextColor: #{hex2rgb($secondaryButtonTextColor)};
+  --secondaryButtonBorder: #{$secondaryButtonBorder};
+  --secondaryButtonHoverBg: #{hex2rgb($secondaryButtonHoverBg)};
+  --secondaryButtonTextHoverColor: #{hex2rgb($secondaryButtonTextHoverColor)};
+  --secondaryButtonHoverBorderColor: #{hex2rgb($secondaryButtonHoverBorderColor)};
+  --secondaryButtonActiveBg: #{hex2rgb($secondaryButtonActiveBg)};
+  --secondaryButtonTextActiveColor: #{hex2rgb($secondaryButtonTextActiveColor)};
+  --secondaryButtonActiveBorderColor: #{hex2rgb($secondaryButtonActiveBorderColor)};
+  --secondaryButtonFocusShadow: #{$secondaryButtonFocusShadow};
+
+  --infoButtonBg: #{hex2rgb($infoButtonBg)};
+  --infoButtonTextColor: #{hex2rgb($infoButtonTextColor)};
+  --infoButtonBorder: #{$infoButtonBorder};
+  --infoButtonHoverBg: #{hex2rgb($infoButtonHoverBg)};
+  --infoButtonTextHoverColor: #{hex2rgb($infoButtonTextHoverColor)};
+  --infoButtonHoverBorderColor: #{hex2rgb($infoButtonHoverBorderColor)};
+  --infoButtonActiveBg: #{hex2rgb($infoButtonActiveBg)};
+  --infoButtonTextActiveColor: #{hex2rgb($infoButtonTextActiveColor)};
+  --infoButtonActiveBorderColor: #{hex2rgb($infoButtonActiveBorderColor)};
+  --infoButtonFocusShadow: #{$infoButtonFocusShadow};
+
+  --successButtonBg: #{hex2rgb($successButtonBg)};
+  --successButtonTextColor: #{hex2rgb($successButtonTextColor)};
+  --successButtonBorder: #{$successButtonBorder};
+  --successButtonHoverBg: #{hex2rgb($successButtonHoverBg)};
+  --successButtonTextHoverColor: #{hex2rgb($successButtonTextHoverColor)};
+  --successButtonHoverBorderColor: #{hex2rgb($successButtonHoverBorderColor)};
+  --successButtonActiveBg: #{hex2rgb($successButtonActiveBg)};
+  --successButtonTextActiveColor: #{hex2rgb($successButtonTextActiveColor)};
+  --successButtonActiveBorderColor: #{hex2rgb($successButtonActiveBorderColor)};
+  --successButtonFocusShadow: #{$successButtonFocusShadow};
+
+  --warningButtonBg: #{hex2rgb($warningButtonBg)};
+  --warningButtonTextColor: #{hex2rgb($warningButtonTextColor)};
+  --warningButtonBorder: #{$warningButtonBorder};
+  --warningButtonHoverBg: #{hex2rgb($warningButtonHoverBg)};
+  --warningButtonTextHoverColor: #{hex2rgb($warningButtonTextHoverColor)};
+  --warningButtonHoverBorderColor: #{hex2rgb($warningButtonHoverBorderColor)};
+  --warningButtonActiveBg: #{hex2rgb($warningButtonActiveBg)};
+  --warningButtonTextActiveColor: #{hex2rgb($warningButtonTextActiveColor)};
+  --warningButtonActiveBorderColor: #{hex2rgb($warningButtonActiveBorderColor)};
+  --warningButtonFocusShadow: #{$warningButtonFocusShadow};
+
+  --helpButtonBg: #{hex2rgb($helpButtonBg)};
+  --helpButtonTextColor: #{hex2rgb($helpButtonTextColor)};
+  --helpButtonBorder: #{$helpButtonBorder};
+  --helpButtonHoverBg: #{hex2rgb($helpButtonHoverBg)};
+  --helpButtonTextHoverColor: #{hex2rgb($helpButtonTextHoverColor)};
+  --helpButtonHoverBorderColor: #{hex2rgb($helpButtonHoverBorderColor)};
+  --helpButtonActiveBg: #{hex2rgb($helpButtonActiveBg)};
+  --helpButtonTextActiveColor: #{hex2rgb($helpButtonTextActiveColor)};
+  --helpButtonActiveBorderColor: #{hex2rgb($helpButtonActiveBorderColor)};
+  --helpButtonFocusShadow: #{$helpButtonFocusShadow};
+
+  --dangerButtonBg: #{hex2rgb($dangerButtonBg)};
+  --dangerButtonTextColor: #{hex2rgb($dangerButtonTextColor)};
+  --dangerButtonBorder: #{$dangerButtonBorder};
+  --dangerButtonHoverBg: #{hex2rgb($dangerButtonHoverBg)};
+  --dangerButtonTextHoverColor: #{hex2rgb($dangerButtonTextHoverColor)};
+  --dangerButtonHoverBorderColor: #{hex2rgb($dangerButtonHoverBorderColor)};
+  --dangerButtonActiveBg: #{hex2rgb($dangerButtonActiveBg)};
+  --dangerButtonTextActiveColor: #{hex2rgb($dangerButtonTextActiveColor)};
+  --dangerButtonActiveBorderColor: #{hex2rgb($dangerButtonActiveBorderColor)};
+  --dangerButtonFocusShadow: #{$dangerButtonFocusShadow};
+
+  --linkButtonColor: #{hex2rgb($linkButtonColor)};
+  --linkButtonHoverColor: #{hex2rgb($linkButtonHoverColor)};
+  --linkButtonTextHoverDecoration: #{$linkButtonTextHoverDecoration};
+  --linkButtonFocusShadow: #{$linkButtonFocusShadow};
+
+  //checkbox
+  --checkboxWidth: #{$checkboxWidth};
+  --checkboxHeight: #{$checkboxHeight};
+  --checkboxBorder: #{$checkboxBorder};
+  --checkboxIconFontSize: #{$checkboxIconFontSize};
+  --checkboxActiveBorderColor: #{hex2rgb($checkboxActiveBorderColor)};
+  --checkboxActiveBg: #{hex2rgb($checkboxActiveBg)};
+  --checkboxIconActiveColor: #{hex2rgb($checkboxIconActiveColor)};
+  --checkboxActiveHoverBg: #{hex2rgb($checkboxActiveHoverBg)};
+  --checkboxIconActiveHoverColor: #{hex2rgb($checkboxIconActiveHoverColor)};
+  --checkboxActiveHoverBorderColor: #{hex2rgb($checkboxActiveHoverBorderColor)};
+
+  //radiobutton
+  --radiobuttonWidth: #{$radiobuttonWidth};
+  --radiobuttonHeight: #{$radiobuttonHeight};
+  --radiobuttonBorder: #{$radiobuttonBorder};
+  --radiobuttonIconSize: #{$radiobuttonIconSize};
+  --radiobuttonActiveBorderColor: #{hex2rgb($radiobuttonActiveBorderColor)};
+  --radiobuttonActiveBg: #{hex2rgb($radiobuttonActiveBg)};
+  --radiobuttonIconActiveColor: #{hex2rgb($radiobuttonIconActiveColor)};
+  --radiobuttonActiveHoverBg: #{hex2rgb($radiobuttonActiveHoverBg)};
+  --radiobuttonIconActiveHoverColor: #{hex2rgb($radiobuttonIconActiveHoverColor)};
+  --radiobuttonActiveHoverBorderColor: #{hex2rgb($radiobuttonActiveHoverBorderColor)};
+
+  //colorpicker
+  --colorPickerPreviewWidth: #{$colorPickerPreviewWidth};
+  --colorPickerPreviewHeight: #{$colorPickerPreviewHeight};
+  --colorPickerBg: #{hex2rgb($colorPickerBg)};
+  --colorPickerBorder: #{$colorPickerBorder};
+  --colorPickerHandleColor: #{hex2rgb($colorPickerHandleColor)};
+
+  //togglebutton
+  --toggleButtonBg: #{hex2rgb($toggleButtonBg)};
+  --toggleButtonBorder: #{$toggleButtonBorder};
+  --toggleButtonTextColor: #{hex2rgb($toggleButtonTextColor)};
+  --toggleButtonIconColor: #{hex2rgb($toggleButtonIconColor)};
+  --toggleButtonHoverBg: #{hex2rgb($toggleButtonHoverBg)};
+  --toggleButtonHoverBorderColor: #{hex2rgb($toggleButtonHoverBorderColor)};
+  --toggleButtonTextHoverColor: #{hex2rgb($toggleButtonTextHoverColor)};
+  --toggleButtonIconHoverColor: #{hex2rgb($toggleButtonIconHoverColor)};
+  --toggleButtonActiveBg: #{hex2rgb($toggleButtonActiveBg)};
+  --toggleButtonActiveBorderColor: #{hex2rgb($toggleButtonActiveBorderColor)};
+  --toggleButtonTextActiveColor: #{hex2rgb($toggleButtonTextActiveColor)};
+  --toggleButtonIconActiveColor: #{hex2rgb($toggleButtonIconActiveColor)};
+  --toggleButtonActiveHoverBg: #{hex2rgb($toggleButtonActiveHoverBg)};
+  --toggleButtonActiveHoverBorderColor: #{hex2rgb($toggleButtonActiveHoverBorderColor)};
+  --toggleButtonTextActiveHoverColor: #{hex2rgb($toggleButtonTextActiveHoverColor)};
+  --toggleButtonIconActiveHoverColor: #{hex2rgb($toggleButtonIconActiveHoverColor)};
+
+  //inplace
+  --inplacePadding: #{$inplacePadding};
+  --inplaceHoverBg: #{hex2rgb($inplaceHoverBg)};
+  --inplaceTextHoverColor: #{hex2rgb($inplaceTextHoverColor)};
+
+  //rating
+  --ratingIconFontSize: #{$ratingIconFontSize};
+  --ratingCancelIconColor: #{hex2rgb($ratingCancelIconColor)};
+  --ratingCancelIconHoverColor: #{hex2rgb($ratingCancelIconHoverColor)};
+  --ratingStarIconOffColor: #{hex2rgb($ratingStarIconOffColor)};
+  --ratingStarIconOnColor: #{hex2rgb($ratingStarIconOnColor)};
+  --ratingStarIconHoverColor: #{hex2rgb($ratingStarIconHoverColor)};
+
+  //slider
+  --sliderBg: #{hex2rgb($sliderBg)};
+  --sliderBorder: #{$sliderBorder};
+  --sliderHorizontalHeight: #{$sliderHorizontalHeight};
+  --sliderVerticalWidth: #{$sliderVerticalWidth};
+  --sliderHandleWidth: #{$sliderHandleWidth};
+  --sliderHandleHeight: #{$sliderHandleHeight};
+  --sliderHandleBg: #{hex2rgb($sliderHandleBg)};
+  --sliderHandleBorder: #{$sliderHandleBorder};
+  --sliderHandleBorderRadius: #{$sliderHandleBorderRadius};
+  --sliderHandleHoverBorderColor: #{hex2rgb($sliderHandleHoverBorderColor)};
+  --sliderHandleHoverBg: #{hex2rgb($sliderHandleHoverBg)};
+  --sliderRangeBg: #{hex2rgb($sliderRangeBg)};
+
+  //calendar
+  --calendarTableMargin: #{$calendarTableMargin};
+  --calendarPadding: #{$calendarPadding};
+  --calendarBg: #{hex2rgb($calendarBg)};
+  --calendarInlineBg: #{hex2rgb($calendarInlineBg)};
+  --calendarTextColor: #{hex2rgb($calendarTextColor)};
+  --calendarBorder: #{$calendarBorder};
+  --calendarOverlayBorder: #{$calendarOverlayBorder};
+
+  --calendarHeaderPadding: #{$calendarHeaderPadding};
+  --calendarHeaderBg: #{hex2rgb($calendarHeaderBg)};
+  --calendarInlineHeaderBg: #{hex2rgb($calendarInlineHeaderBg)};
+  --calendarHeaderBorder: #{$calendarHeaderBorder};
+  --calendarHeaderTextColor: #{hex2rgb($calendarHeaderTextColor)};
+  --calendarHeaderFontWeight: #{$calendarHeaderFontWeight};
+  --calendarHeaderCellPadding: #{$calendarHeaderCellPadding};
+  --calendarMonthYearHeaderHoverTextColor: #{hex2rgb($calendarMonthYearHeaderHoverTextColor)};
+
+  --calendarCellDatePadding: #{$calendarCellDatePadding};
+  --calendarCellDateWidth: #{$calendarCellDateWidth};
+  --calendarCellDateHeight: #{$calendarCellDateHeight};
+  --calendarCellDateBorderRadius: #{$calendarCellDateBorderRadius};
+  --calendarCellDateBorder: #{$calendarCellDateBorder};
+  --calendarCellDateHoverBg: #{hex2rgb($calendarCellDateHoverBg)};
+  --calendarCellDateTodayBg: #{hex2rgb($calendarCellDateTodayBg)};
+  --calendarCellDateTodayBorderColor: #{$calendarCellDateTodayBorderColor};
+  --calendarCellDateTodayTextColor: #{hex2rgb($calendarCellDateTodayTextColor)};
+
+  --calendarButtonBarPadding: #{$calendarButtonBarPadding};
+  --calendarTimePickerPadding: #{$calendarTimePickerPadding};
+  --calendarTimePickerElementPadding: #{$calendarTimePickerElementPadding};
+  --calendarTimePickerTimeFontSize: #{$calendarTimePickerTimeFontSize};
+
+  --calendarBreakpoint: #{$calendarBreakpoint};
+  --calendarCellDatePaddingSM: #{$calendarCellDatePaddingSM};
+
+  //input switch
+  --inputSwitchWidth: #{$inputSwitchWidth};
+  --inputSwitchHeight: #{$inputSwitchHeight};
+  --inputSwitchBorderRadius: #{$inputSwitchBorderRadius};
+  --inputSwitchHandleWidth: #{$inputSwitchHandleWidth};
+  --inputSwitchHandleHeight: #{$inputSwitchHandleHeight};
+  --inputSwitchHandleBorderRadius: #{$inputSwitchHandleBorderRadius};
+  --inputSwitchSliderPadding: #{$inputSwitchSliderPadding};
+  --inputSwitchSliderOffBg: #{hex2rgb($inputSwitchSliderOffBg)};
+  --inputSwitchHandleOffBg: #{hex2rgb($inputSwitchHandleOffBg)};
+  --inputSwitchSliderOffHoverBg: #{hex2rgb($inputSwitchSliderOffHoverBg)};
+  --inputSwitchSliderOnBg: #{hex2rgb($inputSwitchSliderOnBg)};
+  --inputSwitchSliderOnHoverBg: #{hex2rgb($inputSwitchSliderOnHoverBg)};
+  --inputSwitchHandleOnBg: #{hex2rgb($inputSwitchHandleOnBg)};
+
+  //panel
+  --panelHeaderBorderColor: #{hex2rgb($panelHeaderBorderColor)};
+  --panelHeaderBorder: #{$panelHeaderBorder};
+  --panelHeaderBg: #{hex2rgb($panelHeaderBg)};
+  --panelHeaderTextColor: #{hex2rgb($panelHeaderTextColor)};
+  --panelHeaderFontWeight: #{$panelHeaderFontWeight};
+  --panelHeaderPadding: #{$panelHeaderPadding};
+  --panelToggleableHeaderPadding: #{$panelToggleableHeaderPadding};
+
+  --panelHeaderHoverBg: #{hex2rgb($panelHeaderHoverBg)};
+  --panelHeaderHoverBorderColor: #{hex2rgb($panelHeaderHoverBorderColor)};
+  --panelHeaderTextHoverColor: #{hex2rgb($panelHeaderTextHoverColor)};
+
+  --panelContentBorderColor: #{hex2rgb($panelContentBorderColor)};
+  --panelContentBorder: #{$panelContentBorder};
+  --panelContentBg: #{hex2rgb($panelContentBg)};
+  --panelContentTextColor: #{hex2rgb($panelContentTextColor)};
+  --panelContentPadding: #{$panelContentPadding};
+
+  --panelFooterBorder: #{$panelFooterBorder};
+  --panelFooterBg: #{hex2rgb($panelFooterBg)};
+  --panelFooterTextColor: #{hex2rgb($panelFooterTextColor)};
+  --panelFooterPadding: #{$panelFooterPadding};
+
+  //accordion
+  --accordionSpacing: #{$accordionSpacing};
+  --accordionHeaderBorder: #{$accordionHeaderBorder};
+  --accordionHeaderBg: #{hex2rgb($accordionHeaderBg)};
+  --accordionHeaderTextColor: #{hex2rgb($accordionHeaderTextColor)};
+  --accordionHeaderFontWeight: #{$accordionHeaderFontWeight};
+  --accordionHeaderPadding: #{$accordionHeaderPadding};
+
+  --accordionHeaderHoverBg: #{hex2rgb($accordionHeaderHoverBg)};
+  --accordionHeaderHoverBorderColor: #{hex2rgb($accordionHeaderHoverBorderColor)};
+  --accordionHeaderTextHoverColor: #{hex2rgb($accordionHeaderTextHoverColor)};
+
+  --accordionHeaderActiveBg: #{hex2rgb($accordionHeaderActiveBg)};
+  --accordionHeaderActiveBorderColor: #{hex2rgb($accordionHeaderActiveBorderColor)};
+  --accordionHeaderTextActiveColor: #{hex2rgb($accordionHeaderTextActiveColor)};
+
+  --accordionHeaderActiveHoverBg: #{hex2rgb($accordionHeaderActiveHoverBg)};
+  --accordionHeaderActiveHoverBorderColor: #{hex2rgb($accordionHeaderActiveHoverBorderColor)};
+  --accordionHeaderTextActiveHoverColor: #{hex2rgb($accordionHeaderTextActiveHoverColor)};
+
+  --accordionContentBorder: #{$accordionContentBorder};
+  --accordionContentBg: #{hex2rgb($accordionContentBg)};
+  --accordionContentTextColor: #{hex2rgb($accordionContentTextColor)};
+  --accordionContentPadding: #{$accordionContentPadding};
+
+  //tabview
+  --tabviewNavBorder: #{$tabviewNavBorder};
+  --tabviewNavBorderWidth: #{$tabviewNavBorderWidth};
+  --tabviewNavBg: #{hex2rgb($tabviewNavBg)};
+
+  --tabviewHeaderSpacing: #{$tabviewHeaderSpacing};
+  --tabviewHeaderBorder: #{$tabviewHeaderBorder};
+  --tabviewHeaderBorderWidth: #{$tabviewHeaderBorderWidth};
+  --tabviewHeaderBorderColor: #{$tabviewHeaderBorderColor};
+  --tabviewHeaderBg: #{hex2rgb($tabviewHeaderBg)};
+  --tabviewHeaderTextColor: #{$tabviewHeaderTextColor};
+  --tabviewHeaderFontWeight: #{$tabviewHeaderFontWeight};
+  --tabviewHeaderPadding: #{$tabviewHeaderPadding};
+  --tabviewHeaderMargin: #{$tabviewHeaderMargin};
+
+  --tabviewHeaderHoverBg: #{hex2rgb($tabviewHeaderHoverBg)};
+  --tabviewHeaderHoverBorderColor: #{hex2rgb($tabviewHeaderHoverBorderColor)};
+  --tabviewHeaderTextHoverColor: #{hex2rgb($tabviewHeaderTextHoverColor)};
+
+  --tabviewHeaderActiveBg: #{hex2rgb($tabviewHeaderActiveBg)};
+  --tabviewHeaderActiveBorderColor: #{hex2rgb($tabviewHeaderActiveBorderColor)};
+  --tabviewHeaderTextActiveColor: #{hex2rgb($tabviewHeaderTextActiveColor)};
+
+  --tabviewContentBorder: #{$tabviewContentBorder};
+  --tabviewContentBg: #{hex2rgb($tabviewContentBg)};
+  --tabviewContentTextColor: #{hex2rgb($tabviewContentTextColor)};
+  --tabviewContentPadding: #{$tabviewContentPadding};
+
+  //upload
+  --fileUploadProgressBarHeight: #{$fileUploadProgressBarHeight};
+  --fileUploadContentPadding: #{$fileUploadContentPadding};
+
+  //scrollpanel
+  --scrollPanelTrackBorder: #{$scrollPanelTrackBorder};
+  --scrollPanelTrackBg: #{hex2rgb($scrollPanelTrackBg)};
+
+  //card
+  --cardBodyPadding: #{$cardBodyPadding};
+  --cardTitleFontSize: #{$cardTitleFontSize};
+  --cardTitleFontWeight: #{$cardTitleFontWeight};
+  --cardSubTitleFontWeight: #{$cardSubTitleFontWeight};
+  --cardSubTitleColor: #{hex2rgb($cardSubTitleColor)};
+  --cardContentPadding: #{$cardContentPadding};
+  --cardFooterPadding: #{$cardFooterPadding};
+  --cardShadow: #{$cardShadow};
+  --cardBackground: #{hex2rgb($cardBackground)};
+
+  //editor
+  --editorToolbarBg: #{hex2rgb($editorToolbarBg)};
+  --editorToolbarBorder: #{$editorToolbarBorder};
+  --editorToolbarPadding: #{$editorToolbarPadding};
+  --editorToolbarIconColor: #{hex2rgb($editorToolbarIconColor)};
+  --editorToolbarIconHoverColor: #{hex2rgb($editorToolbarIconHoverColor)};
+  --editorIconActiveColor: #{hex2rgb($editorIconActiveColor)};
+  --editorContentBorder: #{$editorContentBorder};
+  --editorContentBg: #{hex2rgb($editorContentBg)};
+
+  //paginator
+  --paginatorBg: #{hex2rgb($paginatorBg)};
+  --paginatorTextColor: #{hex2rgb($paginatorTextColor)};
+  --paginatorBorder: #{$paginatorBorder};
+  --paginatorBorderWidth: #{$paginatorBorderWidth};
+  --paginatorPadding: #{$paginatorPadding};
+  --paginatorElementWidth: #{$paginatorElementWidth};
+  --paginatorElementHeight: #{$paginatorElementHeight};
+  --paginatorElementBg: #{$paginatorElementBg};
+  --paginatorElementBorder: #{$paginatorElementBorder};
+  --paginatorElementIconColor: #{hex2rgb($paginatorElementIconColor)};
+  --paginatorElementHoverBg: #{hex2rgb($paginatorElementHoverBg)};
+  --paginatorElementHoverBorderColor: #{hex2rgb($paginatorElementHoverBorderColor)};
+  --paginatorElementIconHoverColor: #{hex2rgb($paginatorElementIconHoverColor)};
+  --paginatorElementBorderRadius: #{$paginatorElementBorderRadius};
+  --paginatorElementMargin: #{$paginatorElementMargin};
+  --paginatorElementPadding: #{$paginatorElementPadding};
+
+  //table
+  --tableHeaderBorder: #{$tableHeaderBorder};
+  --tableHeaderBorderWidth: #{$tableHeaderBorderWidth};
+  --tableHeaderBg: #{hex2rgb($tableHeaderBg)};
+  --tableHeaderTextColor: #{hex2rgb($tableHeaderTextColor)};
+  --tableHeaderFontWeight: #{$tableHeaderFontWeight};
+  --tableHeaderPadding: #{$tableHeaderPadding};
+
+  --tableHeaderCellPadding: #{$tableHeaderCellPadding};
+  --tableHeaderCellBg: #{hex2rgb($tableHeaderCellBg)};
+  --tableHeaderCellTextColor: #{hex2rgb($tableHeaderCellTextColor)};
+  --tableHeaderCellFontWeight: #{$tableHeaderCellFontWeight};
+  --tableHeaderCellBorder: #{$tableHeaderCellBorder};
+  --tableHeaderCellBorderWidth: #{$tableHeaderCellBorderWidth};
+  --tableHeaderCellHoverBg: #{hex2rgb($tableHeaderCellHoverBg)};
+  --tableHeaderCellTextHoverColor: #{hex2rgb($tableHeaderCellTextHoverColor)};
+  --tableHeaderCellIconColor: #{hex2rgb($tableHeaderCellIconColor)};
+  --tableHeaderCellIconHoverColor: #{hex2rgb($tableHeaderCellIconHoverColor)};
+  --tableHeaderCellHighlightBg: #{hex2rgb($tableHeaderCellHighlightBg)};
+  --tableHeaderCellHighlightTextColor: #{hex2rgb($tableHeaderCellHighlightTextColor)};
+  --tableHeaderCellHighlightHoverBg: #{hex2rgb($tableHeaderCellHighlightHoverBg)};
+  --tableHeaderCellHighlightTextHoverColor: #{hex2rgb($tableHeaderCellHighlightTextHoverColor)};
+  --tableSortableColumnBadgeSize: #{$tableSortableColumnBadgeSize};
+
+  --tableBodyRowBg: #{hex2rgb($tableBodyRowBg)};
+  --tableBodyRowTextColor: #{hex2rgb($tableBodyRowTextColor)};
+  --tableBodyRowEvenBg: #{hex2rgb($tableBodyRowEvenBg)};
+  --tableBodyRowHoverBg: #{hex2rgb($tableBodyRowHoverBg)};
+  --tableBodyRowTextHoverColor: #{hex2rgb($tableBodyRowTextHoverColor)};
+  --tableBodyCellBorder: #{$tableBodyCellBorder};
+  --tableBodyCellBorderWidth: #{$tableBodyCellBorderWidth};
+  --tableBodyCellPadding: #{$tableBodyCellPadding};
+
+  --tableFooterCellPadding: #{$tableFooterCellPadding};
+  --tableFooterCellBg: #{hex2rgb($tableFooterCellBg)};
+  --tableFooterCellTextColor: #{hex2rgb($tableFooterCellTextColor)};
+  --tableFooterCellFontWeight: #{$tableFooterCellFontWeight};
+  --tableFooterCellBorder: #{$tableFooterCellBorder};
+  --tableFooterCellBorderWidth: #{$tableFooterCellBorderWidth};
+  --tableResizerHelperBg: #{hex2rgb($tableResizerHelperBg)};
+
+  --tableFooterBorder: #{$tableFooterBorder};
+  --tableFooterBorderWidth: #{$tableFooterBorderWidth};
+  --tableFooterBg: #{hex2rgb($tableFooterBg)};
+  --tableFooterTextColor: #{hex2rgb($tableFooterTextColor)};
+  --tableFooterFontWeight: #{$tableFooterFontWeight};
+  --tableFooterPadding: #{$tableFooterPadding};
+
+  --tableCellContentAlignment: #{$tableCellContentAlignment};
+  --tableTopPaginatorBorderWidth: #{$tableTopPaginatorBorderWidth};
+  --tableBottomPaginatorBorderWidth: #{$tableBottomPaginatorBorderWidth};
+
+  --tableScaleSM: #{$tableScaleSM};
+  --tableScaleLG: #{$tableScaleLG};
+
+  //dataview
+  --dataViewContentPadding: #{$dataViewContentPadding};
+  --dataViewContentBorder: #{$dataViewContentBorder};
+  --dataViewListItemBorder: #{$dataViewListItemBorder};
+  --dataViewListItemBorderWidth: #{$dataViewListItemBorderWidth};
+
+  //schedule
+  --fullCalendarEventBg: #{hex2rgb($fullCalendarEventBg)};
+  --fullCalendarEventBorderColor: #{hex2rgb($fullCalendarEventBorderColor)};
+  --fullCalendarEventBorder: #{$fullCalendarEventBorder};
+  --fullCalendarEventTextColor: #{hex2rgb($fullCalendarEventTextColor)};
+
+  //tree
+  --treeContainerPadding: #{$treeContainerPadding};
+  --treeNodePadding: #{$treeNodePadding};
+  --treeNodeContentPadding: #{$treeNodeContentPadding};
+  --treeNodeChildrenPadding: #{$treeNodeChildrenPadding};
+  --treeNodeIconColor: #{hex2rgb($treeNodeIconColor)};
+
+  //timeline
+  --timelineVerticalEventContentPadding: #{$timelineVerticalEventContentPadding};
+  --timelineHorizontalEventContentPadding: #{$timelineHorizontalEventContentPadding};
+  --timelineEventMarkerWidth: #{$timelineEventMarkerWidth};
+  --timelineEventMarkerHeight: #{$timelineEventMarkerHeight};
+  --timelineEventMarkerBorderRadius: #{$timelineEventMarkerBorderRadius};
+  --timelineEventMarkerBorder: #{$timelineEventMarkerBorder};
+  --timelineEventMarkerBackground: #{hex2rgb($timelineEventMarkerBackground)};
+  --timelineEventConnectorSize: #{$timelineEventConnectorSize};
+  --timelineEventColor: #{hex2rgb($timelineEventColor)};
+
+  //org chart
+  --organizationChartConnectorColor: #{hex2rgb($organizationChartConnectorColor)};
+
+  //message
+  --messageMargin: #{$messageMargin};
+  --messagePadding: #{$messagePadding};
+  --messageBorderWidth: #{$messageBorderWidth};
+  --messageIconFontSize: #{$messageIconFontSize};
+  --messageTextFontSize: #{$messageTextFontSize};
+  --messageTextFontWeight: #{$messageTextFontWeight};
+
+  //inline message
+  --inlineMessagePadding: #{$inlineMessagePadding};
+  --inlineMessageMargin: #{$inlineMessageMargin};
+  --inlineMessageIconFontSize: #{$inlineMessageIconFontSize};
+  --inlineMessageTextFontSize: #{$inlineMessageTextFontSize};
+  --inlineMessageBorderWidth: #{$inlineMessageBorderWidth};
+
+  //toast
+  --toastIconFontSize: #{$toastIconFontSize};
+  --toastMessageTextMargin: #{$toastMessageTextMargin};
+  --toastMargin: #{$toastMargin};
+  --toastPadding: #{$toastPadding};
+  --toastBorderWidth: #{$toastBorderWidth};
+  --toastShadow: #{$toastShadow};
+  --toastOpacity: #{$toastOpacity};
+  --toastTitleFontWeight: #{$toastTitleFontWeight};
+  --toastDetailMargin: #{$toastDetailMargin};
+
+  //severities
+  --infoMessageBg: #{hex2rgb($infoMessageBg)};
+  --infoMessageBorder: #{$infoMessageBorder};
+  --infoMessageTextColor: #{hex2rgb($infoMessageTextColor)};
+  --infoMessageIconColor: #{hex2rgb($infoMessageIconColor)};
+  --successMessageBg: #{hex2rgb($successMessageBg)};
+  --successMessageBorder: #{$successMessageBorder};
+  --successMessageTextColor: #{hex2rgb($successMessageTextColor)};
+  --successMessageIconColor: #{hex2rgb($successMessageIconColor)};
+  --warningMessageBg: #{hex2rgb($warningMessageBg)};
+  --warningMessageBorder: #{$warningMessageBorder};
+  --warningMessageTextColor: #{hex2rgb($warningMessageTextColor)};
+  --warningMessageIconColor: #{hex2rgb($warningMessageIconColor)};
+  --errorMessageBg: #{hex2rgb($errorMessageBg)};
+  --errorMessageBorder: #{$errorMessageBorder};
+  --errorMessageTextColor: #{hex2rgb($errorMessageTextColor)};
+  --errorMessageIconColor: #{hex2rgb($errorMessageIconColor)};
+
+  //overlays
+  --overlayContentBorder: #{$overlayContentBorder};
+  --overlayContentBg: #{$overlayContentBg};
+  --overlayContainerShadow: #{$overlayContainerShadow};
+
+  //dialog
+  --dialogHeaderBg: #{hex2rgb($dialogHeaderBg)};
+  --dialogHeaderBorder: #{$dialogHeaderBorder};
+  --dialogHeaderTextColor: #{hex2rgb($dialogHeaderTextColor)};
+  --dialogHeaderFontWeight: #{$dialogHeaderFontWeight};
+  --dialogHeaderFontSize: #{$dialogHeaderFontSize};
+  --dialogHeaderPadding: #{$dialogHeaderPadding};
+  --dialogContentPadding: #{$dialogContentPadding};
+  --dialogFooterBorder: #{$dialogFooterBorder};
+  --dialogFooterPadding: #{$dialogFooterPadding};
+
+  //confirmpopup
+  --confirmPopupContentPadding: #{$confirmPopupContentPadding};
+  --confirmPopupFooterPadding: #{$confirmPopupFooterPadding};
+
+  //tooltip
+  --tooltipBg: #{hex2rgb($tooltipBg)};
+  --tooltipTextColor: #{hex2rgb($tooltipTextColor)};
+  --tooltipPadding: #{$tooltipPadding};
+
+  //steps
+  --stepsItemBg: #{hex2rgb($stepsItemBg)};
+  --stepsItemBorder: #{$stepsItemBorder};
+  --stepsItemTextColor: #{hex2rgb($stepsItemTextColor)};
+  --stepsItemNumberWidth: #{$stepsItemNumberWidth};
+  --stepsItemNumberHeight: #{$stepsItemNumberHeight};
+  --stepsItemNumberFontSize: #{$stepsItemNumberFontSize};
+  --stepsItemNumberColor: #{hex2rgb($stepsItemNumberColor)};
+  --stepsItemNumberBorderRadius: #{$stepsItemNumberBorderRadius};
+  --stepsItemActiveFontWeight: #{$stepsItemActiveFontWeight};
+
+  //progressbar
+  --progressBarHeight: #{$progressBarHeight};
+  --progressBarBorder: #{$progressBarBorder};
+  --progressBarBg: #{hex2rgb($progressBarBg)};
+  --progressBarValueBg: #{hex2rgb($progressBarValueBg)};
+  --progressBarValueTextColor: #{hex2rgb($progressBarValueTextColor)};
+
+  //menu (e.g. menu, menubar, tieredmenu)
+  --menuWidth: #{$menuWidth};
+  --menuBg: #{hex2rgb($menuBg)};
+  --menuBorder: #{$menuBorder};
+  --menuTextColor: #{hex2rgb($menuTextColor)};
+  --menuitemPadding: #{$menuitemPadding};
+  --menuitemBorderRadius: #{$menuitemBorderRadius};
+  --menuitemTextColor: #{hex2rgb($menuitemTextColor)};
+  --menuitemIconColor: #{hex2rgb($menuitemIconColor)};
+  --menuitemTextHoverColor: #{hex2rgb($menuitemTextHoverColor)};
+  --menuitemIconHoverColor: #{hex2rgb($menuitemIconHoverColor)};
+  --menuitemHoverBg: #{hex2rgb($menuitemHoverBg)};
+  --menuitemTextActiveColor: #{hex2rgb($menuitemTextActiveColor)};
+  --menuitemIconActiveColor: #{hex2rgb($menuitemIconActiveColor)};
+  --menuitemActiveBg: #{hex2rgb($menuitemActiveBg)};
+  --menuitemSubmenuIconFontSize: #{$menuitemSubmenuIconFontSize};
+  --submenuHeaderMargin: #{$submenuHeaderMargin};
+  --submenuHeaderPadding: #{$submenuHeaderPadding};
+  --submenuHeaderBg: #{hex2rgb($submenuHeaderBg)};
+  --submenuHeaderTextColor: #{hex2rgb($submenuHeaderTextColor)};
+  --submenuHeaderBorderRadius: #{$submenuHeaderBorderRadius};
+  --submenuHeaderFontWeight: #{$submenuHeaderFontWeight};
+  --overlayMenuBg: #{hex2rgb($overlayMenuBg)};
+  --overlayMenuBorder: #{$overlayMenuBorder};
+  --overlayMenuShadow: #{$overlayMenuShadow};
+  --verticalMenuPadding: #{$verticalMenuPadding};
+  --menuSeparatorMargin: #{$menuSeparatorMargin};
+
+  --breadcrumbPadding: #{$breadcrumbPadding};
+  --breadcrumbBg: #{hex2rgb($breadcrumbBg)};
+  --breadcrumbBorder: #{$breadcrumbBorder};
+  --breadcrumbItemTextColor: #{hex2rgb($breadcrumbItemTextColor)};
+  --breadcrumbItemIconColor: #{hex2rgb($breadcrumbItemIconColor)};
+  --breadcrumbLastItemTextColor: #{hex2rgb($breadcrumbLastItemTextColor)};
+  --breadcrumbLastItemIconColor: #{hex2rgb($breadcrumbLastItemIconColor)};
+  --breadcrumbSeparatorColor: #{hex2rgb($breadcrumbSeparatorColor)};
+
+  --horizontalMenuPadding: #{$horizontalMenuPadding};
+  --horizontalMenuBg: #{hex2rgb($horizontalMenuBg)};
+  --horizontalMenuBorder: #{$horizontalMenuBorder};
+  --horizontalMenuTextColor: #{hex2rgb($horizontalMenuTextColor)};
+  --horizontalMenuRootMenuitemPadding: #{$horizontalMenuRootMenuitemPadding};
+  --horizontalMenuRootMenuitemBorderRadius: #{$horizontalMenuRootMenuitemBorderRadius};
+  --horizontalMenuRootMenuitemTextColor: #{hex2rgb($horizontalMenuRootMenuitemTextColor)};
+  --horizontalMenuRootMenuitemIconColor: #{hex2rgb($horizontalMenuRootMenuitemIconColor)};
+  --horizontalMenuRootMenuitemTextHoverColor: #{hex2rgb($horizontalMenuRootMenuitemTextHoverColor)};
+  --horizontalMenuRootMenuitemIconHoverColor: #{hex2rgb($horizontalMenuRootMenuitemIconHoverColor)};
+  --horizontalMenuRootMenuitemHoverBg: #{hex2rgb($horizontalMenuRootMenuitemHoverBg)};
+  --horizontalMenuRootMenuitemTextActiveColor: #{hex2rgb($horizontalMenuRootMenuitemTextActiveColor)};
+  --horizontalMenuRootMenuitemIconActiveColor: #{hex2rgb($horizontalMenuRootMenuitemIconActiveColor)};
+  --horizontalMenuRootMenuitemActiveBg: #{hex2rgb($horizontalMenuRootMenuitemActiveBg)};
+
+  //badge and tag
+  --badgeBg: #{hex2rgb($badgeBg)};
+  --badgeTextColor: #{hex2rgb($badgeTextColor)};
+  --badgeMinWidth: #{$badgeMinWidth};
+  --badgeHeight: #{$badgeHeight};
+  --badgeFontWeight: #{$badgeFontWeight};
+  --badgeFontSize: #{$badgeFontSize};
+  --badgeLetterSpacing: #{$badgeLetterSpacing};
+
+  --tagPadding: #{$tagPadding};
+
+  //carousel
+  --carouselIndicatorsPadding: #{$carouselIndicatorsPadding};
+  --carouselIndicatorBg: #{hex2rgb($carouselIndicatorBg)};
+  --carouselIndicatorHoverBg: #{hex2rgb($carouselIndicatorHoverBg)};
+  --carouselIndicatorBorderRadius: #{$carouselIndicatorBorderRadius};
+  --carouselIndicatorWidth: #{$carouselIndicatorWidth};
+  --carouselIndicatorHeight: #{$carouselIndicatorHeight};
+
+  //galleria
+  --galleriaMaskBg: #{$galleriaMaskBg};
+  --galleriaCloseIconMargin: #{$galleriaCloseIconMargin};
+  --galleriaCloseIconFontSize: #{$galleriaCloseIconFontSize};
+  --galleriaCloseIconBg: #{$galleriaCloseIconBg};
+  --galleriaCloseIconColor: #{hex2rgb($galleriaCloseIconColor)};
+  --galleriaCloseIconHoverBg: #{$galleriaCloseIconHoverBg};
+  --galleriaCloseIconHoverColor: #{hex2rgb($galleriaCloseIconHoverColor)};
+  --galleriaCloseIconWidth: #{$galleriaCloseIconWidth};
+  --galleriaCloseIconHeight: #{$galleriaCloseIconHeight};
+  --galleriaCloseIconBorderRadius: #{$galleriaCloseIconBorderRadius};
+
+  --galleriaItemNavigatorBg: #{$galleriaItemNavigatorBg};
+  --galleriaItemNavigatorColor: #{hex2rgb($galleriaItemNavigatorColor)};
+  --galleriaItemNavigatorMargin: #{$galleriaItemNavigatorMargin};
+  --galleriaItemNavigatorFontSize: #{$galleriaItemNavigatorFontSize};
+  --galleriaItemNavigatorHoverBg: #{$galleriaItemNavigatorHoverBg};
+  --galleriaItemNavigatorHoverColor: #{hex2rgb($galleriaItemNavigatorHoverColor)};
+  --galleriaItemNavigatorWidth: #{$galleriaItemNavigatorWidth};
+  --galleriaItemNavigatorHeight: #{$galleriaItemNavigatorHeight};
+  --galleriaItemNavigatorBorderRadius: #{$galleriaItemNavigatorBorderRadius};
+
+  --galleriaCaptionBg: #{$galleriaCaptionBg};
+  --galleriaCaptionTextColor: #{hex2rgb($galleriaCaptionTextColor)};
+  --galleriaCaptionPadding: #{$galleriaCaptionPadding};
+
+  --galleriaIndicatorsPadding: #{$galleriaIndicatorsPadding};
+  --galleriaIndicatorBg: #{hex2rgb($galleriaIndicatorBg)};
+  --galleriaIndicatorHoverBg: #{hex2rgb($galleriaIndicatorHoverBg)};
+  --galleriaIndicatorBorderRadius: #{$galleriaIndicatorBorderRadius};
+  --galleriaIndicatorWidth: #{$galleriaIndicatorWidth};
+  --galleriaIndicatorHeight: #{$galleriaIndicatorHeight};
+  --galleriaIndicatorsBgOnItem: #{$galleriaIndicatorsBgOnItem};
+  --galleriaIndicatorBgOnItem: #{$galleriaIndicatorBgOnItem};
+  --galleriaIndicatorHoverBgOnItem: #{$galleriaIndicatorHoverBgOnItem};
+
+  --galleriaThumbnailContainerBg: #{$galleriaThumbnailContainerBg};
+  --galleriaThumbnailContainerPadding: #{$galleriaThumbnailContainerPadding};
+  --galleriaThumbnailNavigatorBg: #{$galleriaThumbnailNavigatorBg};
+  --galleriaThumbnailNavigatorColor: #{hex2rgb($galleriaThumbnailNavigatorColor)};
+  --galleriaThumbnailNavigatorHoverBg: #{$galleriaThumbnailNavigatorHoverBg};
+  --galleriaThumbnailNavigatorHoverColor: #{hex2rgb($galleriaThumbnailNavigatorHoverColor)};
+  --galleriaThumbnailNavigatorBorderRadius: #{$galleriaThumbnailNavigatorBorderRadius};
+  --galleriaThumbnailNavigatorWidth: #{$galleriaThumbnailNavigatorWidth};
+  --galleriaThumbnailNavigatorHeight: #{$galleriaThumbnailNavigatorHeight};
+
+  --dividerHorizontalMargin: #{$dividerHorizontalMargin};
+  --dividerHorizontalPadding: #{$dividerHorizontalPadding};
+  --dividerVerticalMargin: #{$dividerVerticalMargin};
+  --dividerVerticalPadding: #{$dividerVerticalPadding};
+  --dividerSize: #{$dividerSize};
+  --dividerColor: #{hex2rgb($dividerColor)};
+
+  //avatar
+  --avatarBg: #{hex2rgb($avatarBg)};
+  --avatarTextColor: #{hex2rgb($avatarTextColor)};
+
+  //avatar
+  --chipBg: #{hex2rgb($chipBg)};
+  --chipTextColor: #{hex2rgb($chipTextColor)};
+  --chipBorderRadius: #{$chipBorderRadius};
+
+  //scrollTop
+  --scrollTopBg: #{$scrollTopBg};
+  --scrollTopHoverBg: #{$scrollTopHoverBg};
+  --scrollTopWidth: #{$scrollTopWidth};
+  --scrollTopHeight: #{$scrollTopHeight};
+  --scrollTopBorderRadius: #{$scrollTopBorderRadius};
+  --scrollTopFontSize: #{$scrollTopFontSize};
+  --scrollTopTextColor: #{hex2rgb($scrollTopTextColor)};
+
+  //skeleton
+  --skeletonBg: #{hex2rgb($skeletonBg)};
+  --skeletonAnimationBg: #{$skeletonAnimationBg};
+
+  //splitter
+  --splitterGutterBg: #{hex2rgb($splitterGutterBg)};
+  --splitterGutterHandleBg: #{$splitterGutterHandleBg};
+
+  //speeddial
+  --speedDialButtonWidth: #{$speedDialButtonWidth};
+  --speedDialButtonHeight: #{$speedDialButtonHeight};
+  --speedDialButtonIconFontSize: #{$speedDialButtonIconFontSize};
+  --speedDialActionWidth: #{$speedDialActionWidth};
+  --speedDialActionHeight: #{$speedDialActionHeight};
+  --speedDialActionBg: #{hex2rgb($speedDialActionBg)};
+  --speedDialActionHoverBg: #{hex2rgb($speedDialActionHoverBg)};
+  --speedDialActionTextColor: #{$speedDialActionTextColor};
+  --speedDialActionTextHoverColor: #{$speedDialActionTextHoverColor};
+
+  //dock
+  --dockActionWidth: #{$dockActionWidth};
+  --dockActionHeight: #{$dockActionHeight};
+  --dockItemPadding: #{$dockItemPadding};
+  --dockCurrentItemMargin: #{$dockCurrentItemMargin};
+  --dockFirstItemsMargin: #{$dockFirstItemsMargin};
+  --dockSecondItemsMargin: #{$dockSecondItemsMargin};
+  --dockBg: #{$dockBg};
+  --dockBorder: #{$dockBorder};
+  --dockPadding: #{$dockPadding};
+  --dockBorderRadius: #{$dockBorderRadius};
+
+  //image
+  --imageMaskBg: #{$imageMaskBg};
+  --imagePreviewToolbarPadding: #{$imagePreviewToolbarPadding};
+  --imagePreviewIndicatorColor: #{$imagePreviewIndicatorColor};
+  --imagePreviewIndicatorBg: #{$imagePreviewIndicatorBg};
+  --imagePreviewActionIconBg: #{$imagePreviewActionIconBg};
+  --imagePreviewActionIconColor: #{$imagePreviewActionIconColor};
+  --imagePreviewActionIconHoverBg: #{$imagePreviewActionIconHoverBg};
+  --imagePreviewActionIconHoverColor: #{$imagePreviewActionIconHoverColor};
+  --imagePreviewActionIconWidth: #{$imagePreviewActionIconWidth};
+  --imagePreviewActionIconHeight: #{$imagePreviewActionIconHeight};
+  --imagePreviewActionIconFontSize: #{$imagePreviewActionIconFontSize};
+  --imagePreviewActionIconBorderRadius: #{$imagePreviewActionIconBorderRadius};
 }
 [data-color-mode="dark"] {
-    /* --primary-color: #{$dangerColor};
-    --primary-color-rgb: #{hex2rgb($dangerColor)}; */
-    --link-button-color: var(--primary-light-color);
-    --text-color: var(--white100);
-    --text-color-secondary: var(--white300);
+  --linkButtonColor: var(--primaryLightColor);
+  --textColor: var(--white100);
+  --textColorSecondary: var(--white300);
 
-    --surface-ground: #{$gray-700};
-    --surface-section: #{$gray-900};
-    --surface-card: #{$gray-900};
-    --surface-overlay: #{$gray-900};
-    --surface-border: #{$gray-800};
-    --surface-hover: #{$gray-700};
+  --buttonBg: var(--warningColor);
+  --buttonHoverBg: 255, 0, 0;
 
-    --surface-0: #{$black};
-    --surface-50: #{$gray-950};
-    --surface-100: #{$gray-900};
-    --surface-200: #{$gray-800};
-    --surface-300: #{$gray-700};
-    --surface-400: #{$gray-600};
-    --surface-500: #{$gray-500};
-    --surface-600: #{$gray-400};
-    --surface-700: #{$gray-300};
-    --surface-800: #{$gray-200};
-    --surface-900: #{$gray-100};
+  --surfaceGround: #{$gray-700};
+  --surfaceSection: #{$gray-900};
+  --surfaceCard: #{$gray-900};
+  --surfaceOverlay: #{$gray-900};
+  --surfaceBorder: #{$gray-800};
+  --surfaceHover: #{$gray-700};
 
-    --gray-50: #{$gray-950};
-    --gray-100: #{$gray-900};
-    --gray-200: #{$gray-800};
-    --gray-300: #{$gray-700};
-    --gray-400: #{$gray-600};
-    --gray-500: #{$gray-500};
-    --gray-600: #{$gray-400};
-    --gray-700: #{$gray-300};
-    --gray-800: #{$gray-200};
-    --gray-900: #{$gray-100};
+  --surface-0: #{$black};
+  --surface-50: #{$gray-950};
+  --surface-100: #{$gray-900};
+  --surface-200: #{$gray-800};
+  --surface-300: #{$gray-700};
+  --surface-400: #{$gray-600};
+  --surface-500: #{$gray-500};
+  --surface-600: #{$gray-400};
+  --surface-700: #{$gray-300};
+  --surface-800: #{$gray-200};
+  --surface-900: #{$gray-100};
+
+  --gray-50: #{$gray-950};
+  --gray-100: #{$gray-900};
+  --gray-200: #{$gray-800};
+  --gray-300: #{$gray-700};
+  --gray-400: #{$gray-600};
+  --gray-500: #{$gray-500};
+  --gray-600: #{$gray-400};
+  --gray-700: #{$gray-300};
+  --gray-800: #{$gray-200};
+  --gray-900: #{$gray-100};
 }

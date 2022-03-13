@@ -45,6 +45,6 @@ const props = defineProps({
 
 <style lang="scss">
 .byline {
-  color: var(--text-color);
+  color: rgb(var(--textColor));
 }
 </style>

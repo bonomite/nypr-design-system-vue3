@@ -174,8 +174,8 @@ body {
   padding: spacing(3);
 }
 .audioPlayer {
-  background: var(--gray-300);
-  border-radius: var(--border-radius);
+  background: rgb(var(--gray-300));
+  border-radius: var(--borderRadius);
   width: 100%;
   display: grid;
   margin: 0 auto;

@@ -33,6 +33,10 @@ $spacing-base: 0.25; //  matches prime-flex
 @function hex2rgb($hexColor) {
   @return "#{red($hexColor)},#{green($hexColor)},#{blue($hexColor)}";
 }
+// hex to rgba
+@function hex2rgba($hexColor) {
+  @return "#{red($hexColor)},#{green($hexColor)},#{blue($hexColor)},#{alpha($hexColor)}";
+}
 
 @function strip-unit($number) {
   @if type-of($number) == "number" and not unitless($number) {

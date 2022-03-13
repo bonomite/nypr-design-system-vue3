@@ -589,7 +589,7 @@ export default {
     opacity: 0;
   }
   .person-inner {
-    color: var(--text-color);
+    color: rgb(var(--textColor));
     .person-image-link {
       padding: 0;
       position: relative;
@@ -640,26 +640,26 @@ export default {
       }
     }
     .person-details {
-      color: var(--text-color);
+      color: rgb(var(--textColor));
       .person-name-link-holder {
         margin-bottom: spacing(1);
         .person-name-link {
           @include font-config($h2-config);
-          color: var(--text-color);
+          color: rgb(var(--textColor));
           overflow-wrap: anywhere;
           word-break: break-word;
           text-decoration: none;
           display: inline-block;
           span {
-            transition: color var(--transition-duration);
-            -webkit-transition: color var(--transition-duration);
+            transition: color var(--transitionDuration);
+            -webkit-transition: color var(--transitionDuration);
           }
           &.disabled {
             pointer-events: none;
           }
           &:hover {
             span {
-              color: var(--link-button-hover-color);
+              color: rgb(var(--linkButtonHoverColor));
               text-decoration: underline;
             }
           }
@@ -707,8 +707,8 @@ export default {
       .read-more {
         word-break: keep-all;
         cursor: pointer;
-        color: var(--text-color);
-        font-size: var(--font-size-4);
+        color: rgb(var(--textColor));
+        font-size: var(--fontSize-4);
         letter-spacing: 0.6px;
         text-transform: uppercase;
         margin-top: spacing(1);
@@ -717,7 +717,7 @@ export default {
           display: inline-block;
         }
         &:hover {
-          color: var(--primary-color);
+          color: rgb(var(--primaryColor));
         }
       }
     }
@@ -739,7 +739,7 @@ export default {
         width: 24px;
         height: 24px;
         padding: 0;
-        font-size: var(--font-size-2);
+        font-size: var(--fontSize-2);
         position: absolute;
         cursor: pointer;
         top: spacing(1);

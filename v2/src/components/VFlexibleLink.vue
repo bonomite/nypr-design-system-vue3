@@ -51,17 +51,17 @@ const isExternal = computed(() => {
 </template>
 <style lang="scss">
 .flexible-link:not(.raw) {
-  color: var(--link-button-color);
-  transition: all var(--transition-duration);
+  color: rgb(var(--linkButtonColor));
+  transition: all var(--transitionDuration);
   * {
-    transition: all var(--transition-duration);
+    transition: all var(--transitionDuration);
   }
   &:hover {
-    color: var(--link-button-hover-color) !important;
-    text-decoration: var(--link-button-text-hover-decoration);
+    color: rgb(var(--linkButtonHoverColor)) !important;
+    text-decoration: var(--linkButtonTextHoverDecoration);
     * {
-      color: var(--link-button-hover-color) !important;
-      text-decoration: var(--link-button-text-hover-decoration);
+      color: rgb(var(--linkButtonHoverColor)) !important;
+      text-decoration: var(--linkButtonTextHoverDecoration);
     }
   }
   &:focus {

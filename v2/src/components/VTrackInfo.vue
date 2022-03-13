@@ -170,8 +170,8 @@ $track-info-image-size: 84px;
       .track-info-livestream-indicator {
         display: flex;
         align-items: center;
-        background: var(--text-color);
-        color: var(--primary-color-text);
+        background: rgb(var(--textColor));
+        color: rgb(var(--primaryTextColor));
         border-radius: 44px;
         padding: 4px;
         margin-right: 8px;
@@ -189,7 +189,7 @@ $track-info-image-size: 84px;
         }
       }
       .track-info-livestream-station {
-        font-family: var(--font-family);
+        font-family: var(--fontFamily);
         font-size: 12px;
         font-weight: 700;
       }
@@ -231,7 +231,7 @@ $track-info-image-size: 84px;
     }
     .track-info-progress {
       position: absolute;
-      background-color: var(--primary-color);
+      background-color: rgb(var(--primaryColor));
       cursor: pointer;
       min-width: 200px;
       top: -5px;
@@ -246,7 +246,7 @@ $track-info-image-size: 84px;
         position: relative;
       }
       .player-track-seeker {
-        background-color: var(--primary-dark-color);
+        background-color: rgb(var(--primaryDarkColor));
         bottom: 0;
         left: 0;
         position: absolute;
@@ -254,7 +254,7 @@ $track-info-image-size: 84px;
         z-index: 20;
       }
       .player-track-buffered {
-        background-color: var(--gray-400);
+        background-color: rgb(var(--gray-400));
         bottom: 0;
         left: 0;
         position: absolute;
@@ -276,7 +276,7 @@ $track-info-image-size: 84px;
           content: '';
           height: 22px;
           width: 22px;
-          background-color: var(--gray-600);
+          background-color: rgb(var(--gray-600));
           border-radius: 50%;
           opacity: 1;
           display: block;

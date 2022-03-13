@@ -179,11 +179,11 @@ const getMobileImageScale = computed(() => {
 .v-card {
   display: flex;
   align-items: flex-start;
-  background: var(--surface-a);
-  color: var(--text-color);
+  background: rgb(var(--surface-a));
+  color: rgb(var(--textColor));
   box-shadow: var(--shadow);
   -webkit-box-shadow: var(--shadow);
-  border-radius: var(--border-radius);
+  border-radius: var(--borderRadius);
   overflow: hidden;
   width: 100%;
   max-width: 100%;
@@ -215,12 +215,12 @@ const getMobileImageScale = computed(() => {
         overflow-wrap: anywhere;
         word-break: break-word;
         .pi {
-          font-size: var(--font-size-8);
+          font-size: var(--fontSize-8);
           margin-left: spacing(2);
           margin-top: spacing(0.5);
           text-decoration: none;
           &:before {
-            color: var(--link-button-color);
+            color: rgb(var(--linkButtonColor));
           }
         }
       }
@@ -231,37 +231,4 @@ const getMobileImageScale = computed(() => {
     margin-top: spacing(5);
   }
 }
-
-// .card.mod-large .o-gallery-icon {
-//   width: 30px;
-//   height: 30px;
-//   margin-bottom: 3px;
-// }
-
-// .card-subtitle {
-//   font-family: var(--font-family-subheader);
-//   font-size: var(--font-size-4);
-// }
-
-// .card.mod-large {
-//   --card-image-width: 360px;
-//   --card-image-height: 306px;
-// }
-
-// .card.mod-large .card-title {
-//   font-size: var(--font-size-10);
-// }
-
-// .card.mod-large .card-subtitle {
-//   font-size: var(--font-size-7);
-// }
-
-// .card.mod-large:not(.mod-vertical) .card-image-wrapper,
-// .card.mod-large:not(.mod-vertical) .card-image .image {
-//   @include media("<medium") {
-//     min-width: 100px;
-//     width: 100px;
-//     height: 100px;
-//   }
-// }
 </style>

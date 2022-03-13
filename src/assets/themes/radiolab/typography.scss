@@ -1,21 +1,21 @@
 @use "sass:map";
 :root {
-    font-size: var(--font-size);
+    font-size: var(--fontSize);
 }
 
 $h1-config: (
     "default": (
         "values": (
-            "font-family": var(--font-family-header),
-            "font-size": var(--font-size-12),
+            "font-family": var(--fontFamilyHeader),
+            "font-size": var(--fontSize-12),
             "line-height": normal,
             "font-weight": var(--fontWeight-700),
-            "color": var(--text-color),
+            "color": rgb(var(--textColor)),
         ),
     ),
     $medium: (
         "values": (
-            "font-size": var(--font-size-10),
+            "font-size": var(--fontSize-10),
             "line-height": normal,
         ),
     ),
@@ -23,11 +23,11 @@ $h1-config: (
 $h2-config: (
     "default": (
         "values": (
-            "font-family": var(--font-family-header),
-            "font-size": var(--font-size-9),
+            "font-family": var(--fontFamilyHeader),
+            "font-size": var(--fontSize-9),
             "line-height": normal,
             "font-weight": var(--fontWeight-400),
-            "color": var(--text-color),
+            "color": rgb(var(--textColor)),
         ),
     ),
 );
@@ -35,10 +35,10 @@ $h3-config: (
     "default": (
         "values": (
             "font-family": var(--font-family) Header,
-            "font-size": var(--font-size-7),
+            "font-size": var(--fontSize-7),
             "line-height": normal,
             "font-weight": var(--fontWeight-400),
-            "color": var(--text-color),
+            "color": rgb(var(--textColor)),
         ),
     ),
 );
@@ -46,10 +46,10 @@ $h4-config: (
     "default": (
         "values": (
             "font-family": var(--font-family),
-            "font-size": var(--font-size-8),
+            "font-size": var(--fontSize-8),
             "line-height": normal,
             "font-weight": var(--fontWeight-700),
-            "color": var(--text-color),
+            "color": rgb(var(--textColor)),
         ),
     ),
 );
@@ -58,11 +58,11 @@ $h5-config: (
     "default": (
         "values": (
             "font-family": var(--font-family),
-            "font-size": var(--font-size-6),
+            "font-size": var(--fontSize-6),
             "line-height": normal,
             "font-weight": var(--fontWeight-700),
             "text-transform": uppercase,
-            "color": var(--text-color),
+            "color": rgb(var(--textColor)),
         ),
     ),
 );
@@ -71,12 +71,12 @@ $h6-config: (
     "default": (
         "values": (
             "font-family": var(--font-family),
-            "font-size": var(--font-size-4),
+            "font-size": var(--fontSize-4),
             "line-height": normal,
             "font-weight": var(--fontWeight-700),
             "text-transform": uppercase,
             "letter-spacing": 0.2rem,
-            "color": var(--text-color),
+            "color": rgb(var(--textColor)),
         ),
     ),
 );
@@ -85,10 +85,10 @@ $p-config: (
     "default": (
         "values": (
             "font-family": var(--font-family),
-            "font-size": var(--font-size-6),
+            "font-size": var(--fontSize-6),
             "line-height": normal,
             "font-weight": var(--fontWeight-400),
-            "color": var(--text-color),
+            "color": rgb(var(--textColor)),
         ),
     ),
 );
@@ -96,7 +96,7 @@ $p-config: (
 $footer-config: (
     "default": (
         "values": (
-            "font-size": var(--font-size-4),
+            "font-size": var(--fontSize-4),
             "line-height": normal,
         ),
     ),

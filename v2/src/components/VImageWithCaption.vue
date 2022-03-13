@@ -267,7 +267,7 @@ const getCurrentDimensions = computed(() => {
   overflow-y: auto;
   display: block;
   max-height: 100%;
-  background: rgba(var(--primary-dark-color-rgb), 0.7);
+  background: rgba(var(--primaryDarkColor), 0.7);
   pointer-events: none;
   p {
     color: var(--white);
@@ -288,30 +288,6 @@ const getCurrentDimensions = computed(() => {
   text-align: right;
 }
 
-// .image-with-caption.gothamist .image-with-caption-credit {
-//   margin-top: spacing(1);
-//   text-align: left;
-//   display: flex;
-//   flex-wrap: wrap;
-//   align-items: baseline;
-// }
-
-// .image-with-caption.gothamist .image-with-caption-credit-link {
-//   text-transform: uppercase;
-//   line-height: 20px;
-
-//   &:hover {
-//     background-color: RGB(var(--color-reddish-orange));
-//     color: RGB(var(--color-white));
-//   }
-// }
-
-// .image-with-caption.gothamist .image-with-caption-credit span {
-//   @include typeface(small, 1);
-//   letter-spacing: 1px;
-//   text-transform: uppercase;
-// }
-
 .image-with-caption .image-with-caption-icons {
   cursor: pointer;
   margin: 0 0 0 auto;
@@ -320,7 +296,7 @@ const getCurrentDimensions = computed(() => {
   right: spacing(2);
   z-index: 999;
   .p-button {
-    background-color: rgba(var(--primary-color-rgb), 0.8);
+    background-color: rgba(var(--primaryColor), 0.8);
     border-color: transparent;
   }
 }
@@ -330,17 +306,17 @@ const getCurrentDimensions = computed(() => {
   .image-with-caption-icons
   .image-with-caption-icons-close
   .pi {
-  color: var(--white);
+  color: rgb(var(--white));
 }
 
 .image-with-caption .info-icon,
 .image-with-caption .o-close-icon {
-  transition: var(--transition-duration);
+  transition: var(--transitionDuration);
   width: 28px;
   height: 28px;
 
   &:hover {
-    opacity: var(--opacity-hover);
+    opacity: 0.8;
   }
 }
 
@@ -350,30 +326,12 @@ const getCurrentDimensions = computed(() => {
 
 .image-with-caption .o-close-icon path,
 .image-with-caption .info-icon-i {
-  fill: var(--white);
+  fill: rgb(var(--white));
 }
 
 .image-with-caption .info-icon-bg {
   fill: rgba(var(--black), 0.7);
 }
-
-// .image-with-caption .gothamist-caption {
-//   display: flex;
-//   align-items: center;
-//   font-size: var(--font-size-4);
-//   margin-right: spacing(2);
-// }
-
-// .image-with-caption .o-gothamist-arrow-icon {
-//   width: 20px;
-//   margin-top: -11px;
-//   margin-right: spacing(2);
-//   float: left;
-
-//   path {
-//     fill: RGB(var(--color-reddish-orange));
-//   }
-// }
 
 .image-with-caption .image-with-caption-description {
   margin: 0 0 spacing(1) 0;

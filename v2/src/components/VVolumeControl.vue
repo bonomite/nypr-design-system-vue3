@@ -5,22 +5,21 @@ import Slider from 'primevue/slider'
 const props = defineProps({
   volume: {
     type: Number,
-    default: 50
+    default: 50,
   },
   isMuted: {
     type: Boolean,
-    default: false
+    default: false,
   },
   showVolume: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 })
 
 const emit = defineEmits(['volume-toggle-mute', 'volume-change'])
 
 let previousVolume = ref(props.volume)
-
 </script>
 
 <template>
@@ -44,8 +43,6 @@ let previousVolume = ref(props.volume)
     </button>
   </div>
 </template>
-
-
 
 <style lang="scss">
 .volume-control {
@@ -79,7 +76,7 @@ let previousVolume = ref(props.volume)
     margin-right: 4px;
   }
   .volume-control-icon {
-    color: var(--text-color);
+    color: rgb(var(--textColor));
     flex: 1 0;
     appearance: none;
     border: none;
@@ -91,10 +88,10 @@ let previousVolume = ref(props.volume)
     max-width: 36px;
   }
   .volume-control-slider {
-    transition: width var(--transition-duration), opacity var(--transition-duration),
-      margin-right var(--transition-duration);
-    -webkit-transition: width var(--transition-duration), opacity var(--transition-duration),
-      margin-right var(--transition-duration);
+    transition: width var(--transitionDuration),
+      opacity var(--transitionDuration), margin-right var(--transitionDuration);
+    -webkit-transition: width var(--transitionDuration),
+      opacity var(--transitionDuration), margin-right var(--transitionDuration);
     margin-right: 0;
     width: 0px;
     opacity: 0;
