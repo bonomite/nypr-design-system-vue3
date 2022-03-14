@@ -44,8 +44,15 @@ $breakpoints: (
 
 //colors
 $colors: (
-    "blue": #5e81ac,
-    "green": #7fa366,
+    "blue": #0454d6,
+    "lightblue": #90d8fc,
+    "redorange": #ff3500,
+    "orange": #ff6a00,
+    "lightorange": #f79800,
+    "gold": #f5b80c,
+    "pink": #ffb5e0,
+    "lightpink": #ffdfdf,
+    /*     "green": #7fa366,
     "yellow": #dac57a,
     "cyan": #71abc2,
     "pink": #bf616a,
@@ -53,19 +60,19 @@ $colors: (
     "teal": #5eac90,
     "orange": #d08770,
     "bluegray": #7e8d9f,
-    "purple": #9a6796,
+    "purple": #9a6796, */
 );
 
 // scale-color example
 // $newColor: scale-color($existingColor, $saturation: 30%, $lightness: -30%, $alpha: -90%) !default;
 // can use any of the following $red, $green, $blue, $saturation, $lightness, $whiteness, $blackness, $alpha
 
-$primaryColor: #5e81ac !default;
+$primaryColor: #f4f2f0 !default;
 $primaryColorAlt: scale-color($primaryColor, $lightness: 15%) !default;
 $primaryLightColor: scale-color($primaryColor, $lightness: 30%) !default;
 $primaryDarkColor: scale-color($primaryColor, $lightness: -10%) !default;
 $primaryDarkerColor: scale-color($primaryColor, $lightness: -20%) !default;
-$primaryTextColor: #ffffff !default;
+$primaryTextColor: #0a0b0c !default;
 
 $infoColor: #639bb2 !default;
 $infoLightColor: #88c0d0 !default;
@@ -88,7 +95,7 @@ $black400: #2e3440 !default;
 $black500: #15171d !default;
 
 $white: #ffffff !default;
-$white100: #eceff4 !default;
+$white100: #f4f2f0 !default;
 $white200: #e5e9f0 !default;
 $white300: #d8dee9 !default;
 
@@ -120,7 +127,7 @@ $fontFamily: "Matter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, He
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $fontFamilyHeader: "Matter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$textColor: $black100 !default;
+$textColor: $black !default;
 $textSecondaryColor: $primaryColorAlt !default;
 $fontWeight: normal !default;
 $fontWeight-100: 100 !default;
@@ -160,7 +167,7 @@ $scaleSM: 0.875 !default;
 $scaleLG: 1.25 !default;
 
 //focus
-$focusOutlineColor: $primaryLightColor !default;
+$focusOutlineColor: var(--blue-500) !default;
 $focusOutline: 0 none !default;
 $focusOutlineOffset: 0 !default;
 $focusShadow: 0 0 0 0.2rem $focusOutlineColor !default;
@@ -229,6 +236,12 @@ $passwordMeterBg: $white200 !default;
 $passwordWeakBg: $dangerColor !default;
 $passwordMediumBg: $warningColor !default;
 $passwordStrongBg: $successColor !default;
+
+//link
+$linkButtonColor: $textColor !default;
+$linkButtonHoverColor: var(--blue-500) !default;
+$linkButtonTextHoverDecoration: underline !default;
+$linkButtonFocusShadow: 0 0 0 0.2rem $focusOutlineColor !default;
 
 //button
 $buttonPadding: 0.5rem 1rem !default;
@@ -318,11 +331,6 @@ $dangerButtonActiveBg: scale-color($dangerButtonBg, $lightness: -20%) !default;
 $dangerButtonTextActiveColor: $dangerButtonTextColor !default;
 $dangerButtonActiveBorderColor: scale-color($dangerButtonBg, $lightness: -20%) !default;
 $dangerButtonFocusShadow: 0 0 0 0.2rem scale-color($dangerButtonBg, $lightness: 60%) !default;
-
-$linkButtonColor: $primaryColor !default;
-$linkButtonHoverColor: $primaryDarkerColor !default;
-$linkButtonTextHoverDecoration: underline !default;
-$linkButtonFocusShadow: 0 0 0 0.2rem $focusOutlineColor !default;
 
 //checkbox
 $checkboxWidth: 20px !default;
