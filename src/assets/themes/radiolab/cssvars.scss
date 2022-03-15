@@ -1,5 +1,5 @@
 :root,
-[data-color-mode="default"] {
+[data-style-mode="default"] {
     --primary-color: #{$primaryColor};
     --primary-color-rgb: #{hex2rgb($primaryColor)};
     --primary-color-alt: #{$primaryColorAlt};
@@ -163,7 +163,7 @@
     --badge-font-size: #{$badgeFontSize};
     --badge-letter-spacing: #{$badgeLetterSpacing};
 }
-[data-color-mode="dark"] {
+[data-style-mode="dark"] {
     /* --primary-color: #{$dangerColor};
     --primary-color-rgb: #{hex2rgb($dangerColor)}; */
     //--link-button-color: var(--primary-light-color);

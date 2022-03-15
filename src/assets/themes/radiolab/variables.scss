@@ -92,7 +92,7 @@ $black100: #4c566a !default;
 $black200: #434c5e !default;
 $black300: #3b4252 !default;
 $black400: #2e3440 !default;
-$black500: #15171d !default;
+$black500: #0a0b0c !default;
 
 $white: #ffffff !default;
 $white100: #f4f2f0 !default;
@@ -140,7 +140,7 @@ $fontWeight-700: 700 !default;
 $fontWeight-800: 800 !default;
 $fontWeight-900: 900 !default;
 
-$shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12) !default;
+$shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.05) !default;
 
 $borderRadius: 4px !default;
 $transitionDuration: 0.2s !default;
@@ -154,7 +154,7 @@ $primeIconFontSize: 1rem !default;
 $divider: 1px solid $white200 !default;
 $inlineSpacing: 0.5rem !default;
 $disabledOpacity: 0.6 !default;
-$maskBg: rgba(112, 120, 136, 0.5) !default;
+$maskBg: rgba($black500, 0.5) !default;
 $loadingIconFontSize: 2rem !default;
 $errorColor: $dangerColor !default;
 
@@ -422,7 +422,7 @@ $calendarHeaderBg: $white !default;
 $calendarInlineHeaderBg: $calendarBg !default;
 $calendarHeaderBorder: 1px solid $white200 !default;
 $calendarHeaderTextColor: $black100 !default;
-$calendarHeaderFontWeight: 600 !default;
+$calendarHeaderFontWeight: 500 !default;
 $calendarHeaderCellPadding: 0.5rem !default;
 $calendarMonthYearHeaderHoverTextColor: $primaryColor !default;
 
@@ -464,7 +464,7 @@ $panelHeaderBorderColor: $white200 !default;
 $panelHeaderBorder: 1px solid $white200 !default;
 $panelHeaderBg: $white !default;
 $panelHeaderTextColor: $black100 !default;
-$panelHeaderFontWeight: 600 !default;
+$panelHeaderFontWeight: 500 !default;
 $panelHeaderPadding: 1rem !default;
 $panelToggleableHeaderPadding: 0.5rem 1rem !default;
 
@@ -547,7 +547,7 @@ $scrollPanelTrackBg: $white100 !default;
 //card
 $cardBodyPadding: 1rem !default;
 $cardTitleFontSize: 1.5rem !default;
-$cardTitleFontWeight: 700 !default;
+$cardTitleFontWeight: 500 !default;
 $cardSubTitleFontWeight: 400 !default;
 $cardSubTitleColor: $primaryColorAlt !default;
 $cardContentPadding: 1rem 0 !default;
@@ -588,13 +588,13 @@ $tableHeaderBorder: 1px solid $white !default;
 $tableHeaderBorderWidth: 1px 0 1px 0 !default;
 $tableHeaderBg: $white !default;
 $tableHeaderTextColor: $black100 !default;
-$tableHeaderFontWeight: 600 !default;
+$tableHeaderFontWeight: 500 !default;
 $tableHeaderPadding: 1rem 1rem !default;
 
 $tableHeaderCellPadding: 1rem 1rem !default;
 $tableHeaderCellBg: $white100 !default;
 $tableHeaderCellTextColor: $black100 !default;
-$tableHeaderCellFontWeight: 600 !default;
+$tableHeaderCellFontWeight: 500 !default;
 $tableHeaderCellBorder: 1px solid $white !default;
 $tableHeaderCellBorderWidth: 0 0 1px 0 !default;
 $tableHeaderCellHoverBg: $white !default;
@@ -619,7 +619,7 @@ $tableBodyCellPadding: 1rem 1rem !default;
 $tableFooterCellPadding: 1rem 1rem !default;
 $tableFooterCellBg: $white100 !default;
 $tableFooterCellTextColor: $black100 !default;
-$tableFooterCellFontWeight: 600 !default;
+$tableFooterCellFontWeight: 500 !default;
 $tableFooterCellBorder: 1px solid $white !default;
 $tableFooterCellBorderWidth: 0 0 1px 0 !default;
 $tableResizerHelperBg: $primaryColor !default;
@@ -628,7 +628,7 @@ $tableFooterBorder: 1px solid $white !default;
 $tableFooterBorderWidth: 0 0 1px 0 !default;
 $tableFooterBg: $white100 !default;
 $tableFooterTextColor: $black100 !default;
-$tableFooterFontWeight: 600 !default;
+$tableFooterFontWeight: 500 !default;
 $tableFooterPadding: 1rem 1rem !default;
 
 $tableCellContentAlignment: left !default;
@@ -694,7 +694,7 @@ $toastPadding: 1rem !default;
 $toastBorderWidth: 0 0 0 6px !default;
 $toastShadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12) !default;
 $toastOpacity: 0.9 !default;
-$toastTitleFontWeight: 700 !default;
+$toastTitleFontWeight: 500 !default;
 $toastDetailMargin: $inlineSpacing 0 0 0 !default;
 
 //severities
@@ -725,7 +725,7 @@ $overlayContainerShadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3p
 $dialogHeaderBg: $white !default;
 $dialogHeaderBorder: 0 none !default;
 $dialogHeaderTextColor: $black100 !default;
-$dialogHeaderFontWeight: 600 !default;
+$dialogHeaderFontWeight: 500 !default;
 $dialogHeaderFontSize: 1.25rem !default;
 $dialogHeaderPadding: 1.5rem !default;
 $dialogContentPadding: 0 1.5rem 2rem 1.5rem !default;
@@ -750,7 +750,7 @@ $stepsItemNumberHeight: 2rem !default;
 $stepsItemNumberFontSize: 1.143rem !default;
 $stepsItemNumberColor: $black100 !default;
 $stepsItemNumberBorderRadius: 50% !default;
-$stepsItemActiveFontWeight: 600 !default;
+$stepsItemActiveFontWeight: 500 !default;
 
 //progressbar
 $progressBarHeight: 1.5rem !default;
@@ -780,7 +780,7 @@ $submenuHeaderPadding: 0.75rem 1rem !default;
 $submenuHeaderBg: $white !default;
 $submenuHeaderTextColor: $black100 !default;
 $submenuHeaderBorderRadius: 0 !default;
-$submenuHeaderFontWeight: 600 !default;
+$submenuHeaderFontWeight: 500 !default;
 $overlayMenuBg: $menuBg !default;
 $overlayMenuBorder: 0 none !default;
 $overlayMenuShadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12) !default;
@@ -816,7 +816,7 @@ $badgeBg: $primaryColor !default;
 $badgeTextColor: $primaryTextColor !default;
 $badgeMinWidth: 1.5rem !default;
 $badgeHeight: 1.5rem !default;
-$badgeFontWeight: 700 !default;
+$badgeFontWeight: 500 !default;
 $badgeFontSize: 0.633rem !default;
 $badgeLetterSpacing: 0.03rem !default;
 
