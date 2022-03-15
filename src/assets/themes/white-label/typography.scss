@@ -102,25 +102,31 @@ $footer-config: (
     ),
 );
 
-h1 {
+h1,
+.h1 {
     @include font-config($h1-config);
 }
 
-h2 {
+h2,
+.h2 {
     @include font-config($h2-config);
 }
 
-h3 {
+h3,
+.h3 {
     @include font-config($h3-config);
 }
 
-h4 {
+h4,
+.h4 {
     @include font-config($h4-config);
 }
-h5 {
+h5,
+.h5 {
     @include font-config($h5-config);
 }
-h6 {
+h6,
+.h6 {
     @include font-config($h6-config);
 }
 ul,
@@ -131,7 +137,8 @@ ol {
     }
 }
 
-p {
+p,
+.p {
     @include font-config($p-config);
 }
 

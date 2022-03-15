@@ -90,23 +90,23 @@
             :class="!nameLink || onAuthorPage ? 'disabled' : ''"
             :href="nameLink ? nameLink : null"
           >
-            <span v-html="fullName" />
+            <h2><span v-html="fullName" /></h2>
           </a>
         </div>
-        <div v-if="role" class="person-role">
+        <div v-if="role" class="person-role footer">
           <span v-html="role" />
           <a
             v-if="organization"
             :href="organizationLink"
             target="_blank"
             rel="noopener noreferrer"
-            class="person-role organization"
+            class="person-role footer organization"
             :class="[organizationLink ? 'link' : 'no-link']"
             v-html="organizationComputed"
           />
         </div>
         <div ref="blurbHolderRef" class="blurbHolder">
-          <div
+          <p
             v-if="blurb"
             ref="blurbRef"
             :class="[truncate ? 'truncate' : '']"
@@ -644,7 +644,7 @@ export default {
       .person-name-link-holder {
         margin-bottom: spacing(1);
         .person-name-link {
-          @include font-config($h2-config);
+          // @include font-config($h2-config);
           color: var(--text-color);
           overflow-wrap: anywhere;
           word-break: break-word;
@@ -670,7 +670,7 @@ export default {
       .person-role a {
         color: inherit;
         text-decoration: none;
-        @include font-config($footer-config);
+        // @include font-config($footer-config);
         text-transform: uppercase;
         overflow-wrap: anywhere;
         word-break: break-word;
@@ -688,7 +688,7 @@ export default {
       .blurbHolder {
         overflow: hidden;
         .blurb {
-          @include font-config($p-config);
+          // @include font-config($p-config);
           &.truncate {
             display: -webkit-box;
             -webkit-line-clamp: var(--trunc-lines);

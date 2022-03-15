@@ -101,21 +101,31 @@ $type-footer: (
 );
 
 h1,
+.h1,
 .type-large-headline {
     @include font-config($type-large-headline);
 }
 
 h2,
+.h2,
 .type-headline {
     @include font-config($type-headline);
 }
 
 h3,
+.h3,
+.type-subhead {
+    @include font-config($type-subhead);
+}
+
+h4,
+.h4,
 .type-eyebrow-big {
     @include font-config($type-eyebrow-big);
 }
 
-h4,
+h5,
+.h5,
 .type-eyebrow {
     @include font-config($type-eyebrow);
 }
@@ -129,7 +139,7 @@ ol {
 }
 
 p,
-.type-body {
+.p .type-body {
     @include font-config($type-body);
 }
 

@@ -89,12 +89,12 @@ const convertTime = (val) => {
         <h2 v-if="title && !titleLink">{{ title }}</h2>
       </div>
       <div v-if="description" class="track-info-description">
-        <div
+        <p
           v-if="description && !descriptionLink"
           class="track-info-description"
         >
           {{ description }}
-        </div>
+        </p>
 
         <v-flexible-link
           v-if="description && descriptionLink"
@@ -114,7 +114,7 @@ const convertTime = (val) => {
             class="track-info-buffered"
           />
         </div>
-        <div class="track-info-time">
+        <div class="track-info-time footer">
           <span class="track-info-time-current">{{
             convertTime(currentSeconds)
           }}</span>
@@ -171,12 +171,12 @@ $track-info-image-size: 84px;
         display: flex;
         align-items: center;
         background: var(--text-color);
-        color: var(--primary-color-text);
+        color: var(--white);
         border-radius: 44px;
         padding: 4px;
         margin-right: 8px;
         .track-info-livestream-indicator-text {
-          font-size: 12px;
+          font-size: 10px;
           font-weight: 900;
           text-transform: uppercase;
           letter-spacing: 2px;
@@ -209,7 +209,7 @@ $track-info-image-size: 84px;
       }
     }
     .track-info-description {
-      @include font-config($p-config);
+      // @include font-config($p-config);
       display: none;
       white-space: nowrap;
       overflow: hidden;
@@ -287,7 +287,7 @@ $track-info-image-size: 84px;
       }
     }
     .track-info-time {
-      @include font-config($footer-config);
+      // @include font-config($footer-config);
       display: flex;
       gap: spacing(1);
       @media all and (min-width: $md) {
