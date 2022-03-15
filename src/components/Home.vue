@@ -64,7 +64,11 @@
             <InputText type="text" placeholder="Default"></InputText>
           </div>
           <div class="col-4">
-            <InputText type="text" placeholder="Disabled" :disabled="true"></InputText>
+            <InputText
+              type="text"
+              placeholder="Disabled"
+              :disabled="true"
+            ></InputText>
           </div>
           <div class="col-4">
             <InputText type="text" placeholder="Invalid" class="p-invalid" />
@@ -101,7 +105,12 @@
         </span>
 
         <h5>Textarea</h5>
-        <Textarea placeholder="Your Message" :auto-resize="true" rows="3" cols="30" />
+        <Textarea
+          placeholder="Your Message"
+          :auto-resize="true"
+          rows="3"
+          cols="30"
+        />
 
         <h5>AutoComplete</h5>
         <AutoComplete
@@ -116,10 +125,18 @@
         />
 
         <h5>Calendar</h5>
-        <Calendar v-model="calendarValue" :show-icon="true" :show-button-bar="true"></Calendar>
+        <Calendar
+          v-model="calendarValue"
+          :show-icon="true"
+          :show-button-bar="true"
+        ></Calendar>
 
         <h5>Spinner</h5>
-        <InputNumber v-model="inputNumberValue" show-buttons mode="decimal"></InputNumber>
+        <InputNumber
+          v-model="inputNumberValue"
+          show-buttons
+          mode="decimal"
+        ></InputNumber>
 
         <h5>Chips</h5>
         <Chips v-model="chipsValue" />
@@ -144,19 +161,34 @@
         <div class="grid">
           <div class="col-4 md:p-1">
             <div class="field-radiobutton">
-              <RadioButton id="option1" v-model="radioValue" name="option" value="Option 1" />
+              <RadioButton
+                id="option1"
+                v-model="radioValue"
+                name="option"
+                value="Option 1"
+              />
               <label for="option1">Option 1</label>
             </div>
           </div>
           <div class="col-4 md:p-1">
             <div class="field-radiobutton">
-              <RadioButton id="option2" v-model="radioValue" name="option" value="Option 2" />
+              <RadioButton
+                id="option2"
+                v-model="radioValue"
+                name="option"
+                value="Option 2"
+              />
               <label for="option2">Option 2</label>
             </div>
           </div>
           <div class="col-4 md:p-1">
             <div class="field-radiobutton">
-              <RadioButton id="option3" v-model="radioValue" name="option" value="Option 3" />
+              <RadioButton
+                id="option3"
+                v-model="radioValue"
+                name="option"
+                value="Option 3"
+              />
               <label for="option3">Option 3</label>
             </div>
           </div>
@@ -166,19 +198,34 @@
         <div class="grid">
           <div class="col-4 md:p-1">
             <div class="field-checkbox">
-              <Checkbox id="checkOption1" v-model="checkboxValue" name="option" value="Option 1" />
+              <Checkbox
+                id="checkOption1"
+                v-model="checkboxValue"
+                name="option"
+                value="Option 1"
+              />
               <label for="checkOption1">Option 1</label>
             </div>
           </div>
           <div class="col-4 md:p-1">
             <div class="field-checkbox">
-              <Checkbox id="checkOption2" v-model="checkboxValue" name="option" value="Option 2" />
+              <Checkbox
+                id="checkOption2"
+                v-model="checkboxValue"
+                name="option"
+                value="Option 2"
+              />
               <label for="checkOption2">Option 2</label>
             </div>
           </div>
           <div class="col-4 md:p-1">
             <div class="field-checkbox">
-              <Checkbox id="checkOption3" v-model="checkboxValue" name="option" value="Option 3" />
+              <Checkbox
+                id="checkOption3"
+                v-model="checkboxValue"
+                name="option"
+                value="Option 3"
+              />
               <label for="checkOption3">Option 3</label>
             </div>
           </div>
@@ -239,7 +286,12 @@
         <Button label="Submit" class="mr-2 mb:p-2" />
         <Button icon="pi pi-check" class="mr-2 mb:p-2" />
         <Button label="Submit" icon="pi pi-check" class="mr-2 mb:p-2" />
-        <Button label="Submit" icon="pi pi-check" icon-pos="right" class="mr-2 mb:p-2" />
+        <Button
+          label="Submit"
+          icon="pi pi-check"
+          icon-pos="right"
+          class="mr-2 mb:p-2"
+        />
         <Button label="Disabled" disabled="disabled" class="mr-2 mb:p-2" />
 
         <h5>Severities</h5>
@@ -253,66 +305,171 @@
 
         <h5>Raised Buttons</h5>
         <Button label="Primary" class="p-button-raised mr-2 mb:p-2" />
-        <Button label="Secondary" class="p-button-raised p-button-secondary mr-2 mb:p-2" />
-        <Button label="Success" class="p-button-raised p-button-success mr-2 mb:p-2" />
-        <Button label="Info" class="p-button-raised p-button-info mr-2 mb:p-2" />
-        <Button label="Warning" class="p-button-raised p-button-warning mr-2 mb:p-2" />
-        <Button label="Help" class="p-button-raised p-button-help mr-2 mb:p-2" />
+        <Button
+          label="Secondary"
+          class="p-button-raised p-button-secondary mr-2 mb:p-2"
+        />
+        <Button
+          label="Success"
+          class="p-button-raised p-button-success mr-2 mb:p-2"
+        />
+        <Button
+          label="Info"
+          class="p-button-raised p-button-info mr-2 mb:p-2"
+        />
+        <Button
+          label="Warning"
+          class="p-button-raised p-button-warning mr-2 mb:p-2"
+        />
+        <Button
+          label="Help"
+          class="p-button-raised p-button-help mr-2 mb:p-2"
+        />
         <Button label="Danger" class="p-button-raised p-button-danger mb:p-2" />
 
         <h5>Rounded Buttons</h5>
         <Button label="Primary" class="p-button-rounded mr-2 mb:p-2" />
-        <Button label="Secondary" class="p-button-rounded p-button-secondary mr-2 mb:p-2" />
-        <Button label="Success" class="p-button-rounded p-button-success mr-2 mb:p-2" />
-        <Button label="Info" class="p-button-rounded p-button-info mr-2 mb:p-2" />
-        <Button label="Warning" class="p-button-rounded p-button-warning mr-2 mb:p-2" />
-        <Button label="Help" class="p-button-rounded p-button-help mr-2 mb:p-2" />
-        <Button label="Danger" class="p-button-rounded p-button-danger mb:p-2" />
+        <Button
+          label="Secondary"
+          class="p-button-rounded p-button-secondary mr-2 mb:p-2"
+        />
+        <Button
+          label="Success"
+          class="p-button-rounded p-button-success mr-2 mb:p-2"
+        />
+        <Button
+          label="Info"
+          class="p-button-rounded p-button-info mr-2 mb:p-2"
+        />
+        <Button
+          label="Warning"
+          class="p-button-rounded p-button-warning mr-2 mb:p-2"
+        />
+        <Button
+          label="Help"
+          class="p-button-rounded p-button-help mr-2 mb:p-2"
+        />
+        <Button
+          label="Danger"
+          class="p-button-rounded p-button-danger mb:p-2"
+        />
 
         <h5>Text Buttons</h5>
         <Button label="Primary" class="p-button-text mr-2 mb:p-2" />
-        <Button label="Secondary" class="p-button-secondary p-button-text mr-2 mb:p-2" />
-        <Button label="Success" class="p-button-success p-button-text mr-2 mb:p-2" />
+        <Button
+          label="Secondary"
+          class="p-button-secondary p-button-text mr-2 mb:p-2"
+        />
+        <Button
+          label="Success"
+          class="p-button-success p-button-text mr-2 mb:p-2"
+        />
         <Button label="Info" class="p-button-info p-button-text mr-2 mb:p-2" />
-        <Button label="Warning" class="p-button-warning p-button-text mr-2 mb:p-2" />
+        <Button
+          label="Warning"
+          class="p-button-warning p-button-text mr-2 mb:p-2"
+        />
         <Button label="Help" class="p-button-help p-button-text mr-2 mb:p-2" />
-        <Button label="Danger" class="p-button-danger p-button-text mr-2 mb:p-2" />
+        <Button
+          label="Danger"
+          class="p-button-danger p-button-text mr-2 mb:p-2"
+        />
         <Button label="Plain" class="p-button-text p-button-plain mb:p-2" />
 
         <h5>Raised Text Buttons</h5>
-        <Button label="Primary" class="p-button-raised p-button-text mr-2 mb:p-2" />
+        <Button
+          label="Primary"
+          class="p-button-raised p-button-text mr-2 mb:p-2"
+        />
         <Button
           label="Secondary"
           class="p-button-raised p-button-secondary p-button-text mr-2 mb:p-2"
         />
-        <Button label="Success" class="p-button-raised p-button-success p-button-text mr-2 mb:p-2" />
-        <Button label="Info" class="p-button-raised p-button-info p-button-text mr-2 mb:p-2" />
-        <Button label="Warning" class="p-button-raised p-button-warning p-button-text mr-2 mb:p-2" />
-        <Button label="Help" class="p-button-raised p-button-help p-button-text mr-2 mb:p-2" />
-        <Button label="Danger" class="p-button-raised p-button-danger p-button-text mr-2 mb:p-2" />
-        <Button label="Plain" class="p-button-raised p-button-plain p-button-text mb:p-2" />
+        <Button
+          label="Success"
+          class="p-button-raised p-button-success p-button-text mr-2 mb:p-2"
+        />
+        <Button
+          label="Info"
+          class="p-button-raised p-button-info p-button-text mr-2 mb:p-2"
+        />
+        <Button
+          label="Warning"
+          class="p-button-raised p-button-warning p-button-text mr-2 mb:p-2"
+        />
+        <Button
+          label="Help"
+          class="p-button-raised p-button-help p-button-text mr-2 mb:p-2"
+        />
+        <Button
+          label="Danger"
+          class="p-button-raised p-button-danger p-button-text mr-2 mb:p-2"
+        />
+        <Button
+          label="Plain"
+          class="p-button-raised p-button-plain p-button-text mb:p-2"
+        />
 
         <h5>Outlined Buttons</h5>
         <Button label="Primary" class="p-button-outlined mr-2 mb:p-2" />
-        <Button label="Secondary" class="p-button-outlined p-button-secondary mr-2 mb:p-2" />
-        <Button label="Success" class="p-button-outlined p-button-success mr-2 mb:p-2" />
-        <Button label="Info" class="p-button-outlined p-button-info mr-2 mb:p-2" />
-        <Button label="Warning" class="p-button-outlined p-button-warning mr-2 mb:p-2" />
-        <Button label="Help" class="p-button-outlined p-button-help mr-2 mb:p-2" />
-        <Button label="Danger" class="p-button-outlined p-button-danger mr-2 mb:p-2" />
+        <Button
+          label="Secondary"
+          class="p-button-outlined p-button-secondary mr-2 mb:p-2"
+        />
+        <Button
+          label="Success"
+          class="p-button-outlined p-button-success mr-2 mb:p-2"
+        />
+        <Button
+          label="Info"
+          class="p-button-outlined p-button-info mr-2 mb:p-2"
+        />
+        <Button
+          label="Warning"
+          class="p-button-outlined p-button-warning mr-2 mb:p-2"
+        />
+        <Button
+          label="Help"
+          class="p-button-outlined p-button-help mr-2 mb:p-2"
+        />
+        <Button
+          label="Danger"
+          class="p-button-outlined p-button-danger mr-2 mb:p-2"
+        />
         <Button label="Plain" class="p-button-outlined p-button-plain mb:p-2" />
 
         <h5>Rounded Icon Buttons</h5>
         <Button icon="pi pi-check" class="p-button-rounded mr-2 mb:p-2" />
-        <Button icon="pi pi-bookmark" class="p-button-rounded p-button-secondary mr-2 mb:p-2" />
-        <Button icon="pi pi-search" class="p-button-rounded p-button-success mr-2 mb:p-2" />
-        <Button icon="pi pi-user" class="p-button-rounded p-button-info mr-2 mb:p-2" />
-        <Button icon="pi pi-bell" class="p-button-rounded p-button-warning mr-2 mb:p-2" />
-        <Button icon="pi pi-heart" class="p-button-rounded p-button-help mr-2 mb:p-2" />
-        <Button icon="pi pi-times" class="p-button-rounded p-button-danger mb:p-2" />
+        <Button
+          icon="pi pi-bookmark"
+          class="p-button-rounded p-button-secondary mr-2 mb:p-2"
+        />
+        <Button
+          icon="pi pi-search"
+          class="p-button-rounded p-button-success mr-2 mb:p-2"
+        />
+        <Button
+          icon="pi pi-user"
+          class="p-button-rounded p-button-info mr-2 mb:p-2"
+        />
+        <Button
+          icon="pi pi-bell"
+          class="p-button-rounded p-button-warning mr-2 mb:p-2"
+        />
+        <Button
+          icon="pi pi-heart"
+          class="p-button-rounded p-button-help mr-2 mb:p-2"
+        />
+        <Button
+          icon="pi pi-times"
+          class="p-button-rounded p-button-danger mb:p-2"
+        />
 
         <h5>Rounded Text Icon Buttons</h5>
-        <Button icon="pi pi-check" class="p-button-rounded p-button-text mr-2 mb:p-2" />
+        <Button
+          icon="pi pi-check"
+          class="p-button-rounded p-button-text mr-2 mb:p-2"
+        />
         <Button
           icon="pi pi-bookmark"
           class="p-button-rounded p-button-secondary p-button-text mr-2 mb:p-2"
@@ -321,7 +478,10 @@
           icon="pi pi-search"
           class="p-button-rounded p-button-success p-button-text mr-2 mb:p-2"
         />
-        <Button icon="pi pi-user" class="p-button-rounded p-button-info p-button-text mr-2 mb:p-2" />
+        <Button
+          icon="pi pi-user"
+          class="p-button-rounded p-button-info p-button-text mr-2 mb:p-2"
+        />
         <Button
           icon="pi pi-bell"
           class="p-button-rounded p-button-warning p-button-text mr-2 mb:p-2"
@@ -336,7 +496,10 @@
         />
 
         <h5>Rounded and Outlined Icon Buttons</h5>
-        <Button icon="pi pi-check" class="p-button-rounded p-button-outlined mr-2 mb:p-2" />
+        <Button
+          icon="pi pi-check"
+          class="p-button-rounded p-button-outlined mr-2 mb:p-2"
+        />
         <Button
           icon="pi pi-bookmark"
           class="p-button-rounded p-button-secondary p-button-outlined mr-2 mb:p-2"
@@ -409,7 +572,10 @@
               <h5 class="p-m-0">Customers</h5>
               <span class="p-input-icon-left">
                 <i class="pi pi-search" />
-                <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+                <InputText
+                  v-model="filters['global'].value"
+                  placeholder="Keyword Search"
+                />
               </span>
             </div>
           </template>
@@ -491,7 +657,13 @@
               </MultiSelect>
             </template>
           </Column>
-          <Column field="date" header="Date" sortable data-type="date" style="min-width: 8rem">
+          <Column
+            field="date"
+            header="Date"
+            sortable
+            data-type="date"
+            style="min-width: 8rem"
+          >
             <template #body="{ data }">{{ formatDate(data.date) }}</template>
             <template #filter="{ filterModel }">
               <Calendar
@@ -508,7 +680,9 @@
             data-type="numeric"
             style="min-width: 8rem"
           >
-            <template #body="{ data }">{{ formatCurrency(data.balance) }}</template>
+            <template #body="{ data }">{{
+              formatCurrency(data.balance)
+            }}</template>
             <template #filter="{ filterModel }">
               <InputNumber
                 v-model="filterModel.value"
@@ -527,9 +701,7 @@
           >
             <template #body="{ data }">
               <span :class="'customer-badge status-' + data.status">
-                {{
-                  data.status
-                }}
+                {{ data.status }}
               </span>
             </template>
             <template #filter="{ filterModel }">
@@ -542,16 +714,12 @@
               >
                 <template #value="slotProps">
                   <span :class="'customer-badge status-' + slotProps.value">
-                    {{
-                      slotProps.value
-                    }}
+                    {{ slotProps.value }}
                   </span>
                 </template>
                 <template #option="slotProps">
                   <span :class="'customer-badge status-' + slotProps.option">
-                    {{
-                      slotProps.option
-                    }}
+                    {{ slotProps.option }}
                   </span>
                 </template>
               </Dropdown>
@@ -572,9 +740,7 @@
               <div class="p-d-flex p-ai-center p-jc-between p-px-2">
                 <span>{{ filterModel.value ? filterModel.value[0] : 0 }}</span>
                 <span>
-                  {{
-                    filterModel.value ? filterModel.value[1] : 100
-                  }}
+                  {{ filterModel.value ? filterModel.value[1] : 100 }}
                 </span>
               </div>
             </template>
@@ -701,8 +867,18 @@
     <div class="col-12 md:col-6">
       <div class="card p-fluid">
         <h5>Overlay Panel</h5>
-        <Button type="button" label="Choose" icon="pi pi-search" @click="toggle" />
-        <OverlayPanel ref="op" append-to="body" :show-close-icon="true" style="width: 450px">
+        <Button
+          type="button"
+          label="Choose"
+          icon="pi pi-search"
+          @click="toggle"
+        />
+        <OverlayPanel
+          ref="op"
+          append-to="body"
+          :show-close-icon="true"
+          style="width: 450px"
+        >
           <DataTable
             v-model:selection="selectedProduct"
             :value="products"
@@ -722,7 +898,9 @@
               </template>
             </Column>
             <Column field="price" header="Price" sortable>
-              <template #body="slotProps">{{ formatCurrency(slotProps.data.price) }}</template>
+              <template #body="slotProps">{{
+                formatCurrency(slotProps.data.price)
+              }}</template>
             </Column>
           </DataTable>
         </OverlayPanel>
@@ -731,7 +909,12 @@
     <div class="col-12 md:col-6">
       <div class="card p-fluid">
         <h5>Dialog</h5>
-        <Dialog v-model:visible="display" header="Dialog" :style="{ width: '30vw' }" :modal="true">
+        <Dialog
+          v-model:visible="display"
+          header="Dialog"
+          :style="{ width: '30vw' }"
+          :modal="true"
+        >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -742,10 +925,20 @@
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <template #footer>
-            <Button label="Dismiss" icon="pi pi-check" class="p-button-text" @click="close" />
+            <Button
+              label="Dismiss"
+              icon="pi pi-check"
+              class="p-button-text"
+              @click="close"
+            />
           </template>
         </Dialog>
-        <Button label="Show" icon="pi pi-external-link" class="p-button-secondary" @click="open" />
+        <Button
+          label="Show"
+          icon="pi pi-external-link"
+          class="p-button-secondary"
+          @click="open"
+        />
       </div>
     </div>
     <div class="col-12 md:col-6">
@@ -817,7 +1010,8 @@
     </div>
     <div class="col-12 md:col-6">
       <div class="card" @contextmenu="onContextRightClick">
-        <h5>Context Menu</h5>Right click to display.
+        <h5>Context Menu</h5>
+        Right click to display.
         <ContextMenu ref="contextMenu" :model="contextMenuItems" />
       </div>
     </div>
@@ -837,10 +1031,26 @@
         <h5>Toast</h5>
 
         <Toast />
-        <Button label="Info" class="p-button-info mr-2 mb:p-2" @click="showToast('info')" />
-        <Button label="Success" class="p-button-success mr-2 mb:p-2" @click="showToast('success')" />
-        <Button label="Warn" class="p-button-warning mr-2 mb:p-2" @click="showToast('warn')" />
-        <Button label="Error" class="p-button-danger mb:p-2" @click="showToast('error')" />
+        <Button
+          label="Info"
+          class="p-button-info mr-2 mb:p-2"
+          @click="showToast('info')"
+        />
+        <Button
+          label="Success"
+          class="p-button-success mr-2 mb:p-2"
+          @click="showToast('success')"
+        />
+        <Button
+          label="Warn"
+          class="p-button-warning mr-2 mb:p-2"
+          @click="showToast('warn')"
+        />
+        <Button
+          label="Error"
+          class="p-button-danger mb:p-2"
+          @click="showToast('error')"
+        />
       </div>
 
       <div class="card">
@@ -856,7 +1066,12 @@
         <h5>Inline Message</h5>
         <div class="p-formgroup-inline" style="margin-bottom: 0.5rem">
           <label for="username1" class="p-sr-only">Username</label>
-          <InputText id="username1" type="text" placeholder="Username" class="p-invalid mr-2" />
+          <InputText
+            id="username1"
+            type="text"
+            placeholder="Username"
+            class="p-invalid mr-2"
+          />
           <InlineMessage>Username is required</InlineMessage>
         </div>
         <div class="p-formgroup-inline">
@@ -872,8 +1087,14 @@
         <h5>Helper Text</h5>
         <div class="p-field p-fluid">
           <label for="username2">Username</label>
-          <InputText id="username2" type="text" aria-describedby="username-help" />
-          <small id="username-help" class="p-error">Enter your username to reset your password.</small>
+          <InputText
+            id="username2"
+            type="text"
+            aria-describedby="username-help"
+          />
+          <small id="username-help" class="p-error"
+            >Enter your username to reset your password.</small
+          >
         </div>
       </div>
     </div>
@@ -887,7 +1108,6 @@ import ProductService from '../service/ProductService'
 import { FilterMatchMode, FilterOperator } from 'primevue/api'
 
 export default {
-
   data() {
     return {
       customers: null,
@@ -1281,7 +1501,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/themes/white-label/_theme.scss";
+@import '../assets/themes/white-label/_theme.scss';
 .image-text {
   vertical-align: middle;
 }

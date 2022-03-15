@@ -3,97 +3,95 @@
     font-size: var(--font-size);
 }
 
-$h1-config: (
+$type-large-headline: (
     "default": (
         "values": (
             "font-family": var(--font-family-header),
-            "font-size": var(--font-size-12),
-            "line-height": normal,
-            "font-weight": var(--fontWeight-700),
+            "font-size": var(--font-size-20),
+            "line-height": var(--font-size-20),
+            "font-weight": var(--fontWeight-400),
+            "letter-spacing": -1px,
             "color": var(--text-color),
         ),
     ),
     $medium: (
         "values": (
-            "font-size": var(--font-size-10),
-            "line-height": normal,
+            "font-size": var(--font-size-12),
+            "line-height": var(--font-size-12),
         ),
     ),
 );
-$h2-config: (
+$type-headline: (
     "default": (
         "values": (
             "font-family": var(--font-family-header),
-            "font-size": var(--font-size-9),
-            "line-height": normal,
-            "font-weight": var(--fontWeight-400),
+            "font-size": var(--font-size-12),
+            "line-height": var(--font-size-12),
+            "font-weight": var(--fontWeight-500),
+            "letter-spacing": -1px,
             "color": var(--text-color),
         ),
     ),
-);
-$h3-config: (
-    "default": (
+    $medium: (
         "values": (
-            "font-family": var(--font-family) Header,
-            "font-size": var(--font-size-7),
-            "line-height": normal,
-            "font-weight": var(--fontWeight-400),
-            "color": var(--text-color),
-        ),
-    ),
-);
-$h4-config: (
-    "default": (
-        "values": (
-            "font-family": var(--font-family),
             "font-size": var(--font-size-8),
-            "line-height": normal,
-            "font-weight": var(--fontWeight-700),
+            "line-height": var(--font-size-8),
+        ),
+    ),
+);
+$type-subhead: (
+    "default": (
+        "values": (
+            "font-family": var(--font-family-header),
+            "font-size": var(--font-size-10),
+            "line-height": var(--font-size-12),
+            "font-weight": var(--fontWeight-500),
+            "letter-spacing": -0.5px,
             "color": var(--text-color),
         ),
     ),
 );
 
-$h5-config: (
+$type-eyebrow: (
+    "default": (
+        "values": (
+            "font-family": var(--font-family),
+            "font-size": var(--font-size-5),
+            "line-height": var(--font-size-6),
+            "font-weight": var(--fontWeight-400),
+            "letter-spacing": -0.5px,
+            "color": var(--text-color),
+            "text-transform": uppercase,
+        ),
+    ),
+);
+$type-eyebrow-big: (
     "default": (
         "values": (
             "font-family": var(--font-family),
             "font-size": var(--font-size-6),
-            "line-height": normal,
-            "font-weight": var(--fontWeight-700),
-            "text-transform": uppercase,
+            "line-height": var(--font-size-9),
+            "font-weight": var(--fontWeight-400),
+            "letter-spacing": -0.5px,
             "color": var(--text-color),
+            "text-transform": uppercase,
         ),
     ),
 );
 
-$h6-config: (
-    "default": (
-        "values": (
-            "font-family": var(--font-family),
-            "font-size": var(--font-size-4),
-            "line-height": normal,
-            "font-weight": var(--fontWeight-700),
-            "text-transform": uppercase,
-            "letter-spacing": 0.2rem,
-            "color": var(--text-color),
-        ),
-    ),
-);
-
-$p-config: (
+$type-body: (
     "default": (
         "values": (
             "font-family": var(--font-family),
             "font-size": var(--font-size-6),
-            "line-height": normal,
+            "line-height": var(--font-size-11),
             "font-weight": var(--fontWeight-400),
             "color": var(--text-color),
         ),
     ),
 );
 
-$footer-config: (
+$type-footer: (
     "default": (
         "values": (
             "font-size": var(--font-size-4),
@@ -102,41 +100,41 @@ $footer-config: (
     ),
 );
 
-h1 {
-    @include font-config($h1-config);
+h1,
+.type-large-headline {
+    @include font-config($type-large-headline);
 }
 
-h2 {
-    @include font-config($h2-config);
+h2,
+.type-headline {
+    @include font-config($type-headline);
 }
 
-h3 {
-    @include font-config($h3-config);
+h3,
+.type-eyebrow-big {
+    @include font-config($type-eyebrow-big);
 }
 
-h4 {
-    @include font-config($h4-config);
+h4,
+.type-eyebrow {
+    @include font-config($type-eyebrow);
 }
-h5 {
-    @include font-config($h5-config);
-}
-h6 {
-    @include font-config($h6-config);
-}
+
 ul,
 ol {
     padding-left: 1rem;
     li {
-        @include font-config($p-config);
+        @include font-config($type-body);
     }
 }
 
-p {
-    @include font-config($p-config);
+p,
+.type-body {
+    @include font-config($type-body);
 }
 
 .footer {
-    @include font-config($footer-config);
+    @include font-config($type-footer);
 }
 
 // special configs below

@@ -18,7 +18,7 @@ module.exports = {
         {
           loader: 'sass-loader',
           options: {
-            additionalData: '@import "~/src/assets/themes/white-label/_theme.scss"; @import "primevue/resources/primevue.min.css"; @import "primeicons/primeicons.css"; body.dark{background-color: #080808 !important;}',
+            additionalData: '@import "~/src/assets/themes/radiolab/_theme.scss"; @import "primevue/resources/primevue.min.css"; @import "primeicons/primeicons.css"; body.dark{background-color: #080808 !important;}',
             // additionalData: '@import "./assets/scss/main.scss";',
             //@import "primeflex/primeflex.scss";
             //@import "primevue/resources/themes/lara-light-blue/theme.css";

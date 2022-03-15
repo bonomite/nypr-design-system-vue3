@@ -11,10 +11,10 @@ const channel = addons.getChannel()
 channel.on('DARK_MODE', isDark => {
   if (isDark) {
     document.body.classList.add('dark')
-    document.body.setAttribute('data-color-mode', 'dark')
+    document.body.setAttribute('data-style-mode', 'dark')
   } else {
     document.body.classList.remove('dark')
-    document.body.setAttribute('data-color-mode', 'default')
+    document.body.setAttribute('data-style-mode', 'default')
   }
 })
 
